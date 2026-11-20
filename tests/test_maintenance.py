@@ -13,6 +13,7 @@ from adicionar_historia import salvar_historias
 with TemporaryDirectory() as tmp:
     base = Path(tmp)
     (base / 'index.html').write_text('original', encoding='utf8')
+    (base / 'dictionary.js').write_text("window.STORYSPEAK_DICTIONARY={'right':'certo; direita'};", encoding='utf8')
     (base / 'catalog.json').write_text((ROOT / 'catalog.json').read_text(), encoding='utf8')
     (base / 'packs').mkdir()
     for source in (ROOT / 'packs').glob('*.json'):
@@ -24,7 +25,9 @@ with TemporaryDirectory() as tmp:
         zf.writestr('app.js', 'NEW APP')
         zf.writestr('tts/andrew.mp3', 'SHOULD NOT OVERWRITE')
         zf.writestr('catalog.json', '{"bad":true}')
+        zf.writestr('dictionary.js', 'WRONG DICTIONARY')
         zf.writestr('packs/everyday.json', '{"bad":true}')
+    previous_dictionary = (base / 'dictionary.js').read_bytes()
     previous_catalog = (base / 'catalog.json').read_bytes()
     previous_pack = (base / 'packs/everyday.json').read_bytes()
     result = atualizar(zip_path, base)
@@ -32,6 +35,7 @@ with TemporaryDirectory() as tmp:
     assert (base / 'app.js').read_text() == 'NEW APP'
     assert (base / 'tts/andrew.mp3').read_bytes() == b'old mp3 stays'
     assert (base / 'catalog.json').read_bytes() == previous_catalog
+    assert (base / 'dictionary.js').read_bytes() == previous_dictionary
     assert (base / 'packs/everyday.json').read_bytes() == previous_pack
     # Story import creates a new category and updates both catalog and pack JSON.
     pack = {'id': 'fantasy', 'title': 'Fantasia', 'file': 'packs/fantasy.json',

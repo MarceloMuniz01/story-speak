@@ -16,6 +16,7 @@ import unicodedata
 from pathlib import Path
 
 from audio_common import ROOT, WORD_PATTERN, read_json, write_json
+from atualizar_dicionario import atualizar_dicionario
 
 LEVELS = {'A1', 'A2', 'B1', 'B2', 'C1', 'C2'}
 SLUG = re.compile(r'^[a-z0-9]+(?:-[a-z0-9]+)*$')
@@ -181,6 +182,8 @@ def salvar_historias(pack: dict, nova_categoria: bool, items: list[dict], root: 
 def main():
     parser = argparse.ArgumentParser(description='Adiciona histórias ao catálogo e aos packs do StorySpeak.')
     parser.add_argument('--arquivo', type=Path, help='Arquivo .json ou .txt em vez de colar no terminal.')
+    parser.add_argument('--sem-traducao', action='store_true', help='Não consulta tradução agora; use atualizar_dicionario.py depois.')
+    parser.add_argument('--sentidos', type=int, default=3, help='Máximo de sentidos por palavra (padrão: 3).')
     args = parser.parse_args()
     try:
         catalog = read_json(ROOT / 'catalog.json')
@@ -204,9 +207,20 @@ def main():
             return
         saved = salvar_historias(pack, new_category, stories)
         print(f'\n{len(saved)} história(s) adicionada(s).')
+        if not args.sem_traducao:
+            vocabulary = {w.lower().replace('’', "'")
+                          for story in saved for w in WORD_PATTERN.findall(story['text'])}
+            print('\nAtualizando o dicionário com novos significados...')
+            try:
+                atualizar_dicionario(words=vocabulary, max_sentidos=args.sentidos)
+            except (ValueError, OSError) as exc:
+                print(f'Não foi possível concluir as traduções: {exc}')
+                print('História salva. Tente depois: python scripts/atualizar_dicionario.py')
+        else:
+            print('Traduções pendentes. Execute: python scripts/atualizar_dicionario.py')
         print('Próximos passos:')
         print('  python scripts/gerar_tudo.py --voice andrew')
-        print('  git add catalog.json packs/ tts/ && git commit -m "Novas histórias"')
+        print('  git add catalog.json packs/ dictionary.js tts/ && git commit -m "Novas histórias"')
         print('  git push')
     except (ValueError, OSError, json.JSONDecodeError) as exc:
         parser.exit(1, f'Erro: {exc}\n')

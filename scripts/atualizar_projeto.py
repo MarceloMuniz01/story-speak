@@ -4,7 +4,7 @@
 Uso: python scripts/atualizar_projeto.py [arquivo.zip]
      python scripts/atualizar_projeto.py --dry-run
 
-Por padrão também protege histórias locais: catalog.json e packs/.
+Por padrão também protege histórias e dicionário: catalog.json, packs/ e dictionary.js.
 Use --sobrescrever-historias para atualizar esses arquivos pelo ZIP.
 """
 from __future__ import annotations
@@ -67,7 +67,7 @@ def arquivos_do_zip(zf: zipfile.ZipFile, sobrescrever_historias: bool):
         if (parts[0] in {'tts', '.git', '.venv', 'venv', '__pycache__', 'node_modules'}
                 or any(p.startswith('.') or p == '__pycache__' for p in parts)
                 or (not sobrescrever_historias and
-                    (parts[0] == 'packs' or path.as_posix() == 'catalog.json'))):
+                    (parts[0] == 'packs' or path.as_posix() in {'catalog.json', 'dictionary.js'}))):
             ignored.append(path.as_posix())
             continue
         if path.as_posix() in seen:
@@ -125,7 +125,7 @@ def main():
     if args.dry_run:
         for name in result['nomes']:
             print('  ', name)
-    print('A pasta tts/ foi preservada. Histórias locais também foram preservadas'
+    print('A pasta tts/ foi preservada. Histórias e dictionary.js também foram preservados'
           if not args.sobrescrever_historias else 'A pasta tts/ foi preservada.')
 
 
