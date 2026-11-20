@@ -1,0 +1,25 @@
+{
+  "name": "StorySpeak — English Reader",
+  "short_name": "StorySpeak",
+  "description": "Leitor de inglês com pronúncia, tradução por palavra e áudio de parágrafos.",
+  "id": "./",
+  "start_url": "./#library",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f9fd",
+  "theme_color": "#f7f9fd",
+  "icons": [
+    {
+      "src": "./assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

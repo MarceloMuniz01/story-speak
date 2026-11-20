@@ -1,0 +1,32 @@
+{
+  "id": "everyday",
+  "stories": [
+    {
+      "id": "morning-choice",
+      "title": "A Different Morning",
+      "level": "A1",
+      "genre": "Everyday life",
+      "summary": "A small change leads to an unexpected conversation.",
+      "tags": ["routine", "coffee", "conversation"],
+      "text": "Daniel wakes up early on Monday. He usually drinks coffee at home, but today he walks to a small cafe near the park.\n\nAt the cafe, he sees a woman reading a book about space. Daniel likes astronomy, so he asks about the book. Her name is Maya. She tells him about a beautiful planet with blue clouds.\n\nThey talk for ten minutes. Before Daniel leaves, Maya recommends another book. His morning was simple, but it feels different. Tomorrow, he wants to visit the cafe again."
+    },
+    {
+      "id": "train-to-coast",
+      "title": "The Train to the Coast",
+      "level": "A2",
+      "genre": "Travel",
+      "summary": "A delayed train changes a weekend journey.",
+      "tags": ["travel", "train", "friendship"],
+      "text": "Nina bought a train ticket because she wanted to spend the weekend near the ocean. She packed a camera, a notebook, and one warm jacket.\n\nAt the station, a message appeared on the screen. Her train was delayed for two hours. Nina felt frustrated, but she decided to explore the neighborhood instead of waiting on a bench.\n\nShe found a small bookstore and started talking to its owner. He showed her a collection of old maps. One map described a hidden beach near her destination.\n\nWhen the train finally arrived, Nina was smiling. The delay had given her a new place to discover."
+    },
+    {
+      "id": "city-without-phones",
+      "title": "A Day Without Notifications",
+      "level": "B1",
+      "genre": "Personal growth",
+      "summary": "An experiment with silence changes a busy day.",
+      "tags": ["focus", "habits", "technology", "digital detox"],
+      "text": "Leo had developed a strange habit. Every few minutes, he checked his phone, even when nothing important had happened. One Saturday, he decided to turn off every notification until sunset.\n\nAt first, the silence made him uncomfortable. He kept reaching for his pocket, expecting a message that never arrived. After lunch, however, he noticed details he usually ignored: the sound of rain, the smell of fresh bread, and the patience of people walking slowly through the city.\n\nBy evening, Leo had finished a novel and written three pages in his journal. He did not decide to abandon technology. Instead, he decided to use it with more intention."
+    }
+  ]
+}

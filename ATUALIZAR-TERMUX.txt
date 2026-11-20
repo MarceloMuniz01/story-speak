@@ -1,0 +1,10 @@
+StorySpeak v17
+
+1. Copie os arquivos novos por cima da versão anterior SEM apagar tts/.
+2. Atualize a dependência: python -m pip install -r requirements-tts.txt
+3. Gere tudo: python scripts/gerar_tudo.py
+4. Publique tts/ e os arquivos novos no GitHub Pages.
+5. No celular, abra Downloads, escolha a voz e toque em Baixar coleção.
+
+Se seus MP3 antigos existirem mas estiverem sem hash,
+use: python scripts/gerar_tudo.py --aproveitar-existentes

@@ -1,0 +1,32 @@
+{
+  "id": "technology",
+  "stories": [
+    {
+      "id": "first-robot",
+      "title": "My First Robot",
+      "level": "A2",
+      "genre": "Technology",
+      "summary": "A beginner builds a small machine with a surprising purpose.",
+      "tags": ["robot", "engineering", "learning"],
+      "text": "Olivia wanted to build a robot, but she had never written computer code. She watched a few lessons and bought a small motor, two wheels, and a simple controller.\n\nHer first robot moved forward and crashed into a chair. She changed the program, but it crashed again. After many attempts, Olivia added a sensor that could detect objects in front of it.\n\nThe next day, her robot moved around the room without touching the furniture. It was not fast or beautiful. Still, Olivia felt proud because she had solved a real problem. She started planning a second robot that could carry books."
+    },
+    {
+      "id": "the-last-bug",
+      "title": "The Last Bug Before Launch",
+      "level": "B1",
+      "genre": "Programming",
+      "summary": "A developer learns why small details matter.",
+      "tags": ["software", "programming", "startup", "debugging", "code"],
+      "text": "The team had spent six months building a new application. They were excited because their first customers would arrive the following morning. Everything seemed ready until a strange error appeared in the payment system.\n\nSam checked the database, read the logs, and tested the same request many times. The code looked correct, but one number was being rounded too early. A customer could lose a small amount of money on every purchase.\n\nSam fixed the calculation and added a test to prevent the problem from returning. The launch happened on schedule. The team celebrated, but Sam remembered a different lesson: reliable software depends on the details nobody notices."
+    },
+    {
+      "id": "message-from-europa",
+      "title": "A Message from Europa",
+      "level": "B2",
+      "genre": "Science fiction",
+      "summary": "A scientist receives a signal from an icy moon.",
+      "tags": ["space", "astronomy", "science", "future", "mystery"],
+      "text": "The research station above Europa had been silent for fourteen hours. Its communication system was damaged, and the crew was preparing to abandon an important experiment beneath the frozen surface.\n\nThen Dr. Reyes noticed a repeating pattern in the data. The instruments were recording faint vibrations from the ocean below the ice. At first, the team assumed the signal came from moving water. But the pattern changed whenever they transmitted a sound through the probe.\n\nNobody wanted to call it a conversation. The evidence was incomplete, and the equipment could still be malfunctioning. Yet when Reyes sent a simple sequence of three pulses, the ocean answered with exactly three of its own."
+    }
+  ]
+}

@@ -1,0 +1,2363 @@
+{
+  "version": 1,
+  "voices": {
+    "en-GB-SoniaNeural": {
+      "dir": "tts/sonia_en-gb",
+      "stories": {
+        "architecture-of-trust": {
+          "full": {
+            "path": "tts/sonia_en-gb/packs/ideas/architecture-of-trust/full.mp3",
+            "text": "When engineers design a complex system, they are not merely arranging components. They are also deciding which failures users will experience, which assumptions remain invisible, and how responsibility is distributed across the organization.\n\nConsider a financial platform that handles thousands of transactions every second. Its users rarely admire the elegance of its internal architecture. They care that balances remain accurate, payments are predictable, and mistakes can be corrected. Trust emerges from these ordinary expectations being satisfied repeatedly.\n\nA secure design, therefore, is not simply a collection of technical safeguards. It is an ongoing process of anticipating uncertainty, explaining limitations, and creating mechanisms that allow people to recover when something inevitably goes wrong."
+          },
+          "sentences": [
+            {
+              "path": "tts/sonia_en-gb/packs/ideas/architecture-of-trust/s0001.mp3",
+              "text": "When engineers design a complex system, they are not merely arranging components."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/ideas/architecture-of-trust/s0002.mp3",
+              "text": "They are also deciding which failures users will experience, which assumptions remain invisible, and how responsibility is distributed across the organization."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/ideas/architecture-of-trust/s0003.mp3",
+              "text": "Consider a financial platform that handles thousands of transactions every second."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/ideas/architecture-of-trust/s0004.mp3",
+              "text": "Its users rarely admire the elegance of its internal architecture."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/ideas/architecture-of-trust/s0005.mp3",
+              "text": "They care that balances remain accurate, payments are predictable, and mistakes can be corrected."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/ideas/architecture-of-trust/s0006.mp3",
+              "text": "Trust emerges from these ordinary expectations being satisfied repeatedly."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/ideas/architecture-of-trust/s0007.mp3",
+              "text": "A secure design, therefore, is not simply a collection of technical safeguards."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/ideas/architecture-of-trust/s0008.mp3",
+              "text": "It is an ongoing process of anticipating uncertainty, explaining limitations, and creating mechanisms that allow people to recover when something inevitably goes wrong."
+            }
+          ]
+        },
+        "bridge-of-ideas": {
+          "full": {
+            "path": "tts/sonia_en-gb/packs/ideas/bridge-of-ideas/full.mp3",
+            "text": "Two friends met every Thursday on a bridge overlooking the river. One believed that happiness came from freedom: the ability to choose where to go, what to study, and how to spend each day. The other argued that freedom mattered little without responsibility.\n\nTheir discussions rarely ended in agreement. Sometimes they debated for an hour before realizing that they were using the same word to mean different things.\n\nOne evening, a storm forced them to take shelter beneath the bridge. As the rain fell, they helped a stranger repair a damaged bicycle. Walking home, both noticed something unexpected. For a few minutes, neither had worried about winning an argument. They had simply done something useful together."
+          },
+          "sentences": [
+            {
+              "path": "tts/sonia_en-gb/packs/ideas/bridge-of-ideas/s0001.mp3",
+              "text": "Two friends met every Thursday on a bridge overlooking the river."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/ideas/bridge-of-ideas/s0002.mp3",
+              "text": "One believed that happiness came from freedom: the ability to choose where to go, what to study, and how to spend each day."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/ideas/bridge-of-ideas/s0003.mp3",
+              "text": "The other argued that freedom mattered little without responsibility."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/ideas/bridge-of-ideas/s0004.mp3",
+              "text": "Their discussions rarely ended in agreement."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/ideas/bridge-of-ideas/s0005.mp3",
+              "text": "Sometimes they debated for an hour before realizing that they were using the same word to mean different things."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/ideas/bridge-of-ideas/s0006.mp3",
+              "text": "One evening, a storm forced them to take shelter beneath the bridge."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/ideas/bridge-of-ideas/s0007.mp3",
+              "text": "As the rain fell, they helped a stranger repair a damaged bicycle."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/ideas/bridge-of-ideas/s0008.mp3",
+              "text": "Walking home, both noticed something unexpected."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/ideas/bridge-of-ideas/s0009.mp3",
+              "text": "For a few minutes, neither had worried about winning an argument."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/ideas/bridge-of-ideas/s0010.mp3",
+              "text": "They had simply done something useful together."
+            }
+          ]
+        },
+        "city-without-phones": {
+          "full": {
+            "path": "tts/sonia_en-gb/packs/everyday/city-without-phones/full.mp3",
+            "text": "Leo had developed a strange habit. Every few minutes, he checked his phone, even when nothing important had happened. One Saturday, he decided to turn off every notification until sunset.\n\nAt first, the silence made him uncomfortable. He kept reaching for his pocket, expecting a message that never arrived. After lunch, however, he noticed details he usually ignored: the sound of rain, the smell of fresh bread, and the patience of people walking slowly through the city.\n\nBy evening, Leo had finished a novel and written three pages in his journal. He did not decide to abandon technology. Instead, he decided to use it with more intention."
+          },
+          "sentences": [
+            {
+              "path": "tts/sonia_en-gb/packs/everyday/city-without-phones/s0001.mp3",
+              "text": "Leo had developed a strange habit."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/everyday/city-without-phones/s0002.mp3",
+              "text": "Every few minutes, he checked his phone, even when nothing important had happened."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/everyday/city-without-phones/s0003.mp3",
+              "text": "One Saturday, he decided to turn off every notification until sunset."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/everyday/city-without-phones/s0004.mp3",
+              "text": "At first, the silence made him uncomfortable."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/everyday/city-without-phones/s0005.mp3",
+              "text": "He kept reaching for his pocket, expecting a message that never arrived."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/everyday/city-without-phones/s0006.mp3",
+              "text": "After lunch, however, he noticed details he usually ignored: the sound of rain, the smell of fresh bread, and the patience of people walking slowly through the city."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/everyday/city-without-phones/s0007.mp3",
+              "text": "By evening, Leo had finished a novel and written three pages in his journal."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/everyday/city-without-phones/s0008.mp3",
+              "text": "He did not decide to abandon technology."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/everyday/city-without-phones/s0009.mp3",
+              "text": "Instead, he decided to use it with more intention."
+            }
+          ]
+        },
+        "first-robot": {
+          "full": {
+            "path": "tts/sonia_en-gb/packs/technology/first-robot/full.mp3",
+            "text": "Olivia wanted to build a robot, but she had never written computer code. She watched a few lessons and bought a small motor, two wheels, and a simple controller.\n\nHer first robot moved forward and crashed into a chair. She changed the program, but it crashed again. After many attempts, Olivia added a sensor that could detect objects in front of it.\n\nThe next day, her robot moved around the room without touching the furniture. It was not fast or beautiful. Still, Olivia felt proud because she had solved a real problem. She started planning a second robot that could carry books."
+          },
+          "sentences": [
+            {
+              "path": "tts/sonia_en-gb/packs/technology/first-robot/s0001.mp3",
+              "text": "Olivia wanted to build a robot, but she had never written computer code."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/technology/first-robot/s0002.mp3",
+              "text": "She watched a few lessons and bought a small motor, two wheels, and a simple controller."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/technology/first-robot/s0003.mp3",
+              "text": "Her first robot moved forward and crashed into a chair."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/technology/first-robot/s0004.mp3",
+              "text": "She changed the program, but it crashed again."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/technology/first-robot/s0005.mp3",
+              "text": "After many attempts, Olivia added a sensor that could detect objects in front of it."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/technology/first-robot/s0006.mp3",
+              "text": "The next day, her robot moved around the room without touching the furniture."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/technology/first-robot/s0007.mp3",
+              "text": "It was not fast or beautiful."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/technology/first-robot/s0008.mp3",
+              "text": "Still, Olivia felt proud because she had solved a real problem."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/technology/first-robot/s0009.mp3",
+              "text": "She started planning a second robot that could carry books."
+            }
+          ]
+        },
+        "message-from-europa": {
+          "full": {
+            "path": "tts/sonia_en-gb/packs/technology/message-from-europa/full.mp3",
+            "text": "The research station above Europa had been silent for fourteen hours. Its communication system was damaged, and the crew was preparing to abandon an important experiment beneath the frozen surface.\n\nThen Dr. Reyes noticed a repeating pattern in the data. The instruments were recording faint vibrations from the ocean below the ice. At first, the team assumed the signal came from moving water. But the pattern changed whenever they transmitted a sound through the probe.\n\nNobody wanted to call it a conversation. The evidence was incomplete, and the equipment could still be malfunctioning. Yet when Reyes sent a simple sequence of three pulses, the ocean answered with exactly three of its own."
+          },
+          "sentences": [
+            {
+              "path": "tts/sonia_en-gb/packs/technology/message-from-europa/s0001.mp3",
+              "text": "The research station above Europa had been silent for fourteen hours."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/technology/message-from-europa/s0002.mp3",
+              "text": "Its communication system was damaged, and the crew was preparing to abandon an important experiment beneath the frozen surface."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/technology/message-from-europa/s0003.mp3",
+              "text": "Then Dr. Reyes noticed a repeating pattern in the data."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/technology/message-from-europa/s0004.mp3",
+              "text": "The instruments were recording faint vibrations from the ocean below the ice."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/technology/message-from-europa/s0005.mp3",
+              "text": "At first, the team assumed the signal came from moving water."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/technology/message-from-europa/s0006.mp3",
+              "text": "But the pattern changed whenever they transmitted a sound through the probe."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/technology/message-from-europa/s0007.mp3",
+              "text": "Nobody wanted to call it a conversation."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/technology/message-from-europa/s0008.mp3",
+              "text": "The evidence was incomplete, and the equipment could still be malfunctioning."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/technology/message-from-europa/s0009.mp3",
+              "text": "Yet when Reyes sent a simple sequence of three pulses, the ocean answered with exactly three of its own."
+            }
+          ]
+        },
+        "midnight-library": {
+          "full": {
+            "path": "tts/sonia_en-gb/packs/mystery/midnight-library/full.mp3",
+            "text": "At midnight, the lights in the old library turned on by themselves. The caretaker had checked every room before closing, so he was certain that nobody remained inside.\n\nHe called Elena, a local journalist who loved unusual stories. Together, they entered the building and followed a quiet tapping sound toward the history section. A heavy book had fallen from the highest shelf. Inside its cover, they discovered a handwritten note with a date from fifty years earlier.\n\nThe note mentioned a hidden room beneath the library. Elena searched the floor and found a small metal handle. She pulled it carefully. Under the carpet, a wooden door began to open."
+          },
+          "sentences": [
+            {
+              "path": "tts/sonia_en-gb/packs/mystery/midnight-library/s0001.mp3",
+              "text": "At midnight, the lights in the old library turned on by themselves."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/mystery/midnight-library/s0002.mp3",
+              "text": "The caretaker had checked every room before closing, so he was certain that nobody remained inside."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/mystery/midnight-library/s0003.mp3",
+              "text": "He called Elena, a local journalist who loved unusual stories."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/mystery/midnight-library/s0004.mp3",
+              "text": "Together, they entered the building and followed a quiet tapping sound toward the history section."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/mystery/midnight-library/s0005.mp3",
+              "text": "A heavy book had fallen from the highest shelf."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/mystery/midnight-library/s0006.mp3",
+              "text": "Inside its cover, they discovered a handwritten note with a date from fifty years earlier."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/mystery/midnight-library/s0007.mp3",
+              "text": "The note mentioned a hidden room beneath the library."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/mystery/midnight-library/s0008.mp3",
+              "text": "Elena searched the floor and found a small metal handle."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/mystery/midnight-library/s0009.mp3",
+              "text": "She pulled it carefully."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/mystery/midnight-library/s0010.mp3",
+              "text": "Under the carpet, a wooden door began to open."
+            }
+          ]
+        },
+        "missing-key": {
+          "full": {
+            "path": "tts/sonia_en-gb/packs/mystery/missing-key/full.mp3",
+            "text": "Every evening, Mr. Brown placed a silver key on the wooden table beside his front door. The key opened a box that belonged to his grandfather.\n\nOne morning, the key was gone. The windows were closed, and nobody had visited the house. Mr. Brown searched the kitchen, the bedroom, and the garden. He found nothing.\n\nThen he noticed small marks on the table. They looked like the footprints of a bird. He walked outside and saw a black crow sitting on the roof. Something bright was shining near its nest.\n\nMr. Brown laughed. His mystery had wings."
+          },
+          "sentences": [
+            {
+              "path": "tts/sonia_en-gb/packs/mystery/missing-key/s0001.mp3",
+              "text": "Every evening, Mr. Brown placed a silver key on the wooden table beside his front door."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/mystery/missing-key/s0002.mp3",
+              "text": "The key opened a box that belonged to his grandfather."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/mystery/missing-key/s0003.mp3",
+              "text": "One morning, the key was gone."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/mystery/missing-key/s0004.mp3",
+              "text": "The windows were closed, and nobody had visited the house."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/mystery/missing-key/s0005.mp3",
+              "text": "Mr. Brown searched the kitchen, the bedroom, and the garden."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/mystery/missing-key/s0006.mp3",
+              "text": "He found nothing."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/mystery/missing-key/s0007.mp3",
+              "text": "Then he noticed small marks on the table."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/mystery/missing-key/s0008.mp3",
+              "text": "They looked like the footprints of a bird."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/mystery/missing-key/s0009.mp3",
+              "text": "He walked outside and saw a black crow sitting on the roof."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/mystery/missing-key/s0010.mp3",
+              "text": "Something bright was shining near its nest."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/mystery/missing-key/s0011.mp3",
+              "text": "Mr. Brown laughed."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/mystery/missing-key/s0012.mp3",
+              "text": "His mystery had wings."
+            }
+          ]
+        },
+        "morning-choice": {
+          "full": {
+            "path": "tts/sonia_en-gb/packs/everyday/morning-choice/full.mp3",
+            "text": "Daniel wakes up early on Monday. He usually drinks coffee at home, but today he walks to a small cafe near the park.\n\nAt the cafe, he sees a woman reading a book about space. Daniel likes astronomy, so he asks about the book. Her name is Maya. She tells him about a beautiful planet with blue clouds.\n\nThey talk for ten minutes. Before Daniel leaves, Maya recommends another book. His morning was simple, but it feels different. Tomorrow, he wants to visit the cafe again."
+          },
+          "sentences": [
+            {
+              "path": "tts/sonia_en-gb/packs/everyday/morning-choice/s0001.mp3",
+              "text": "Daniel wakes up early on Monday."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/everyday/morning-choice/s0002.mp3",
+              "text": "He usually drinks coffee at home, but today he walks to a small cafe near the park."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/everyday/morning-choice/s0003.mp3",
+              "text": "At the cafe, he sees a woman reading a book about space."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/everyday/morning-choice/s0004.mp3",
+              "text": "Daniel likes astronomy, so he asks about the book."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/everyday/morning-choice/s0005.mp3",
+              "text": "Her name is Maya."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/everyday/morning-choice/s0006.mp3",
+              "text": "She tells him about a beautiful planet with blue clouds."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/everyday/morning-choice/s0007.mp3",
+              "text": "They talk for ten minutes."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/everyday/morning-choice/s0008.mp3",
+              "text": "Before Daniel leaves, Maya recommends another book."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/everyday/morning-choice/s0009.mp3",
+              "text": "His morning was simple, but it feels different."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/everyday/morning-choice/s0010.mp3",
+              "text": "Tomorrow, he wants to visit the cafe again."
+            }
+          ]
+        },
+        "small-decisions": {
+          "full": {
+            "path": "tts/sonia_en-gb/packs/ideas/small-decisions/full.mp3",
+            "text": "People often imagine that personal change requires one dramatic decision. In reality, many improvements begin with actions so small that nobody else notices them.\n\nA person who reads five pages each evening may finish several books in a year. Someone who practices a language for ten minutes each morning gradually becomes more comfortable using it. These actions are not impressive on their own, but they create opportunities to practice consistently.\n\nOf course, habits do not guarantee success. Sometimes we need better strategies, feedback, or support from other people. Still, a modest routine can make progress easier because it reduces the number of decisions we must make every day."
+          },
+          "sentences": [
+            {
+              "path": "tts/sonia_en-gb/packs/ideas/small-decisions/s0001.mp3",
+              "text": "People often imagine that personal change requires one dramatic decision."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/ideas/small-decisions/s0002.mp3",
+              "text": "In reality, many improvements begin with actions so small that nobody else notices them."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/ideas/small-decisions/s0003.mp3",
+              "text": "A person who reads five pages each evening may finish several books in a year."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/ideas/small-decisions/s0004.mp3",
+              "text": "Someone who practices a language for ten minutes each morning gradually becomes more comfortable using it."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/ideas/small-decisions/s0005.mp3",
+              "text": "These actions are not impressive on their own, but they create opportunities to practice consistently."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/ideas/small-decisions/s0006.mp3",
+              "text": "Of course, habits do not guarantee success."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/ideas/small-decisions/s0007.mp3",
+              "text": "Sometimes we need better strategies, feedback, or support from other people."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/ideas/small-decisions/s0008.mp3",
+              "text": "Still, a modest routine can make progress easier because it reduces the number of decisions we must make every day."
+            }
+          ]
+        },
+        "the-empty-seat": {
+          "full": {
+            "path": "tts/sonia_en-gb/packs/mystery/the-empty-seat/full.mp3",
+            "text": "The flight was nearly empty, and the cabin lights had been dimmed for the night. Clara sat beside the window, trying to remember where she had seen the man across the aisle. His face seemed familiar, although she could not place it.\n\nWhen she returned from the restroom, his seat was empty. A flight attendant insisted that nobody had occupied it since departure. Clara pointed at the folded newspaper on the tray, but the attendant looked confused. The newspaper carried tomorrow's date.\n\nClara unfolded it and discovered a photograph of herself standing outside an airport she had never visited. The article described an event scheduled to happen in just six hours."
+          },
+          "sentences": [
+            {
+              "path": "tts/sonia_en-gb/packs/mystery/the-empty-seat/s0001.mp3",
+              "text": "The flight was nearly empty, and the cabin lights had been dimmed for the night."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/mystery/the-empty-seat/s0002.mp3",
+              "text": "Clara sat beside the window, trying to remember where she had seen the man across the aisle."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/mystery/the-empty-seat/s0003.mp3",
+              "text": "His face seemed familiar, although she could not place it."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/mystery/the-empty-seat/s0004.mp3",
+              "text": "When she returned from the restroom, his seat was empty."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/mystery/the-empty-seat/s0005.mp3",
+              "text": "A flight attendant insisted that nobody had occupied it since departure."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/mystery/the-empty-seat/s0006.mp3",
+              "text": "Clara pointed at the folded newspaper on the tray, but the attendant looked confused."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/mystery/the-empty-seat/s0007.mp3",
+              "text": "The newspaper carried tomorrow's date."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/mystery/the-empty-seat/s0008.mp3",
+              "text": "Clara unfolded it and discovered a photograph of herself standing outside an airport she had never visited."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/mystery/the-empty-seat/s0009.mp3",
+              "text": "The article described an event scheduled to happen in just six hours."
+            }
+          ]
+        },
+        "the-last-bug": {
+          "full": {
+            "path": "tts/sonia_en-gb/packs/technology/the-last-bug/full.mp3",
+            "text": "The team had spent six months building a new application. They were excited because their first customers would arrive the following morning. Everything seemed ready until a strange error appeared in the payment system.\n\nSam checked the database, read the logs, and tested the same request many times. The code looked correct, but one number was being rounded too early. A customer could lose a small amount of money on every purchase.\n\nSam fixed the calculation and added a test to prevent the problem from returning. The launch happened on schedule. The team celebrated, but Sam remembered a different lesson: reliable software depends on the details nobody notices."
+          },
+          "sentences": [
+            {
+              "path": "tts/sonia_en-gb/packs/technology/the-last-bug/s0001.mp3",
+              "text": "The team had spent six months building a new application."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/technology/the-last-bug/s0002.mp3",
+              "text": "They were excited because their first customers would arrive the following morning."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/technology/the-last-bug/s0003.mp3",
+              "text": "Everything seemed ready until a strange error appeared in the payment system."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/technology/the-last-bug/s0004.mp3",
+              "text": "Sam checked the database, read the logs, and tested the same request many times."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/technology/the-last-bug/s0005.mp3",
+              "text": "The code looked correct, but one number was being rounded too early."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/technology/the-last-bug/s0006.mp3",
+              "text": "A customer could lose a small amount of money on every purchase."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/technology/the-last-bug/s0007.mp3",
+              "text": "Sam fixed the calculation and added a test to prevent the problem from returning."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/technology/the-last-bug/s0008.mp3",
+              "text": "The launch happened on schedule."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/technology/the-last-bug/s0009.mp3",
+              "text": "The team celebrated, but Sam remembered a different lesson: reliable software depends on the details nobody notices."
+            }
+          ]
+        },
+        "train-to-coast": {
+          "full": {
+            "path": "tts/sonia_en-gb/packs/everyday/train-to-coast/full.mp3",
+            "text": "Nina bought a train ticket because she wanted to spend the weekend near the ocean. She packed a camera, a notebook, and one warm jacket.\n\nAt the station, a message appeared on the screen. Her train was delayed for two hours. Nina felt frustrated, but she decided to explore the neighborhood instead of waiting on a bench.\n\nShe found a small bookstore and started talking to its owner. He showed her a collection of old maps. One map described a hidden beach near her destination.\n\nWhen the train finally arrived, Nina was smiling. The delay had given her a new place to discover."
+          },
+          "sentences": [
+            {
+              "path": "tts/sonia_en-gb/packs/everyday/train-to-coast/s0001.mp3",
+              "text": "Nina bought a train ticket because she wanted to spend the weekend near the ocean."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/everyday/train-to-coast/s0002.mp3",
+              "text": "She packed a camera, a notebook, and one warm jacket."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/everyday/train-to-coast/s0003.mp3",
+              "text": "At the station, a message appeared on the screen."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/everyday/train-to-coast/s0004.mp3",
+              "text": "Her train was delayed for two hours."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/everyday/train-to-coast/s0005.mp3",
+              "text": "Nina felt frustrated, but she decided to explore the neighborhood instead of waiting on a bench."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/everyday/train-to-coast/s0006.mp3",
+              "text": "She found a small bookstore and started talking to its owner."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/everyday/train-to-coast/s0007.mp3",
+              "text": "He showed her a collection of old maps."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/everyday/train-to-coast/s0008.mp3",
+              "text": "One map described a hidden beach near her destination."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/everyday/train-to-coast/s0009.mp3",
+              "text": "When the train finally arrived, Nina was smiling."
+            },
+            {
+              "path": "tts/sonia_en-gb/packs/everyday/train-to-coast/s0010.mp3",
+              "text": "The delay had given her a new place to discover."
+            }
+          ]
+        }
+      },
+      "words": {
+        "a": "tts/sonia_en-gb/a.mp3",
+        "abandon": "tts/sonia_en-gb/abandon.mp3",
+        "ability": "tts/sonia_en-gb/ability.mp3",
+        "about": "tts/sonia_en-gb/about.mp3",
+        "above": "tts/sonia_en-gb/above.mp3",
+        "accurate": "tts/sonia_en-gb/accurate.mp3",
+        "across": "tts/sonia_en-gb/across.mp3",
+        "actions": "tts/sonia_en-gb/actions.mp3",
+        "added": "tts/sonia_en-gb/added.mp3",
+        "admire": "tts/sonia_en-gb/admire.mp3",
+        "after": "tts/sonia_en-gb/after.mp3",
+        "again": "tts/sonia_en-gb/again.mp3",
+        "agreement": "tts/sonia_en-gb/agreement.mp3",
+        "airport": "tts/sonia_en-gb/airport.mp3",
+        "aisle": "tts/sonia_en-gb/aisle.mp3",
+        "allow": "tts/sonia_en-gb/allow.mp3",
+        "also": "tts/sonia_en-gb/also.mp3",
+        "although": "tts/sonia_en-gb/although.mp3",
+        "amount": "tts/sonia_en-gb/amount.mp3",
+        "an": "tts/sonia_en-gb/an.mp3",
+        "and": "tts/sonia_en-gb/and.mp3",
+        "another": "tts/sonia_en-gb/another.mp3",
+        "answered": "tts/sonia_en-gb/answered.mp3",
+        "anticipating": "tts/sonia_en-gb/anticipating.mp3",
+        "appeared": "tts/sonia_en-gb/appeared.mp3",
+        "application": "tts/sonia_en-gb/application.mp3",
+        "architecture": "tts/sonia_en-gb/architecture.mp3",
+        "are": "tts/sonia_en-gb/are.mp3",
+        "argued": "tts/sonia_en-gb/argued.mp3",
+        "argument": "tts/sonia_en-gb/argument.mp3",
+        "around": "tts/sonia_en-gb/around.mp3",
+        "arranging": "tts/sonia_en-gb/arranging.mp3",
+        "arrive": "tts/sonia_en-gb/arrive.mp3",
+        "arrived": "tts/sonia_en-gb/arrived.mp3",
+        "article": "tts/sonia_en-gb/article.mp3",
+        "as": "tts/sonia_en-gb/as.mp3",
+        "asks": "tts/sonia_en-gb/asks.mp3",
+        "assumed": "tts/sonia_en-gb/assumed.mp3",
+        "assumptions": "tts/sonia_en-gb/assumptions.mp3",
+        "astronomy": "tts/sonia_en-gb/astronomy.mp3",
+        "at": "tts/sonia_en-gb/at.mp3",
+        "attempts": "tts/sonia_en-gb/attempts.mp3",
+        "attendant": "tts/sonia_en-gb/attendant.mp3",
+        "balances": "tts/sonia_en-gb/balances.mp3",
+        "be": "tts/sonia_en-gb/be.mp3",
+        "beach": "tts/sonia_en-gb/beach.mp3",
+        "beautiful": "tts/sonia_en-gb/beautiful.mp3",
+        "because": "tts/sonia_en-gb/because.mp3",
+        "becomes": "tts/sonia_en-gb/becomes.mp3",
+        "bedroom": "tts/sonia_en-gb/bedroom.mp3",
+        "been": "tts/sonia_en-gb/been.mp3",
+        "before": "tts/sonia_en-gb/before.mp3",
+        "began": "tts/sonia_en-gb/began.mp3",
+        "begin": "tts/sonia_en-gb/begin.mp3",
+        "being": "tts/sonia_en-gb/being.mp3",
+        "believed": "tts/sonia_en-gb/believed.mp3",
+        "belonged": "tts/sonia_en-gb/belonged.mp3",
+        "below": "tts/sonia_en-gb/below.mp3",
+        "bench": "tts/sonia_en-gb/bench.mp3",
+        "beneath": "tts/sonia_en-gb/beneath.mp3",
+        "beside": "tts/sonia_en-gb/beside.mp3",
+        "better": "tts/sonia_en-gb/better.mp3",
+        "bicycle": "tts/sonia_en-gb/bicycle.mp3",
+        "bird": "tts/sonia_en-gb/bird.mp3",
+        "black": "tts/sonia_en-gb/black.mp3",
+        "blue": "tts/sonia_en-gb/blue.mp3",
+        "book": "tts/sonia_en-gb/book.mp3",
+        "books": "tts/sonia_en-gb/books.mp3",
+        "bookstore": "tts/sonia_en-gb/bookstore.mp3",
+        "both": "tts/sonia_en-gb/both.mp3",
+        "bought": "tts/sonia_en-gb/bought.mp3",
+        "box": "tts/sonia_en-gb/box.mp3",
+        "bread": "tts/sonia_en-gb/bread.mp3",
+        "bridge": "tts/sonia_en-gb/bridge.mp3",
+        "bright": "tts/sonia_en-gb/bright.mp3",
+        "brown": "tts/sonia_en-gb/brown.mp3",
+        "build": "tts/sonia_en-gb/build.mp3",
+        "building": "tts/sonia_en-gb/building.mp3",
+        "but": "tts/sonia_en-gb/but.mp3",
+        "by": "tts/sonia_en-gb/by.mp3",
+        "cabin": "tts/sonia_en-gb/cabin.mp3",
+        "cafe": "tts/sonia_en-gb/cafe.mp3",
+        "calculation": "tts/sonia_en-gb/calculation.mp3",
+        "call": "tts/sonia_en-gb/call.mp3",
+        "called": "tts/sonia_en-gb/called.mp3",
+        "came": "tts/sonia_en-gb/came.mp3",
+        "camera": "tts/sonia_en-gb/camera.mp3",
+        "can": "tts/sonia_en-gb/can.mp3",
+        "care": "tts/sonia_en-gb/care.mp3",
+        "carefully": "tts/sonia_en-gb/carefully.mp3",
+        "caretaker": "tts/sonia_en-gb/caretaker.mp3",
+        "carpet": "tts/sonia_en-gb/carpet.mp3",
+        "carried": "tts/sonia_en-gb/carried.mp3",
+        "carry": "tts/sonia_en-gb/carry.mp3",
+        "celebrated": "tts/sonia_en-gb/celebrated.mp3",
+        "certain": "tts/sonia_en-gb/certain.mp3",
+        "chair": "tts/sonia_en-gb/chair.mp3",
+        "change": "tts/sonia_en-gb/change.mp3",
+        "changed": "tts/sonia_en-gb/changed.mp3",
+        "checked": "tts/sonia_en-gb/checked.mp3",
+        "choose": "tts/sonia_en-gb/choose.mp3",
+        "city": "tts/sonia_en-gb/city.mp3",
+        "clara": "tts/sonia_en-gb/clara.mp3",
+        "closed": "tts/sonia_en-gb/closed.mp3",
+        "closing": "tts/sonia_en-gb/closing.mp3",
+        "clouds": "tts/sonia_en-gb/clouds.mp3",
+        "code": "tts/sonia_en-gb/code.mp3",
+        "coffee": "tts/sonia_en-gb/coffee.mp3",
+        "collection": "tts/sonia_en-gb/collection.mp3",
+        "comfortable": "tts/sonia_en-gb/comfortable.mp3",
+        "communication": "tts/sonia_en-gb/communication.mp3",
+        "complex": "tts/sonia_en-gb/complex.mp3",
+        "components": "tts/sonia_en-gb/components.mp3",
+        "computer": "tts/sonia_en-gb/computer.mp3",
+        "confused": "tts/sonia_en-gb/confused.mp3",
+        "consider": "tts/sonia_en-gb/consider.mp3",
+        "consistently": "tts/sonia_en-gb/consistently.mp3",
+        "controller": "tts/sonia_en-gb/controller.mp3",
+        "conversation": "tts/sonia_en-gb/conversation.mp3",
+        "correct": "tts/sonia_en-gb/correct.mp3",
+        "corrected": "tts/sonia_en-gb/corrected.mp3",
+        "could": "tts/sonia_en-gb/could.mp3",
+        "course": "tts/sonia_en-gb/course.mp3",
+        "cover": "tts/sonia_en-gb/cover.mp3",
+        "crashed": "tts/sonia_en-gb/crashed.mp3",
+        "create": "tts/sonia_en-gb/create.mp3",
+        "creating": "tts/sonia_en-gb/creating.mp3",
+        "crew": "tts/sonia_en-gb/crew.mp3",
+        "crow": "tts/sonia_en-gb/crow.mp3",
+        "customer": "tts/sonia_en-gb/customer.mp3",
+        "customers": "tts/sonia_en-gb/customers.mp3",
+        "damaged": "tts/sonia_en-gb/damaged.mp3",
+        "daniel": "tts/sonia_en-gb/daniel.mp3",
+        "data": "tts/sonia_en-gb/data.mp3",
+        "database": "tts/sonia_en-gb/database.mp3",
+        "date": "tts/sonia_en-gb/date.mp3",
+        "day": "tts/sonia_en-gb/day.mp3",
+        "debated": "tts/sonia_en-gb/debated.mp3",
+        "decide": "tts/sonia_en-gb/decide.mp3",
+        "decided": "tts/sonia_en-gb/decided.mp3",
+        "deciding": "tts/sonia_en-gb/deciding.mp3",
+        "decision": "tts/sonia_en-gb/decision.mp3",
+        "decisions": "tts/sonia_en-gb/decisions.mp3",
+        "delay": "tts/sonia_en-gb/delay.mp3",
+        "delayed": "tts/sonia_en-gb/delayed.mp3",
+        "departure": "tts/sonia_en-gb/departure.mp3",
+        "depends": "tts/sonia_en-gb/depends.mp3",
+        "described": "tts/sonia_en-gb/described.mp3",
+        "design": "tts/sonia_en-gb/design.mp3",
+        "destination": "tts/sonia_en-gb/destination.mp3",
+        "details": "tts/sonia_en-gb/details.mp3",
+        "detect": "tts/sonia_en-gb/detect.mp3",
+        "developed": "tts/sonia_en-gb/developed.mp3",
+        "did": "tts/sonia_en-gb/did.mp3",
+        "different": "tts/sonia_en-gb/different.mp3",
+        "dimmed": "tts/sonia_en-gb/dimmed.mp3",
+        "discover": "tts/sonia_en-gb/discover.mp3",
+        "discovered": "tts/sonia_en-gb/discovered.mp3",
+        "discussions": "tts/sonia_en-gb/discussions.mp3",
+        "distributed": "tts/sonia_en-gb/distributed.mp3",
+        "do": "tts/sonia_en-gb/do.mp3",
+        "done": "tts/sonia_en-gb/done.mp3",
+        "door": "tts/sonia_en-gb/door.mp3",
+        "dr": "tts/sonia_en-gb/dr.mp3",
+        "dramatic": "tts/sonia_en-gb/dramatic.mp3",
+        "drinks": "tts/sonia_en-gb/drinks.mp3",
+        "each": "tts/sonia_en-gb/each.mp3",
+        "earlier": "tts/sonia_en-gb/earlier.mp3",
+        "early": "tts/sonia_en-gb/early.mp3",
+        "easier": "tts/sonia_en-gb/easier.mp3",
+        "elegance": "tts/sonia_en-gb/elegance.mp3",
+        "elena": "tts/sonia_en-gb/elena.mp3",
+        "else": "tts/sonia_en-gb/else.mp3",
+        "emerges": "tts/sonia_en-gb/emerges.mp3",
+        "empty": "tts/sonia_en-gb/empty.mp3",
+        "ended": "tts/sonia_en-gb/ended.mp3",
+        "engineers": "tts/sonia_en-gb/engineers.mp3",
+        "entered": "tts/sonia_en-gb/entered.mp3",
+        "equipment": "tts/sonia_en-gb/equipment.mp3",
+        "error": "tts/sonia_en-gb/error.mp3",
+        "europa": "tts/sonia_en-gb/europa.mp3",
+        "even": "tts/sonia_en-gb/even.mp3",
+        "evening": "tts/sonia_en-gb/evening.mp3",
+        "event": "tts/sonia_en-gb/event.mp3",
+        "every": "tts/sonia_en-gb/every.mp3",
+        "everything": "tts/sonia_en-gb/everything.mp3",
+        "evidence": "tts/sonia_en-gb/evidence.mp3",
+        "exactly": "tts/sonia_en-gb/exactly.mp3",
+        "excited": "tts/sonia_en-gb/excited.mp3",
+        "expectations": "tts/sonia_en-gb/expectations.mp3",
+        "expecting": "tts/sonia_en-gb/expecting.mp3",
+        "experience": "tts/sonia_en-gb/experience.mp3",
+        "experiment": "tts/sonia_en-gb/experiment.mp3",
+        "explaining": "tts/sonia_en-gb/explaining.mp3",
+        "explore": "tts/sonia_en-gb/explore.mp3",
+        "face": "tts/sonia_en-gb/face.mp3",
+        "failures": "tts/sonia_en-gb/failures.mp3",
+        "faint": "tts/sonia_en-gb/faint.mp3",
+        "fallen": "tts/sonia_en-gb/fallen.mp3",
+        "familiar": "tts/sonia_en-gb/familiar.mp3",
+        "fast": "tts/sonia_en-gb/fast.mp3",
+        "feedback": "tts/sonia_en-gb/feedback.mp3",
+        "feels": "tts/sonia_en-gb/feels.mp3",
+        "fell": "tts/sonia_en-gb/fell.mp3",
+        "felt": "tts/sonia_en-gb/felt.mp3",
+        "few": "tts/sonia_en-gb/few.mp3",
+        "fifty": "tts/sonia_en-gb/fifty.mp3",
+        "finally": "tts/sonia_en-gb/finally.mp3",
+        "financial": "tts/sonia_en-gb/financial.mp3",
+        "finish": "tts/sonia_en-gb/finish.mp3",
+        "finished": "tts/sonia_en-gb/finished.mp3",
+        "first": "tts/sonia_en-gb/first.mp3",
+        "five": "tts/sonia_en-gb/five.mp3",
+        "fixed": "tts/sonia_en-gb/fixed.mp3",
+        "flight": "tts/sonia_en-gb/flight.mp3",
+        "floor": "tts/sonia_en-gb/floor.mp3",
+        "folded": "tts/sonia_en-gb/folded.mp3",
+        "followed": "tts/sonia_en-gb/followed.mp3",
+        "following": "tts/sonia_en-gb/following.mp3",
+        "footprints": "tts/sonia_en-gb/footprints.mp3",
+        "for": "tts/sonia_en-gb/for.mp3",
+        "forced": "tts/sonia_en-gb/forced.mp3",
+        "forward": "tts/sonia_en-gb/forward.mp3",
+        "found": "tts/sonia_en-gb/found.mp3",
+        "fourteen": "tts/sonia_en-gb/fourteen.mp3",
+        "freedom": "tts/sonia_en-gb/freedom.mp3",
+        "fresh": "tts/sonia_en-gb/fresh.mp3",
+        "friends": "tts/sonia_en-gb/friends.mp3",
+        "from": "tts/sonia_en-gb/from.mp3",
+        "front": "tts/sonia_en-gb/front.mp3",
+        "frozen": "tts/sonia_en-gb/frozen.mp3",
+        "frustrated": "tts/sonia_en-gb/frustrated.mp3",
+        "furniture": "tts/sonia_en-gb/furniture.mp3",
+        "garden": "tts/sonia_en-gb/garden.mp3",
+        "given": "tts/sonia_en-gb/given.mp3",
+        "go": "tts/sonia_en-gb/go.mp3",
+        "goes": "tts/sonia_en-gb/goes.mp3",
+        "gone": "tts/sonia_en-gb/gone.mp3",
+        "gradually": "tts/sonia_en-gb/gradually.mp3",
+        "grandfather": "tts/sonia_en-gb/grandfather.mp3",
+        "guarantee": "tts/sonia_en-gb/guarantee.mp3",
+        "habit": "tts/sonia_en-gb/habit.mp3",
+        "habits": "tts/sonia_en-gb/habits.mp3",
+        "had": "tts/sonia_en-gb/had.mp3",
+        "handle": "tts/sonia_en-gb/handle.mp3",
+        "handles": "tts/sonia_en-gb/handles.mp3",
+        "handwritten": "tts/sonia_en-gb/handwritten.mp3",
+        "happen": "tts/sonia_en-gb/happen.mp3",
+        "happened": "tts/sonia_en-gb/happened.mp3",
+        "happiness": "tts/sonia_en-gb/happiness.mp3",
+        "he": "tts/sonia_en-gb/he.mp3",
+        "heavy": "tts/sonia_en-gb/heavy.mp3",
+        "helped": "tts/sonia_en-gb/helped.mp3",
+        "her": "tts/sonia_en-gb/her.mp3",
+        "herself": "tts/sonia_en-gb/herself.mp3",
+        "hidden": "tts/sonia_en-gb/hidden.mp3",
+        "highest": "tts/sonia_en-gb/highest.mp3",
+        "him": "tts/sonia_en-gb/him.mp3",
+        "his": "tts/sonia_en-gb/his.mp3",
+        "history": "tts/sonia_en-gb/history.mp3",
+        "home": "tts/sonia_en-gb/home.mp3",
+        "hour": "tts/sonia_en-gb/hour.mp3",
+        "hours": "tts/sonia_en-gb/hours.mp3",
+        "house": "tts/sonia_en-gb/house.mp3",
+        "how": "tts/sonia_en-gb/how.mp3",
+        "however": "tts/sonia_en-gb/however.mp3",
+        "ice": "tts/sonia_en-gb/ice.mp3",
+        "ignored": "tts/sonia_en-gb/ignored.mp3",
+        "imagine": "tts/sonia_en-gb/imagine.mp3",
+        "important": "tts/sonia_en-gb/important.mp3",
+        "impressive": "tts/sonia_en-gb/impressive.mp3",
+        "improvements": "tts/sonia_en-gb/improvements.mp3",
+        "in": "tts/sonia_en-gb/in.mp3",
+        "incomplete": "tts/sonia_en-gb/incomplete.mp3",
+        "inevitably": "tts/sonia_en-gb/inevitably.mp3",
+        "inside": "tts/sonia_en-gb/inside.mp3",
+        "insisted": "tts/sonia_en-gb/insisted.mp3",
+        "instead": "tts/sonia_en-gb/instead.mp3",
+        "instruments": "tts/sonia_en-gb/instruments.mp3",
+        "intention": "tts/sonia_en-gb/intention.mp3",
+        "internal": "tts/sonia_en-gb/internal.mp3",
+        "into": "tts/sonia_en-gb/into.mp3",
+        "invisible": "tts/sonia_en-gb/invisible.mp3",
+        "is": "tts/sonia_en-gb/is.mp3",
+        "it": "tts/sonia_en-gb/it.mp3",
+        "its": "tts/sonia_en-gb/its.mp3",
+        "jacket": "tts/sonia_en-gb/jacket.mp3",
+        "journal": "tts/sonia_en-gb/journal.mp3",
+        "journalist": "tts/sonia_en-gb/journalist.mp3",
+        "just": "tts/sonia_en-gb/just.mp3",
+        "kept": "tts/sonia_en-gb/kept.mp3",
+        "key": "tts/sonia_en-gb/key.mp3",
+        "kitchen": "tts/sonia_en-gb/kitchen.mp3",
+        "language": "tts/sonia_en-gb/language.mp3",
+        "laughed": "tts/sonia_en-gb/laughed.mp3",
+        "launch": "tts/sonia_en-gb/launch.mp3",
+        "leaves": "tts/sonia_en-gb/leaves.mp3",
+        "leo": "tts/sonia_en-gb/leo.mp3",
+        "lesson": "tts/sonia_en-gb/lesson.mp3",
+        "lessons": "tts/sonia_en-gb/lessons.mp3",
+        "library": "tts/sonia_en-gb/library.mp3",
+        "lights": "tts/sonia_en-gb/lights.mp3",
+        "like": "tts/sonia_en-gb/like.mp3",
+        "likes": "tts/sonia_en-gb/likes.mp3",
+        "limitations": "tts/sonia_en-gb/limitations.mp3",
+        "little": "tts/sonia_en-gb/little.mp3",
+        "local": "tts/sonia_en-gb/local.mp3",
+        "logs": "tts/sonia_en-gb/logs.mp3",
+        "looked": "tts/sonia_en-gb/looked.mp3",
+        "lose": "tts/sonia_en-gb/lose.mp3",
+        "loved": "tts/sonia_en-gb/loved.mp3",
+        "lunch": "tts/sonia_en-gb/lunch.mp3",
+        "made": "tts/sonia_en-gb/made.mp3",
+        "make": "tts/sonia_en-gb/make.mp3",
+        "malfunctioning": "tts/sonia_en-gb/malfunctioning.mp3",
+        "man": "tts/sonia_en-gb/man.mp3",
+        "many": "tts/sonia_en-gb/many.mp3",
+        "map": "tts/sonia_en-gb/map.mp3",
+        "maps": "tts/sonia_en-gb/maps.mp3",
+        "marks": "tts/sonia_en-gb/marks.mp3",
+        "mattered": "tts/sonia_en-gb/mattered.mp3",
+        "may": "tts/sonia_en-gb/may.mp3",
+        "maya": "tts/sonia_en-gb/maya.mp3",
+        "mean": "tts/sonia_en-gb/mean.mp3",
+        "mechanisms": "tts/sonia_en-gb/mechanisms.mp3",
+        "mentioned": "tts/sonia_en-gb/mentioned.mp3",
+        "merely": "tts/sonia_en-gb/merely.mp3",
+        "message": "tts/sonia_en-gb/message.mp3",
+        "met": "tts/sonia_en-gb/met.mp3",
+        "metal": "tts/sonia_en-gb/metal.mp3",
+        "midnight": "tts/sonia_en-gb/midnight.mp3",
+        "minutes": "tts/sonia_en-gb/minutes.mp3",
+        "mistakes": "tts/sonia_en-gb/mistakes.mp3",
+        "modest": "tts/sonia_en-gb/modest.mp3",
+        "monday": "tts/sonia_en-gb/monday.mp3",
+        "money": "tts/sonia_en-gb/money.mp3",
+        "months": "tts/sonia_en-gb/months.mp3",
+        "more": "tts/sonia_en-gb/more.mp3",
+        "morning": "tts/sonia_en-gb/morning.mp3",
+        "motor": "tts/sonia_en-gb/motor.mp3",
+        "moved": "tts/sonia_en-gb/moved.mp3",
+        "moving": "tts/sonia_en-gb/moving.mp3",
+        "mr": "tts/sonia_en-gb/mr.mp3",
+        "must": "tts/sonia_en-gb/must.mp3",
+        "mystery": "tts/sonia_en-gb/mystery.mp3",
+        "name": "tts/sonia_en-gb/name.mp3",
+        "near": "tts/sonia_en-gb/near.mp3",
+        "nearly": "tts/sonia_en-gb/nearly.mp3",
+        "need": "tts/sonia_en-gb/need.mp3",
+        "neighborhood": "tts/sonia_en-gb/neighborhood.mp3",
+        "neither": "tts/sonia_en-gb/neither.mp3",
+        "nest": "tts/sonia_en-gb/nest.mp3",
+        "never": "tts/sonia_en-gb/never.mp3",
+        "new": "tts/sonia_en-gb/new.mp3",
+        "newspaper": "tts/sonia_en-gb/newspaper.mp3",
+        "next": "tts/sonia_en-gb/next.mp3",
+        "night": "tts/sonia_en-gb/night.mp3",
+        "nina": "tts/sonia_en-gb/nina.mp3",
+        "nobody": "tts/sonia_en-gb/nobody.mp3",
+        "not": "tts/sonia_en-gb/not.mp3",
+        "note": "tts/sonia_en-gb/note.mp3",
+        "notebook": "tts/sonia_en-gb/notebook.mp3",
+        "nothing": "tts/sonia_en-gb/nothing.mp3",
+        "noticed": "tts/sonia_en-gb/noticed.mp3",
+        "notices": "tts/sonia_en-gb/notices.mp3",
+        "notification": "tts/sonia_en-gb/notification.mp3",
+        "novel": "tts/sonia_en-gb/novel.mp3",
+        "number": "tts/sonia_en-gb/number.mp3",
+        "objects": "tts/sonia_en-gb/objects.mp3",
+        "occupied": "tts/sonia_en-gb/occupied.mp3",
+        "ocean": "tts/sonia_en-gb/ocean.mp3",
+        "of": "tts/sonia_en-gb/of.mp3",
+        "off": "tts/sonia_en-gb/off.mp3",
+        "often": "tts/sonia_en-gb/often.mp3",
+        "old": "tts/sonia_en-gb/old.mp3",
+        "olivia": "tts/sonia_en-gb/olivia.mp3",
+        "on": "tts/sonia_en-gb/on.mp3",
+        "one": "tts/sonia_en-gb/one.mp3",
+        "ongoing": "tts/sonia_en-gb/ongoing.mp3",
+        "open": "tts/sonia_en-gb/open.mp3",
+        "opened": "tts/sonia_en-gb/opened.mp3",
+        "opportunities": "tts/sonia_en-gb/opportunities.mp3",
+        "or": "tts/sonia_en-gb/or.mp3",
+        "ordinary": "tts/sonia_en-gb/ordinary.mp3",
+        "organization": "tts/sonia_en-gb/organization.mp3",
+        "other": "tts/sonia_en-gb/other.mp3",
+        "outside": "tts/sonia_en-gb/outside.mp3",
+        "overlooking": "tts/sonia_en-gb/overlooking.mp3",
+        "own": "tts/sonia_en-gb/own.mp3",
+        "owner": "tts/sonia_en-gb/owner.mp3",
+        "packed": "tts/sonia_en-gb/packed.mp3",
+        "pages": "tts/sonia_en-gb/pages.mp3",
+        "park": "tts/sonia_en-gb/park.mp3",
+        "patience": "tts/sonia_en-gb/patience.mp3",
+        "pattern": "tts/sonia_en-gb/pattern.mp3",
+        "payment": "tts/sonia_en-gb/payment.mp3",
+        "payments": "tts/sonia_en-gb/payments.mp3",
+        "people": "tts/sonia_en-gb/people.mp3",
+        "person": "tts/sonia_en-gb/person.mp3",
+        "personal": "tts/sonia_en-gb/personal.mp3",
+        "phone": "tts/sonia_en-gb/phone.mp3",
+        "photograph": "tts/sonia_en-gb/photograph.mp3",
+        "place": "tts/sonia_en-gb/place.mp3",
+        "placed": "tts/sonia_en-gb/placed.mp3",
+        "planet": "tts/sonia_en-gb/planet.mp3",
+        "planning": "tts/sonia_en-gb/planning.mp3",
+        "platform": "tts/sonia_en-gb/platform.mp3",
+        "pocket": "tts/sonia_en-gb/pocket.mp3",
+        "pointed": "tts/sonia_en-gb/pointed.mp3",
+        "practice": "tts/sonia_en-gb/practice.mp3",
+        "practices": "tts/sonia_en-gb/practices.mp3",
+        "predictable": "tts/sonia_en-gb/predictable.mp3",
+        "preparing": "tts/sonia_en-gb/preparing.mp3",
+        "prevent": "tts/sonia_en-gb/prevent.mp3",
+        "probe": "tts/sonia_en-gb/probe.mp3",
+        "problem": "tts/sonia_en-gb/problem.mp3",
+        "process": "tts/sonia_en-gb/process.mp3",
+        "program": "tts/sonia_en-gb/program.mp3",
+        "progress": "tts/sonia_en-gb/progress.mp3",
+        "proud": "tts/sonia_en-gb/proud.mp3",
+        "pulled": "tts/sonia_en-gb/pulled.mp3",
+        "pulses": "tts/sonia_en-gb/pulses.mp3",
+        "purchase": "tts/sonia_en-gb/purchase.mp3",
+        "quiet": "tts/sonia_en-gb/quiet.mp3",
+        "rain": "tts/sonia_en-gb/rain.mp3",
+        "rarely": "tts/sonia_en-gb/rarely.mp3",
+        "reaching": "tts/sonia_en-gb/reaching.mp3",
+        "read": "tts/sonia_en-gb/read.mp3",
+        "reading": "tts/sonia_en-gb/reading.mp3",
+        "reads": "tts/sonia_en-gb/reads.mp3",
+        "ready": "tts/sonia_en-gb/ready.mp3",
+        "real": "tts/sonia_en-gb/real.mp3",
+        "reality": "tts/sonia_en-gb/reality.mp3",
+        "realizing": "tts/sonia_en-gb/realizing.mp3",
+        "recommends": "tts/sonia_en-gb/recommends.mp3",
+        "recording": "tts/sonia_en-gb/recording.mp3",
+        "recover": "tts/sonia_en-gb/recover.mp3",
+        "reduces": "tts/sonia_en-gb/reduces.mp3",
+        "reliable": "tts/sonia_en-gb/reliable.mp3",
+        "remain": "tts/sonia_en-gb/remain.mp3",
+        "remained": "tts/sonia_en-gb/remained.mp3",
+        "remember": "tts/sonia_en-gb/remember.mp3",
+        "remembered": "tts/sonia_en-gb/remembered.mp3",
+        "repair": "tts/sonia_en-gb/repair.mp3",
+        "repeatedly": "tts/sonia_en-gb/repeatedly.mp3",
+        "repeating": "tts/sonia_en-gb/repeating.mp3",
+        "request": "tts/sonia_en-gb/request.mp3",
+        "requires": "tts/sonia_en-gb/requires.mp3",
+        "research": "tts/sonia_en-gb/research.mp3",
+        "responsibility": "tts/sonia_en-gb/responsibility.mp3",
+        "restroom": "tts/sonia_en-gb/restroom.mp3",
+        "returned": "tts/sonia_en-gb/returned.mp3",
+        "returning": "tts/sonia_en-gb/returning.mp3",
+        "reyes": "tts/sonia_en-gb/reyes.mp3",
+        "river": "tts/sonia_en-gb/river.mp3",
+        "robot": "tts/sonia_en-gb/robot.mp3",
+        "roof": "tts/sonia_en-gb/roof.mp3",
+        "room": "tts/sonia_en-gb/room.mp3",
+        "rounded": "tts/sonia_en-gb/rounded.mp3",
+        "routine": "tts/sonia_en-gb/routine.mp3",
+        "safeguards": "tts/sonia_en-gb/safeguards.mp3",
+        "sam": "tts/sonia_en-gb/sam.mp3",
+        "same": "tts/sonia_en-gb/same.mp3",
+        "sat": "tts/sonia_en-gb/sat.mp3",
+        "satisfied": "tts/sonia_en-gb/satisfied.mp3",
+        "saturday": "tts/sonia_en-gb/saturday.mp3",
+        "saw": "tts/sonia_en-gb/saw.mp3",
+        "schedule": "tts/sonia_en-gb/schedule.mp3",
+        "scheduled": "tts/sonia_en-gb/scheduled.mp3",
+        "screen": "tts/sonia_en-gb/screen.mp3",
+        "searched": "tts/sonia_en-gb/searched.mp3",
+        "seat": "tts/sonia_en-gb/seat.mp3",
+        "second": "tts/sonia_en-gb/second.mp3",
+        "section": "tts/sonia_en-gb/section.mp3",
+        "secure": "tts/sonia_en-gb/secure.mp3",
+        "seemed": "tts/sonia_en-gb/seemed.mp3",
+        "seen": "tts/sonia_en-gb/seen.mp3",
+        "sees": "tts/sonia_en-gb/sees.mp3",
+        "sensor": "tts/sonia_en-gb/sensor.mp3",
+        "sent": "tts/sonia_en-gb/sent.mp3",
+        "sequence": "tts/sonia_en-gb/sequence.mp3",
+        "several": "tts/sonia_en-gb/several.mp3",
+        "she": "tts/sonia_en-gb/she.mp3",
+        "shelf": "tts/sonia_en-gb/shelf.mp3",
+        "shelter": "tts/sonia_en-gb/shelter.mp3",
+        "shining": "tts/sonia_en-gb/shining.mp3",
+        "showed": "tts/sonia_en-gb/showed.mp3",
+        "signal": "tts/sonia_en-gb/signal.mp3",
+        "silence": "tts/sonia_en-gb/silence.mp3",
+        "silent": "tts/sonia_en-gb/silent.mp3",
+        "silver": "tts/sonia_en-gb/silver.mp3",
+        "simple": "tts/sonia_en-gb/simple.mp3",
+        "simply": "tts/sonia_en-gb/simply.mp3",
+        "since": "tts/sonia_en-gb/since.mp3",
+        "sitting": "tts/sonia_en-gb/sitting.mp3",
+        "six": "tts/sonia_en-gb/six.mp3",
+        "slowly": "tts/sonia_en-gb/slowly.mp3",
+        "small": "tts/sonia_en-gb/small.mp3",
+        "smell": "tts/sonia_en-gb/smell.mp3",
+        "smiling": "tts/sonia_en-gb/smiling.mp3",
+        "so": "tts/sonia_en-gb/so.mp3",
+        "software": "tts/sonia_en-gb/software.mp3",
+        "solved": "tts/sonia_en-gb/solved.mp3",
+        "someone": "tts/sonia_en-gb/someone.mp3",
+        "something": "tts/sonia_en-gb/something.mp3",
+        "sometimes": "tts/sonia_en-gb/sometimes.mp3",
+        "sound": "tts/sonia_en-gb/sound.mp3",
+        "space": "tts/sonia_en-gb/space.mp3",
+        "spend": "tts/sonia_en-gb/spend.mp3",
+        "spent": "tts/sonia_en-gb/spent.mp3",
+        "standing": "tts/sonia_en-gb/standing.mp3",
+        "started": "tts/sonia_en-gb/started.mp3",
+        "station": "tts/sonia_en-gb/station.mp3",
+        "still": "tts/sonia_en-gb/still.mp3",
+        "stories": "tts/sonia_en-gb/stories.mp3",
+        "storm": "tts/sonia_en-gb/storm.mp3",
+        "strange": "tts/sonia_en-gb/strange.mp3",
+        "stranger": "tts/sonia_en-gb/stranger.mp3",
+        "strategies": "tts/sonia_en-gb/strategies.mp3",
+        "study": "tts/sonia_en-gb/study.mp3",
+        "success": "tts/sonia_en-gb/success.mp3",
+        "sunset": "tts/sonia_en-gb/sunset.mp3",
+        "support": "tts/sonia_en-gb/support.mp3",
+        "surface": "tts/sonia_en-gb/surface.mp3",
+        "system": "tts/sonia_en-gb/system.mp3",
+        "table": "tts/sonia_en-gb/table.mp3",
+        "take": "tts/sonia_en-gb/take.mp3",
+        "talk": "tts/sonia_en-gb/talk.mp3",
+        "talking": "tts/sonia_en-gb/talking.mp3",
+        "tapping": "tts/sonia_en-gb/tapping.mp3",
+        "team": "tts/sonia_en-gb/team.mp3",
+        "technical": "tts/sonia_en-gb/technical.mp3",
+        "technology": "tts/sonia_en-gb/technology.mp3",
+        "tells": "tts/sonia_en-gb/tells.mp3",
+        "ten": "tts/sonia_en-gb/ten.mp3",
+        "test": "tts/sonia_en-gb/test.mp3",
+        "tested": "tts/sonia_en-gb/tested.mp3",
+        "that": "tts/sonia_en-gb/that.mp3",
+        "the": "tts/sonia_en-gb/the.mp3",
+        "their": "tts/sonia_en-gb/their.mp3",
+        "them": "tts/sonia_en-gb/them.mp3",
+        "themselves": "tts/sonia_en-gb/themselves.mp3",
+        "then": "tts/sonia_en-gb/then.mp3",
+        "therefore": "tts/sonia_en-gb/therefore.mp3",
+        "these": "tts/sonia_en-gb/these.mp3",
+        "they": "tts/sonia_en-gb/they.mp3",
+        "things": "tts/sonia_en-gb/things.mp3",
+        "thousands": "tts/sonia_en-gb/thousands.mp3",
+        "three": "tts/sonia_en-gb/three.mp3",
+        "through": "tts/sonia_en-gb/through.mp3",
+        "thursday": "tts/sonia_en-gb/thursday.mp3",
+        "ticket": "tts/sonia_en-gb/ticket.mp3",
+        "times": "tts/sonia_en-gb/times.mp3",
+        "to": "tts/sonia_en-gb/to.mp3",
+        "today": "tts/sonia_en-gb/today.mp3",
+        "together": "tts/sonia_en-gb/together.mp3",
+        "tomorrow": "tts/sonia_en-gb/tomorrow.mp3",
+        "tomorrow's": "tts/sonia_en-gb/tomorrow's.mp3",
+        "too": "tts/sonia_en-gb/too.mp3",
+        "touching": "tts/sonia_en-gb/touching.mp3",
+        "toward": "tts/sonia_en-gb/toward.mp3",
+        "train": "tts/sonia_en-gb/train.mp3",
+        "transactions": "tts/sonia_en-gb/transactions.mp3",
+        "transmitted": "tts/sonia_en-gb/transmitted.mp3",
+        "tray": "tts/sonia_en-gb/tray.mp3",
+        "trust": "tts/sonia_en-gb/trust.mp3",
+        "trying": "tts/sonia_en-gb/trying.mp3",
+        "turn": "tts/sonia_en-gb/turn.mp3",
+        "turned": "tts/sonia_en-gb/turned.mp3",
+        "two": "tts/sonia_en-gb/two.mp3",
+        "uncertainty": "tts/sonia_en-gb/uncertainty.mp3",
+        "uncomfortable": "tts/sonia_en-gb/uncomfortable.mp3",
+        "under": "tts/sonia_en-gb/under.mp3",
+        "unexpected": "tts/sonia_en-gb/unexpected.mp3",
+        "unfolded": "tts/sonia_en-gb/unfolded.mp3",
+        "until": "tts/sonia_en-gb/until.mp3",
+        "unusual": "tts/sonia_en-gb/unusual.mp3",
+        "up": "tts/sonia_en-gb/up.mp3",
+        "use": "tts/sonia_en-gb/use.mp3",
+        "useful": "tts/sonia_en-gb/useful.mp3",
+        "users": "tts/sonia_en-gb/users.mp3",
+        "using": "tts/sonia_en-gb/using.mp3",
+        "usually": "tts/sonia_en-gb/usually.mp3",
+        "vibrations": "tts/sonia_en-gb/vibrations.mp3",
+        "visit": "tts/sonia_en-gb/visit.mp3",
+        "visited": "tts/sonia_en-gb/visited.mp3",
+        "waiting": "tts/sonia_en-gb/waiting.mp3",
+        "wakes": "tts/sonia_en-gb/wakes.mp3",
+        "walked": "tts/sonia_en-gb/walked.mp3",
+        "walking": "tts/sonia_en-gb/walking.mp3",
+        "walks": "tts/sonia_en-gb/walks.mp3",
+        "wanted": "tts/sonia_en-gb/wanted.mp3",
+        "wants": "tts/sonia_en-gb/wants.mp3",
+        "warm": "tts/sonia_en-gb/warm.mp3",
+        "was": "tts/sonia_en-gb/was.mp3",
+        "watched": "tts/sonia_en-gb/watched.mp3",
+        "water": "tts/sonia_en-gb/water.mp3",
+        "we": "tts/sonia_en-gb/we.mp3",
+        "weekend": "tts/sonia_en-gb/weekend.mp3",
+        "were": "tts/sonia_en-gb/were.mp3",
+        "what": "tts/sonia_en-gb/what.mp3",
+        "wheels": "tts/sonia_en-gb/wheels.mp3",
+        "when": "tts/sonia_en-gb/when.mp3",
+        "whenever": "tts/sonia_en-gb/whenever.mp3",
+        "where": "tts/sonia_en-gb/where.mp3",
+        "which": "tts/sonia_en-gb/which.mp3",
+        "who": "tts/sonia_en-gb/who.mp3",
+        "will": "tts/sonia_en-gb/will.mp3",
+        "window": "tts/sonia_en-gb/window.mp3",
+        "windows": "tts/sonia_en-gb/windows.mp3",
+        "wings": "tts/sonia_en-gb/wings.mp3",
+        "winning": "tts/sonia_en-gb/winning.mp3",
+        "with": "tts/sonia_en-gb/with.mp3",
+        "without": "tts/sonia_en-gb/without.mp3",
+        "woman": "tts/sonia_en-gb/woman.mp3",
+        "wooden": "tts/sonia_en-gb/wooden.mp3",
+        "word": "tts/sonia_en-gb/word.mp3",
+        "worried": "tts/sonia_en-gb/worried.mp3",
+        "would": "tts/sonia_en-gb/would.mp3",
+        "written": "tts/sonia_en-gb/written.mp3",
+        "wrong": "tts/sonia_en-gb/wrong.mp3",
+        "year": "tts/sonia_en-gb/year.mp3",
+        "years": "tts/sonia_en-gb/years.mp3",
+        "yet": "tts/sonia_en-gb/yet.mp3"
+      }
+    },
+    "en-US-AndrewMultilingualNeural": {
+      "dir": "tts/andrew_en-us",
+      "stories": {
+        "architecture-of-trust": {
+          "full": {
+            "path": "tts/andrew_en-us/packs/ideas/architecture-of-trust/full.mp3",
+            "text": "When engineers design a complex system, they are not merely arranging components. They are also deciding which failures users will experience, which assumptions remain invisible, and how responsibility is distributed across the organization.\n\nConsider a financial platform that handles thousands of transactions every second. Its users rarely admire the elegance of its internal architecture. They care that balances remain accurate, payments are predictable, and mistakes can be corrected. Trust emerges from these ordinary expectations being satisfied repeatedly.\n\nA secure design, therefore, is not simply a collection of technical safeguards. It is an ongoing process of anticipating uncertainty, explaining limitations, and creating mechanisms that allow people to recover when something inevitably goes wrong."
+          },
+          "sentences": [
+            {
+              "path": "tts/andrew_en-us/packs/ideas/architecture-of-trust/s0001.mp3",
+              "text": "When engineers design a complex system, they are not merely arranging components."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/ideas/architecture-of-trust/s0002.mp3",
+              "text": "They are also deciding which failures users will experience, which assumptions remain invisible, and how responsibility is distributed across the organization."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/ideas/architecture-of-trust/s0003.mp3",
+              "text": "Consider a financial platform that handles thousands of transactions every second."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/ideas/architecture-of-trust/s0004.mp3",
+              "text": "Its users rarely admire the elegance of its internal architecture."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/ideas/architecture-of-trust/s0005.mp3",
+              "text": "They care that balances remain accurate, payments are predictable, and mistakes can be corrected."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/ideas/architecture-of-trust/s0006.mp3",
+              "text": "Trust emerges from these ordinary expectations being satisfied repeatedly."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/ideas/architecture-of-trust/s0007.mp3",
+              "text": "A secure design, therefore, is not simply a collection of technical safeguards."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/ideas/architecture-of-trust/s0008.mp3",
+              "text": "It is an ongoing process of anticipating uncertainty, explaining limitations, and creating mechanisms that allow people to recover when something inevitably goes wrong."
+            }
+          ]
+        },
+        "bridge-of-ideas": {
+          "full": {
+            "path": "tts/andrew_en-us/packs/ideas/bridge-of-ideas/full.mp3",
+            "text": "Two friends met every Thursday on a bridge overlooking the river. One believed that happiness came from freedom: the ability to choose where to go, what to study, and how to spend each day. The other argued that freedom mattered little without responsibility.\n\nTheir discussions rarely ended in agreement. Sometimes they debated for an hour before realizing that they were using the same word to mean different things.\n\nOne evening, a storm forced them to take shelter beneath the bridge. As the rain fell, they helped a stranger repair a damaged bicycle. Walking home, both noticed something unexpected. For a few minutes, neither had worried about winning an argument. They had simply done something useful together."
+          },
+          "sentences": [
+            {
+              "path": "tts/andrew_en-us/packs/ideas/bridge-of-ideas/s0001.mp3",
+              "text": "Two friends met every Thursday on a bridge overlooking the river."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/ideas/bridge-of-ideas/s0002.mp3",
+              "text": "One believed that happiness came from freedom: the ability to choose where to go, what to study, and how to spend each day."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/ideas/bridge-of-ideas/s0003.mp3",
+              "text": "The other argued that freedom mattered little without responsibility."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/ideas/bridge-of-ideas/s0004.mp3",
+              "text": "Their discussions rarely ended in agreement."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/ideas/bridge-of-ideas/s0005.mp3",
+              "text": "Sometimes they debated for an hour before realizing that they were using the same word to mean different things."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/ideas/bridge-of-ideas/s0006.mp3",
+              "text": "One evening, a storm forced them to take shelter beneath the bridge."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/ideas/bridge-of-ideas/s0007.mp3",
+              "text": "As the rain fell, they helped a stranger repair a damaged bicycle."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/ideas/bridge-of-ideas/s0008.mp3",
+              "text": "Walking home, both noticed something unexpected."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/ideas/bridge-of-ideas/s0009.mp3",
+              "text": "For a few minutes, neither had worried about winning an argument."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/ideas/bridge-of-ideas/s0010.mp3",
+              "text": "They had simply done something useful together."
+            }
+          ]
+        },
+        "city-without-phones": {
+          "full": {
+            "path": "tts/andrew_en-us/packs/everyday/city-without-phones/full.mp3",
+            "text": "Leo had developed a strange habit. Every few minutes, he checked his phone, even when nothing important had happened. One Saturday, he decided to turn off every notification until sunset.\n\nAt first, the silence made him uncomfortable. He kept reaching for his pocket, expecting a message that never arrived. After lunch, however, he noticed details he usually ignored: the sound of rain, the smell of fresh bread, and the patience of people walking slowly through the city.\n\nBy evening, Leo had finished a novel and written three pages in his journal. He did not decide to abandon technology. Instead, he decided to use it with more intention."
+          },
+          "sentences": [
+            {
+              "path": "tts/andrew_en-us/packs/everyday/city-without-phones/s0001.mp3",
+              "text": "Leo had developed a strange habit."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/everyday/city-without-phones/s0002.mp3",
+              "text": "Every few minutes, he checked his phone, even when nothing important had happened."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/everyday/city-without-phones/s0003.mp3",
+              "text": "One Saturday, he decided to turn off every notification until sunset."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/everyday/city-without-phones/s0004.mp3",
+              "text": "At first, the silence made him uncomfortable."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/everyday/city-without-phones/s0005.mp3",
+              "text": "He kept reaching for his pocket, expecting a message that never arrived."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/everyday/city-without-phones/s0006.mp3",
+              "text": "After lunch, however, he noticed details he usually ignored: the sound of rain, the smell of fresh bread, and the patience of people walking slowly through the city."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/everyday/city-without-phones/s0007.mp3",
+              "text": "By evening, Leo had finished a novel and written three pages in his journal."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/everyday/city-without-phones/s0008.mp3",
+              "text": "He did not decide to abandon technology."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/everyday/city-without-phones/s0009.mp3",
+              "text": "Instead, he decided to use it with more intention."
+            }
+          ]
+        },
+        "first-robot": {
+          "full": {
+            "path": "tts/andrew_en-us/packs/technology/first-robot/full.mp3",
+            "text": "Olivia wanted to build a robot, but she had never written computer code. She watched a few lessons and bought a small motor, two wheels, and a simple controller.\n\nHer first robot moved forward and crashed into a chair. She changed the program, but it crashed again. After many attempts, Olivia added a sensor that could detect objects in front of it.\n\nThe next day, her robot moved around the room without touching the furniture. It was not fast or beautiful. Still, Olivia felt proud because she had solved a real problem. She started planning a second robot that could carry books."
+          },
+          "sentences": [
+            {
+              "path": "tts/andrew_en-us/packs/technology/first-robot/s0001.mp3",
+              "text": "Olivia wanted to build a robot, but she had never written computer code."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/technology/first-robot/s0002.mp3",
+              "text": "She watched a few lessons and bought a small motor, two wheels, and a simple controller."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/technology/first-robot/s0003.mp3",
+              "text": "Her first robot moved forward and crashed into a chair."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/technology/first-robot/s0004.mp3",
+              "text": "She changed the program, but it crashed again."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/technology/first-robot/s0005.mp3",
+              "text": "After many attempts, Olivia added a sensor that could detect objects in front of it."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/technology/first-robot/s0006.mp3",
+              "text": "The next day, her robot moved around the room without touching the furniture."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/technology/first-robot/s0007.mp3",
+              "text": "It was not fast or beautiful."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/technology/first-robot/s0008.mp3",
+              "text": "Still, Olivia felt proud because she had solved a real problem."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/technology/first-robot/s0009.mp3",
+              "text": "She started planning a second robot that could carry books."
+            }
+          ]
+        },
+        "message-from-europa": {
+          "full": {
+            "path": "tts/andrew_en-us/packs/technology/message-from-europa/full.mp3",
+            "text": "The research station above Europa had been silent for fourteen hours. Its communication system was damaged, and the crew was preparing to abandon an important experiment beneath the frozen surface.\n\nThen Dr. Reyes noticed a repeating pattern in the data. The instruments were recording faint vibrations from the ocean below the ice. At first, the team assumed the signal came from moving water. But the pattern changed whenever they transmitted a sound through the probe.\n\nNobody wanted to call it a conversation. The evidence was incomplete, and the equipment could still be malfunctioning. Yet when Reyes sent a simple sequence of three pulses, the ocean answered with exactly three of its own."
+          },
+          "sentences": [
+            {
+              "path": "tts/andrew_en-us/packs/technology/message-from-europa/s0001.mp3",
+              "text": "The research station above Europa had been silent for fourteen hours."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/technology/message-from-europa/s0002.mp3",
+              "text": "Its communication system was damaged, and the crew was preparing to abandon an important experiment beneath the frozen surface."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/technology/message-from-europa/s0003.mp3",
+              "text": "Then Dr. Reyes noticed a repeating pattern in the data."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/technology/message-from-europa/s0004.mp3",
+              "text": "The instruments were recording faint vibrations from the ocean below the ice."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/technology/message-from-europa/s0005.mp3",
+              "text": "At first, the team assumed the signal came from moving water."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/technology/message-from-europa/s0006.mp3",
+              "text": "But the pattern changed whenever they transmitted a sound through the probe."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/technology/message-from-europa/s0007.mp3",
+              "text": "Nobody wanted to call it a conversation."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/technology/message-from-europa/s0008.mp3",
+              "text": "The evidence was incomplete, and the equipment could still be malfunctioning."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/technology/message-from-europa/s0009.mp3",
+              "text": "Yet when Reyes sent a simple sequence of three pulses, the ocean answered with exactly three of its own."
+            }
+          ]
+        },
+        "midnight-library": {
+          "full": {
+            "path": "tts/andrew_en-us/packs/mystery/midnight-library/full.mp3",
+            "text": "At midnight, the lights in the old library turned on by themselves. The caretaker had checked every room before closing, so he was certain that nobody remained inside.\n\nHe called Elena, a local journalist who loved unusual stories. Together, they entered the building and followed a quiet tapping sound toward the history section. A heavy book had fallen from the highest shelf. Inside its cover, they discovered a handwritten note with a date from fifty years earlier.\n\nThe note mentioned a hidden room beneath the library. Elena searched the floor and found a small metal handle. She pulled it carefully. Under the carpet, a wooden door began to open."
+          },
+          "sentences": [
+            {
+              "path": "tts/andrew_en-us/packs/mystery/midnight-library/s0001.mp3",
+              "text": "At midnight, the lights in the old library turned on by themselves."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/mystery/midnight-library/s0002.mp3",
+              "text": "The caretaker had checked every room before closing, so he was certain that nobody remained inside."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/mystery/midnight-library/s0003.mp3",
+              "text": "He called Elena, a local journalist who loved unusual stories."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/mystery/midnight-library/s0004.mp3",
+              "text": "Together, they entered the building and followed a quiet tapping sound toward the history section."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/mystery/midnight-library/s0005.mp3",
+              "text": "A heavy book had fallen from the highest shelf."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/mystery/midnight-library/s0006.mp3",
+              "text": "Inside its cover, they discovered a handwritten note with a date from fifty years earlier."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/mystery/midnight-library/s0007.mp3",
+              "text": "The note mentioned a hidden room beneath the library."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/mystery/midnight-library/s0008.mp3",
+              "text": "Elena searched the floor and found a small metal handle."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/mystery/midnight-library/s0009.mp3",
+              "text": "She pulled it carefully."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/mystery/midnight-library/s0010.mp3",
+              "text": "Under the carpet, a wooden door began to open."
+            }
+          ]
+        },
+        "missing-key": {
+          "full": {
+            "path": "tts/andrew_en-us/packs/mystery/missing-key/full.mp3",
+            "text": "Every evening, Mr. Brown placed a silver key on the wooden table beside his front door. The key opened a box that belonged to his grandfather.\n\nOne morning, the key was gone. The windows were closed, and nobody had visited the house. Mr. Brown searched the kitchen, the bedroom, and the garden. He found nothing.\n\nThen he noticed small marks on the table. They looked like the footprints of a bird. He walked outside and saw a black crow sitting on the roof. Something bright was shining near its nest.\n\nMr. Brown laughed. His mystery had wings."
+          },
+          "sentences": [
+            {
+              "path": "tts/andrew_en-us/packs/mystery/missing-key/s0001.mp3",
+              "text": "Every evening, Mr. Brown placed a silver key on the wooden table beside his front door."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/mystery/missing-key/s0002.mp3",
+              "text": "The key opened a box that belonged to his grandfather."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/mystery/missing-key/s0003.mp3",
+              "text": "One morning, the key was gone."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/mystery/missing-key/s0004.mp3",
+              "text": "The windows were closed, and nobody had visited the house."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/mystery/missing-key/s0005.mp3",
+              "text": "Mr. Brown searched the kitchen, the bedroom, and the garden."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/mystery/missing-key/s0006.mp3",
+              "text": "He found nothing."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/mystery/missing-key/s0007.mp3",
+              "text": "Then he noticed small marks on the table."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/mystery/missing-key/s0008.mp3",
+              "text": "They looked like the footprints of a bird."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/mystery/missing-key/s0009.mp3",
+              "text": "He walked outside and saw a black crow sitting on the roof."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/mystery/missing-key/s0010.mp3",
+              "text": "Something bright was shining near its nest."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/mystery/missing-key/s0011.mp3",
+              "text": "Mr. Brown laughed."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/mystery/missing-key/s0012.mp3",
+              "text": "His mystery had wings."
+            }
+          ]
+        },
+        "morning-choice": {
+          "full": {
+            "path": "tts/andrew_en-us/packs/everyday/morning-choice/full.mp3",
+            "text": "Daniel wakes up early on Monday. He usually drinks coffee at home, but today he walks to a small cafe near the park.\n\nAt the cafe, he sees a woman reading a book about space. Daniel likes astronomy, so he asks about the book. Her name is Maya. She tells him about a beautiful planet with blue clouds.\n\nThey talk for ten minutes. Before Daniel leaves, Maya recommends another book. His morning was simple, but it feels different. Tomorrow, he wants to visit the cafe again."
+          },
+          "sentences": [
+            {
+              "path": "tts/andrew_en-us/packs/everyday/morning-choice/s0001.mp3",
+              "text": "Daniel wakes up early on Monday."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/everyday/morning-choice/s0002.mp3",
+              "text": "He usually drinks coffee at home, but today he walks to a small cafe near the park."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/everyday/morning-choice/s0003.mp3",
+              "text": "At the cafe, he sees a woman reading a book about space."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/everyday/morning-choice/s0004.mp3",
+              "text": "Daniel likes astronomy, so he asks about the book."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/everyday/morning-choice/s0005.mp3",
+              "text": "Her name is Maya."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/everyday/morning-choice/s0006.mp3",
+              "text": "She tells him about a beautiful planet with blue clouds."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/everyday/morning-choice/s0007.mp3",
+              "text": "They talk for ten minutes."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/everyday/morning-choice/s0008.mp3",
+              "text": "Before Daniel leaves, Maya recommends another book."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/everyday/morning-choice/s0009.mp3",
+              "text": "His morning was simple, but it feels different."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/everyday/morning-choice/s0010.mp3",
+              "text": "Tomorrow, he wants to visit the cafe again."
+            }
+          ]
+        },
+        "small-decisions": {
+          "full": {
+            "path": "tts/andrew_en-us/packs/ideas/small-decisions/full.mp3",
+            "text": "People often imagine that personal change requires one dramatic decision. In reality, many improvements begin with actions so small that nobody else notices them.\n\nA person who reads five pages each evening may finish several books in a year. Someone who practices a language for ten minutes each morning gradually becomes more comfortable using it. These actions are not impressive on their own, but they create opportunities to practice consistently.\n\nOf course, habits do not guarantee success. Sometimes we need better strategies, feedback, or support from other people. Still, a modest routine can make progress easier because it reduces the number of decisions we must make every day."
+          },
+          "sentences": [
+            {
+              "path": "tts/andrew_en-us/packs/ideas/small-decisions/s0001.mp3",
+              "text": "People often imagine that personal change requires one dramatic decision."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/ideas/small-decisions/s0002.mp3",
+              "text": "In reality, many improvements begin with actions so small that nobody else notices them."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/ideas/small-decisions/s0003.mp3",
+              "text": "A person who reads five pages each evening may finish several books in a year."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/ideas/small-decisions/s0004.mp3",
+              "text": "Someone who practices a language for ten minutes each morning gradually becomes more comfortable using it."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/ideas/small-decisions/s0005.mp3",
+              "text": "These actions are not impressive on their own, but they create opportunities to practice consistently."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/ideas/small-decisions/s0006.mp3",
+              "text": "Of course, habits do not guarantee success."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/ideas/small-decisions/s0007.mp3",
+              "text": "Sometimes we need better strategies, feedback, or support from other people."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/ideas/small-decisions/s0008.mp3",
+              "text": "Still, a modest routine can make progress easier because it reduces the number of decisions we must make every day."
+            }
+          ]
+        },
+        "the-empty-seat": {
+          "full": {
+            "path": "tts/andrew_en-us/packs/mystery/the-empty-seat/full.mp3",
+            "text": "The flight was nearly empty, and the cabin lights had been dimmed for the night. Clara sat beside the window, trying to remember where she had seen the man across the aisle. His face seemed familiar, although she could not place it.\n\nWhen she returned from the restroom, his seat was empty. A flight attendant insisted that nobody had occupied it since departure. Clara pointed at the folded newspaper on the tray, but the attendant looked confused. The newspaper carried tomorrow's date.\n\nClara unfolded it and discovered a photograph of herself standing outside an airport she had never visited. The article described an event scheduled to happen in just six hours."
+          },
+          "sentences": [
+            {
+              "path": "tts/andrew_en-us/packs/mystery/the-empty-seat/s0001.mp3",
+              "text": "The flight was nearly empty, and the cabin lights had been dimmed for the night."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/mystery/the-empty-seat/s0002.mp3",
+              "text": "Clara sat beside the window, trying to remember where she had seen the man across the aisle."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/mystery/the-empty-seat/s0003.mp3",
+              "text": "His face seemed familiar, although she could not place it."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/mystery/the-empty-seat/s0004.mp3",
+              "text": "When she returned from the restroom, his seat was empty."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/mystery/the-empty-seat/s0005.mp3",
+              "text": "A flight attendant insisted that nobody had occupied it since departure."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/mystery/the-empty-seat/s0006.mp3",
+              "text": "Clara pointed at the folded newspaper on the tray, but the attendant looked confused."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/mystery/the-empty-seat/s0007.mp3",
+              "text": "The newspaper carried tomorrow's date."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/mystery/the-empty-seat/s0008.mp3",
+              "text": "Clara unfolded it and discovered a photograph of herself standing outside an airport she had never visited."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/mystery/the-empty-seat/s0009.mp3",
+              "text": "The article described an event scheduled to happen in just six hours."
+            }
+          ]
+        },
+        "the-last-bug": {
+          "full": {
+            "path": "tts/andrew_en-us/packs/technology/the-last-bug/full.mp3",
+            "text": "The team had spent six months building a new application. They were excited because their first customers would arrive the following morning. Everything seemed ready until a strange error appeared in the payment system.\n\nSam checked the database, read the logs, and tested the same request many times. The code looked correct, but one number was being rounded too early. A customer could lose a small amount of money on every purchase.\n\nSam fixed the calculation and added a test to prevent the problem from returning. The launch happened on schedule. The team celebrated, but Sam remembered a different lesson: reliable software depends on the details nobody notices."
+          },
+          "sentences": [
+            {
+              "path": "tts/andrew_en-us/packs/technology/the-last-bug/s0001.mp3",
+              "text": "The team had spent six months building a new application."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/technology/the-last-bug/s0002.mp3",
+              "text": "They were excited because their first customers would arrive the following morning."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/technology/the-last-bug/s0003.mp3",
+              "text": "Everything seemed ready until a strange error appeared in the payment system."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/technology/the-last-bug/s0004.mp3",
+              "text": "Sam checked the database, read the logs, and tested the same request many times."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/technology/the-last-bug/s0005.mp3",
+              "text": "The code looked correct, but one number was being rounded too early."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/technology/the-last-bug/s0006.mp3",
+              "text": "A customer could lose a small amount of money on every purchase."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/technology/the-last-bug/s0007.mp3",
+              "text": "Sam fixed the calculation and added a test to prevent the problem from returning."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/technology/the-last-bug/s0008.mp3",
+              "text": "The launch happened on schedule."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/technology/the-last-bug/s0009.mp3",
+              "text": "The team celebrated, but Sam remembered a different lesson: reliable software depends on the details nobody notices."
+            }
+          ]
+        },
+        "train-to-coast": {
+          "full": {
+            "path": "tts/andrew_en-us/packs/everyday/train-to-coast/full.mp3",
+            "text": "Nina bought a train ticket because she wanted to spend the weekend near the ocean. She packed a camera, a notebook, and one warm jacket.\n\nAt the station, a message appeared on the screen. Her train was delayed for two hours. Nina felt frustrated, but she decided to explore the neighborhood instead of waiting on a bench.\n\nShe found a small bookstore and started talking to its owner. He showed her a collection of old maps. One map described a hidden beach near her destination.\n\nWhen the train finally arrived, Nina was smiling. The delay had given her a new place to discover."
+          },
+          "sentences": [
+            {
+              "path": "tts/andrew_en-us/packs/everyday/train-to-coast/s0001.mp3",
+              "text": "Nina bought a train ticket because she wanted to spend the weekend near the ocean."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/everyday/train-to-coast/s0002.mp3",
+              "text": "She packed a camera, a notebook, and one warm jacket."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/everyday/train-to-coast/s0003.mp3",
+              "text": "At the station, a message appeared on the screen."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/everyday/train-to-coast/s0004.mp3",
+              "text": "Her train was delayed for two hours."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/everyday/train-to-coast/s0005.mp3",
+              "text": "Nina felt frustrated, but she decided to explore the neighborhood instead of waiting on a bench."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/everyday/train-to-coast/s0006.mp3",
+              "text": "She found a small bookstore and started talking to its owner."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/everyday/train-to-coast/s0007.mp3",
+              "text": "He showed her a collection of old maps."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/everyday/train-to-coast/s0008.mp3",
+              "text": "One map described a hidden beach near her destination."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/everyday/train-to-coast/s0009.mp3",
+              "text": "When the train finally arrived, Nina was smiling."
+            },
+            {
+              "path": "tts/andrew_en-us/packs/everyday/train-to-coast/s0010.mp3",
+              "text": "The delay had given her a new place to discover."
+            }
+          ]
+        }
+      },
+      "words": {
+        "a": "tts/andrew_en-us/a.mp3",
+        "abandon": "tts/andrew_en-us/abandon.mp3",
+        "ability": "tts/andrew_en-us/ability.mp3",
+        "about": "tts/andrew_en-us/about.mp3",
+        "above": "tts/andrew_en-us/above.mp3",
+        "accurate": "tts/andrew_en-us/accurate.mp3",
+        "across": "tts/andrew_en-us/across.mp3",
+        "actions": "tts/andrew_en-us/actions.mp3",
+        "added": "tts/andrew_en-us/added.mp3",
+        "admire": "tts/andrew_en-us/admire.mp3",
+        "after": "tts/andrew_en-us/after.mp3",
+        "again": "tts/andrew_en-us/again.mp3",
+        "agreement": "tts/andrew_en-us/agreement.mp3",
+        "airport": "tts/andrew_en-us/airport.mp3",
+        "aisle": "tts/andrew_en-us/aisle.mp3",
+        "allow": "tts/andrew_en-us/allow.mp3",
+        "also": "tts/andrew_en-us/also.mp3",
+        "although": "tts/andrew_en-us/although.mp3",
+        "amount": "tts/andrew_en-us/amount.mp3",
+        "an": "tts/andrew_en-us/an.mp3",
+        "and": "tts/andrew_en-us/and.mp3",
+        "another": "tts/andrew_en-us/another.mp3",
+        "answered": "tts/andrew_en-us/answered.mp3",
+        "anticipating": "tts/andrew_en-us/anticipating.mp3",
+        "appeared": "tts/andrew_en-us/appeared.mp3",
+        "application": "tts/andrew_en-us/application.mp3",
+        "architecture": "tts/andrew_en-us/architecture.mp3",
+        "are": "tts/andrew_en-us/are.mp3",
+        "argued": "tts/andrew_en-us/argued.mp3",
+        "argument": "tts/andrew_en-us/argument.mp3",
+        "around": "tts/andrew_en-us/around.mp3",
+        "arranging": "tts/andrew_en-us/arranging.mp3",
+        "arrive": "tts/andrew_en-us/arrive.mp3",
+        "arrived": "tts/andrew_en-us/arrived.mp3",
+        "article": "tts/andrew_en-us/article.mp3",
+        "as": "tts/andrew_en-us/as.mp3",
+        "asks": "tts/andrew_en-us/asks.mp3",
+        "assumed": "tts/andrew_en-us/assumed.mp3",
+        "assumptions": "tts/andrew_en-us/assumptions.mp3",
+        "astronomy": "tts/andrew_en-us/astronomy.mp3",
+        "at": "tts/andrew_en-us/at.mp3",
+        "attempts": "tts/andrew_en-us/attempts.mp3",
+        "attendant": "tts/andrew_en-us/attendant.mp3",
+        "balances": "tts/andrew_en-us/balances.mp3",
+        "be": "tts/andrew_en-us/be.mp3",
+        "beach": "tts/andrew_en-us/beach.mp3",
+        "beautiful": "tts/andrew_en-us/beautiful.mp3",
+        "because": "tts/andrew_en-us/because.mp3",
+        "becomes": "tts/andrew_en-us/becomes.mp3",
+        "bedroom": "tts/andrew_en-us/bedroom.mp3",
+        "been": "tts/andrew_en-us/been.mp3",
+        "before": "tts/andrew_en-us/before.mp3",
+        "began": "tts/andrew_en-us/began.mp3",
+        "begin": "tts/andrew_en-us/begin.mp3",
+        "being": "tts/andrew_en-us/being.mp3",
+        "believed": "tts/andrew_en-us/believed.mp3",
+        "belonged": "tts/andrew_en-us/belonged.mp3",
+        "below": "tts/andrew_en-us/below.mp3",
+        "bench": "tts/andrew_en-us/bench.mp3",
+        "beneath": "tts/andrew_en-us/beneath.mp3",
+        "beside": "tts/andrew_en-us/beside.mp3",
+        "better": "tts/andrew_en-us/better.mp3",
+        "bicycle": "tts/andrew_en-us/bicycle.mp3",
+        "bird": "tts/andrew_en-us/bird.mp3",
+        "black": "tts/andrew_en-us/black.mp3",
+        "blue": "tts/andrew_en-us/blue.mp3",
+        "book": "tts/andrew_en-us/book.mp3",
+        "books": "tts/andrew_en-us/books.mp3",
+        "bookstore": "tts/andrew_en-us/bookstore.mp3",
+        "both": "tts/andrew_en-us/both.mp3",
+        "bought": "tts/andrew_en-us/bought.mp3",
+        "box": "tts/andrew_en-us/box.mp3",
+        "bread": "tts/andrew_en-us/bread.mp3",
+        "bridge": "tts/andrew_en-us/bridge.mp3",
+        "bright": "tts/andrew_en-us/bright.mp3",
+        "brown": "tts/andrew_en-us/brown.mp3",
+        "build": "tts/andrew_en-us/build.mp3",
+        "building": "tts/andrew_en-us/building.mp3",
+        "but": "tts/andrew_en-us/but.mp3",
+        "by": "tts/andrew_en-us/by.mp3",
+        "cabin": "tts/andrew_en-us/cabin.mp3",
+        "cafe": "tts/andrew_en-us/cafe.mp3",
+        "calculation": "tts/andrew_en-us/calculation.mp3",
+        "call": "tts/andrew_en-us/call.mp3",
+        "called": "tts/andrew_en-us/called.mp3",
+        "came": "tts/andrew_en-us/came.mp3",
+        "camera": "tts/andrew_en-us/camera.mp3",
+        "can": "tts/andrew_en-us/can.mp3",
+        "care": "tts/andrew_en-us/care.mp3",
+        "carefully": "tts/andrew_en-us/carefully.mp3",
+        "caretaker": "tts/andrew_en-us/caretaker.mp3",
+        "carpet": "tts/andrew_en-us/carpet.mp3",
+        "carried": "tts/andrew_en-us/carried.mp3",
+        "carry": "tts/andrew_en-us/carry.mp3",
+        "celebrated": "tts/andrew_en-us/celebrated.mp3",
+        "certain": "tts/andrew_en-us/certain.mp3",
+        "chair": "tts/andrew_en-us/chair.mp3",
+        "change": "tts/andrew_en-us/change.mp3",
+        "changed": "tts/andrew_en-us/changed.mp3",
+        "checked": "tts/andrew_en-us/checked.mp3",
+        "choose": "tts/andrew_en-us/choose.mp3",
+        "city": "tts/andrew_en-us/city.mp3",
+        "clara": "tts/andrew_en-us/clara.mp3",
+        "closed": "tts/andrew_en-us/closed.mp3",
+        "closing": "tts/andrew_en-us/closing.mp3",
+        "clouds": "tts/andrew_en-us/clouds.mp3",
+        "code": "tts/andrew_en-us/code.mp3",
+        "coffee": "tts/andrew_en-us/coffee.mp3",
+        "collection": "tts/andrew_en-us/collection.mp3",
+        "comfortable": "tts/andrew_en-us/comfortable.mp3",
+        "communication": "tts/andrew_en-us/communication.mp3",
+        "complex": "tts/andrew_en-us/complex.mp3",
+        "components": "tts/andrew_en-us/components.mp3",
+        "computer": "tts/andrew_en-us/computer.mp3",
+        "confused": "tts/andrew_en-us/confused.mp3",
+        "consider": "tts/andrew_en-us/consider.mp3",
+        "consistently": "tts/andrew_en-us/consistently.mp3",
+        "controller": "tts/andrew_en-us/controller.mp3",
+        "conversation": "tts/andrew_en-us/conversation.mp3",
+        "correct": "tts/andrew_en-us/correct.mp3",
+        "corrected": "tts/andrew_en-us/corrected.mp3",
+        "could": "tts/andrew_en-us/could.mp3",
+        "course": "tts/andrew_en-us/course.mp3",
+        "cover": "tts/andrew_en-us/cover.mp3",
+        "crashed": "tts/andrew_en-us/crashed.mp3",
+        "create": "tts/andrew_en-us/create.mp3",
+        "creating": "tts/andrew_en-us/creating.mp3",
+        "crew": "tts/andrew_en-us/crew.mp3",
+        "crow": "tts/andrew_en-us/crow.mp3",
+        "customer": "tts/andrew_en-us/customer.mp3",
+        "customers": "tts/andrew_en-us/customers.mp3",
+        "damaged": "tts/andrew_en-us/damaged.mp3",
+        "daniel": "tts/andrew_en-us/daniel.mp3",
+        "data": "tts/andrew_en-us/data.mp3",
+        "database": "tts/andrew_en-us/database.mp3",
+        "date": "tts/andrew_en-us/date.mp3",
+        "day": "tts/andrew_en-us/day.mp3",
+        "debated": "tts/andrew_en-us/debated.mp3",
+        "decide": "tts/andrew_en-us/decide.mp3",
+        "decided": "tts/andrew_en-us/decided.mp3",
+        "deciding": "tts/andrew_en-us/deciding.mp3",
+        "decision": "tts/andrew_en-us/decision.mp3",
+        "decisions": "tts/andrew_en-us/decisions.mp3",
+        "delay": "tts/andrew_en-us/delay.mp3",
+        "delayed": "tts/andrew_en-us/delayed.mp3",
+        "departure": "tts/andrew_en-us/departure.mp3",
+        "depends": "tts/andrew_en-us/depends.mp3",
+        "described": "tts/andrew_en-us/described.mp3",
+        "design": "tts/andrew_en-us/design.mp3",
+        "destination": "tts/andrew_en-us/destination.mp3",
+        "details": "tts/andrew_en-us/details.mp3",
+        "detect": "tts/andrew_en-us/detect.mp3",
+        "developed": "tts/andrew_en-us/developed.mp3",
+        "did": "tts/andrew_en-us/did.mp3",
+        "different": "tts/andrew_en-us/different.mp3",
+        "dimmed": "tts/andrew_en-us/dimmed.mp3",
+        "discover": "tts/andrew_en-us/discover.mp3",
+        "discovered": "tts/andrew_en-us/discovered.mp3",
+        "discussions": "tts/andrew_en-us/discussions.mp3",
+        "distributed": "tts/andrew_en-us/distributed.mp3",
+        "do": "tts/andrew_en-us/do.mp3",
+        "done": "tts/andrew_en-us/done.mp3",
+        "door": "tts/andrew_en-us/door.mp3",
+        "dr": "tts/andrew_en-us/dr.mp3",
+        "dramatic": "tts/andrew_en-us/dramatic.mp3",
+        "drinks": "tts/andrew_en-us/drinks.mp3",
+        "each": "tts/andrew_en-us/each.mp3",
+        "earlier": "tts/andrew_en-us/earlier.mp3",
+        "early": "tts/andrew_en-us/early.mp3",
+        "easier": "tts/andrew_en-us/easier.mp3",
+        "elegance": "tts/andrew_en-us/elegance.mp3",
+        "elena": "tts/andrew_en-us/elena.mp3",
+        "else": "tts/andrew_en-us/else.mp3",
+        "emerges": "tts/andrew_en-us/emerges.mp3",
+        "empty": "tts/andrew_en-us/empty.mp3",
+        "ended": "tts/andrew_en-us/ended.mp3",
+        "engineers": "tts/andrew_en-us/engineers.mp3",
+        "entered": "tts/andrew_en-us/entered.mp3",
+        "equipment": "tts/andrew_en-us/equipment.mp3",
+        "error": "tts/andrew_en-us/error.mp3",
+        "europa": "tts/andrew_en-us/europa.mp3",
+        "even": "tts/andrew_en-us/even.mp3",
+        "evening": "tts/andrew_en-us/evening.mp3",
+        "event": "tts/andrew_en-us/event.mp3",
+        "every": "tts/andrew_en-us/every.mp3",
+        "everything": "tts/andrew_en-us/everything.mp3",
+        "evidence": "tts/andrew_en-us/evidence.mp3",
+        "exactly": "tts/andrew_en-us/exactly.mp3",
+        "excited": "tts/andrew_en-us/excited.mp3",
+        "expectations": "tts/andrew_en-us/expectations.mp3",
+        "expecting": "tts/andrew_en-us/expecting.mp3",
+        "experience": "tts/andrew_en-us/experience.mp3",
+        "experiment": "tts/andrew_en-us/experiment.mp3",
+        "explaining": "tts/andrew_en-us/explaining.mp3",
+        "explore": "tts/andrew_en-us/explore.mp3",
+        "face": "tts/andrew_en-us/face.mp3",
+        "failures": "tts/andrew_en-us/failures.mp3",
+        "faint": "tts/andrew_en-us/faint.mp3",
+        "fallen": "tts/andrew_en-us/fallen.mp3",
+        "familiar": "tts/andrew_en-us/familiar.mp3",
+        "fast": "tts/andrew_en-us/fast.mp3",
+        "feedback": "tts/andrew_en-us/feedback.mp3",
+        "feels": "tts/andrew_en-us/feels.mp3",
+        "fell": "tts/andrew_en-us/fell.mp3",
+        "felt": "tts/andrew_en-us/felt.mp3",
+        "few": "tts/andrew_en-us/few.mp3",
+        "fifty": "tts/andrew_en-us/fifty.mp3",
+        "finally": "tts/andrew_en-us/finally.mp3",
+        "financial": "tts/andrew_en-us/financial.mp3",
+        "finish": "tts/andrew_en-us/finish.mp3",
+        "finished": "tts/andrew_en-us/finished.mp3",
+        "first": "tts/andrew_en-us/first.mp3",
+        "five": "tts/andrew_en-us/five.mp3",
+        "fixed": "tts/andrew_en-us/fixed.mp3",
+        "flight": "tts/andrew_en-us/flight.mp3",
+        "floor": "tts/andrew_en-us/floor.mp3",
+        "folded": "tts/andrew_en-us/folded.mp3",
+        "followed": "tts/andrew_en-us/followed.mp3",
+        "following": "tts/andrew_en-us/following.mp3",
+        "footprints": "tts/andrew_en-us/footprints.mp3",
+        "for": "tts/andrew_en-us/for.mp3",
+        "forced": "tts/andrew_en-us/forced.mp3",
+        "forward": "tts/andrew_en-us/forward.mp3",
+        "found": "tts/andrew_en-us/found.mp3",
+        "fourteen": "tts/andrew_en-us/fourteen.mp3",
+        "freedom": "tts/andrew_en-us/freedom.mp3",
+        "fresh": "tts/andrew_en-us/fresh.mp3",
+        "friends": "tts/andrew_en-us/friends.mp3",
+        "from": "tts/andrew_en-us/from.mp3",
+        "front": "tts/andrew_en-us/front.mp3",
+        "frozen": "tts/andrew_en-us/frozen.mp3",
+        "frustrated": "tts/andrew_en-us/frustrated.mp3",
+        "furniture": "tts/andrew_en-us/furniture.mp3",
+        "garden": "tts/andrew_en-us/garden.mp3",
+        "given": "tts/andrew_en-us/given.mp3",
+        "go": "tts/andrew_en-us/go.mp3",
+        "goes": "tts/andrew_en-us/goes.mp3",
+        "gone": "tts/andrew_en-us/gone.mp3",
+        "gradually": "tts/andrew_en-us/gradually.mp3",
+        "grandfather": "tts/andrew_en-us/grandfather.mp3",
+        "guarantee": "tts/andrew_en-us/guarantee.mp3",
+        "habit": "tts/andrew_en-us/habit.mp3",
+        "habits": "tts/andrew_en-us/habits.mp3",
+        "had": "tts/andrew_en-us/had.mp3",
+        "handle": "tts/andrew_en-us/handle.mp3",
+        "handles": "tts/andrew_en-us/handles.mp3",
+        "handwritten": "tts/andrew_en-us/handwritten.mp3",
+        "happen": "tts/andrew_en-us/happen.mp3",
+        "happened": "tts/andrew_en-us/happened.mp3",
+        "happiness": "tts/andrew_en-us/happiness.mp3",
+        "he": "tts/andrew_en-us/he.mp3",
+        "heavy": "tts/andrew_en-us/heavy.mp3",
+        "helped": "tts/andrew_en-us/helped.mp3",
+        "her": "tts/andrew_en-us/her.mp3",
+        "herself": "tts/andrew_en-us/herself.mp3",
+        "hidden": "tts/andrew_en-us/hidden.mp3",
+        "highest": "tts/andrew_en-us/highest.mp3",
+        "him": "tts/andrew_en-us/him.mp3",
+        "his": "tts/andrew_en-us/his.mp3",
+        "history": "tts/andrew_en-us/history.mp3",
+        "home": "tts/andrew_en-us/home.mp3",
+        "hour": "tts/andrew_en-us/hour.mp3",
+        "hours": "tts/andrew_en-us/hours.mp3",
+        "house": "tts/andrew_en-us/house.mp3",
+        "how": "tts/andrew_en-us/how.mp3",
+        "however": "tts/andrew_en-us/however.mp3",
+        "ice": "tts/andrew_en-us/ice.mp3",
+        "ignored": "tts/andrew_en-us/ignored.mp3",
+        "imagine": "tts/andrew_en-us/imagine.mp3",
+        "important": "tts/andrew_en-us/important.mp3",
+        "impressive": "tts/andrew_en-us/impressive.mp3",
+        "improvements": "tts/andrew_en-us/improvements.mp3",
+        "in": "tts/andrew_en-us/in.mp3",
+        "incomplete": "tts/andrew_en-us/incomplete.mp3",
+        "inevitably": "tts/andrew_en-us/inevitably.mp3",
+        "inside": "tts/andrew_en-us/inside.mp3",
+        "insisted": "tts/andrew_en-us/insisted.mp3",
+        "instead": "tts/andrew_en-us/instead.mp3",
+        "instruments": "tts/andrew_en-us/instruments.mp3",
+        "intention": "tts/andrew_en-us/intention.mp3",
+        "internal": "tts/andrew_en-us/internal.mp3",
+        "into": "tts/andrew_en-us/into.mp3",
+        "invisible": "tts/andrew_en-us/invisible.mp3",
+        "is": "tts/andrew_en-us/is.mp3",
+        "it": "tts/andrew_en-us/it.mp3",
+        "its": "tts/andrew_en-us/its.mp3",
+        "jacket": "tts/andrew_en-us/jacket.mp3",
+        "journal": "tts/andrew_en-us/journal.mp3",
+        "journalist": "tts/andrew_en-us/journalist.mp3",
+        "just": "tts/andrew_en-us/just.mp3",
+        "kept": "tts/andrew_en-us/kept.mp3",
+        "key": "tts/andrew_en-us/key.mp3",
+        "kitchen": "tts/andrew_en-us/kitchen.mp3",
+        "language": "tts/andrew_en-us/language.mp3",
+        "laughed": "tts/andrew_en-us/laughed.mp3",
+        "launch": "tts/andrew_en-us/launch.mp3",
+        "leaves": "tts/andrew_en-us/leaves.mp3",
+        "leo": "tts/andrew_en-us/leo.mp3",
+        "lesson": "tts/andrew_en-us/lesson.mp3",
+        "lessons": "tts/andrew_en-us/lessons.mp3",
+        "library": "tts/andrew_en-us/library.mp3",
+        "lights": "tts/andrew_en-us/lights.mp3",
+        "like": "tts/andrew_en-us/like.mp3",
+        "likes": "tts/andrew_en-us/likes.mp3",
+        "limitations": "tts/andrew_en-us/limitations.mp3",
+        "little": "tts/andrew_en-us/little.mp3",
+        "local": "tts/andrew_en-us/local.mp3",
+        "logs": "tts/andrew_en-us/logs.mp3",
+        "looked": "tts/andrew_en-us/looked.mp3",
+        "lose": "tts/andrew_en-us/lose.mp3",
+        "loved": "tts/andrew_en-us/loved.mp3",
+        "lunch": "tts/andrew_en-us/lunch.mp3",
+        "made": "tts/andrew_en-us/made.mp3",
+        "make": "tts/andrew_en-us/make.mp3",
+        "malfunctioning": "tts/andrew_en-us/malfunctioning.mp3",
+        "man": "tts/andrew_en-us/man.mp3",
+        "many": "tts/andrew_en-us/many.mp3",
+        "map": "tts/andrew_en-us/map.mp3",
+        "maps": "tts/andrew_en-us/maps.mp3",
+        "marks": "tts/andrew_en-us/marks.mp3",
+        "mattered": "tts/andrew_en-us/mattered.mp3",
+        "may": "tts/andrew_en-us/may.mp3",
+        "maya": "tts/andrew_en-us/maya.mp3",
+        "mean": "tts/andrew_en-us/mean.mp3",
+        "mechanisms": "tts/andrew_en-us/mechanisms.mp3",
+        "mentioned": "tts/andrew_en-us/mentioned.mp3",
+        "merely": "tts/andrew_en-us/merely.mp3",
+        "message": "tts/andrew_en-us/message.mp3",
+        "met": "tts/andrew_en-us/met.mp3",
+        "metal": "tts/andrew_en-us/metal.mp3",
+        "midnight": "tts/andrew_en-us/midnight.mp3",
+        "minutes": "tts/andrew_en-us/minutes.mp3",
+        "mistakes": "tts/andrew_en-us/mistakes.mp3",
+        "modest": "tts/andrew_en-us/modest.mp3",
+        "monday": "tts/andrew_en-us/monday.mp3",
+        "money": "tts/andrew_en-us/money.mp3",
+        "months": "tts/andrew_en-us/months.mp3",
+        "more": "tts/andrew_en-us/more.mp3",
+        "morning": "tts/andrew_en-us/morning.mp3",
+        "motor": "tts/andrew_en-us/motor.mp3",
+        "moved": "tts/andrew_en-us/moved.mp3",
+        "moving": "tts/andrew_en-us/moving.mp3",
+        "mr": "tts/andrew_en-us/mr.mp3",
+        "must": "tts/andrew_en-us/must.mp3",
+        "mystery": "tts/andrew_en-us/mystery.mp3",
+        "name": "tts/andrew_en-us/name.mp3",
+        "near": "tts/andrew_en-us/near.mp3",
+        "nearly": "tts/andrew_en-us/nearly.mp3",
+        "need": "tts/andrew_en-us/need.mp3",
+        "neighborhood": "tts/andrew_en-us/neighborhood.mp3",
+        "neither": "tts/andrew_en-us/neither.mp3",
+        "nest": "tts/andrew_en-us/nest.mp3",
+        "never": "tts/andrew_en-us/never.mp3",
+        "new": "tts/andrew_en-us/new.mp3",
+        "newspaper": "tts/andrew_en-us/newspaper.mp3",
+        "next": "tts/andrew_en-us/next.mp3",
+        "night": "tts/andrew_en-us/night.mp3",
+        "nina": "tts/andrew_en-us/nina.mp3",
+        "nobody": "tts/andrew_en-us/nobody.mp3",
+        "not": "tts/andrew_en-us/not.mp3",
+        "note": "tts/andrew_en-us/note.mp3",
+        "notebook": "tts/andrew_en-us/notebook.mp3",
+        "nothing": "tts/andrew_en-us/nothing.mp3",
+        "noticed": "tts/andrew_en-us/noticed.mp3",
+        "notices": "tts/andrew_en-us/notices.mp3",
+        "notification": "tts/andrew_en-us/notification.mp3",
+        "novel": "tts/andrew_en-us/novel.mp3",
+        "number": "tts/andrew_en-us/number.mp3",
+        "objects": "tts/andrew_en-us/objects.mp3",
+        "occupied": "tts/andrew_en-us/occupied.mp3",
+        "ocean": "tts/andrew_en-us/ocean.mp3",
+        "of": "tts/andrew_en-us/of.mp3",
+        "off": "tts/andrew_en-us/off.mp3",
+        "often": "tts/andrew_en-us/often.mp3",
+        "old": "tts/andrew_en-us/old.mp3",
+        "olivia": "tts/andrew_en-us/olivia.mp3",
+        "on": "tts/andrew_en-us/on.mp3",
+        "one": "tts/andrew_en-us/one.mp3",
+        "ongoing": "tts/andrew_en-us/ongoing.mp3",
+        "open": "tts/andrew_en-us/open.mp3",
+        "opened": "tts/andrew_en-us/opened.mp3",
+        "opportunities": "tts/andrew_en-us/opportunities.mp3",
+        "or": "tts/andrew_en-us/or.mp3",
+        "ordinary": "tts/andrew_en-us/ordinary.mp3",
+        "organization": "tts/andrew_en-us/organization.mp3",
+        "other": "tts/andrew_en-us/other.mp3",
+        "outside": "tts/andrew_en-us/outside.mp3",
+        "overlooking": "tts/andrew_en-us/overlooking.mp3",
+        "own": "tts/andrew_en-us/own.mp3",
+        "owner": "tts/andrew_en-us/owner.mp3",
+        "packed": "tts/andrew_en-us/packed.mp3",
+        "pages": "tts/andrew_en-us/pages.mp3",
+        "park": "tts/andrew_en-us/park.mp3",
+        "patience": "tts/andrew_en-us/patience.mp3",
+        "pattern": "tts/andrew_en-us/pattern.mp3",
+        "payment": "tts/andrew_en-us/payment.mp3",
+        "payments": "tts/andrew_en-us/payments.mp3",
+        "people": "tts/andrew_en-us/people.mp3",
+        "person": "tts/andrew_en-us/person.mp3",
+        "personal": "tts/andrew_en-us/personal.mp3",
+        "phone": "tts/andrew_en-us/phone.mp3",
+        "photograph": "tts/andrew_en-us/photograph.mp3",
+        "place": "tts/andrew_en-us/place.mp3",
+        "placed": "tts/andrew_en-us/placed.mp3",
+        "planet": "tts/andrew_en-us/planet.mp3",
+        "planning": "tts/andrew_en-us/planning.mp3",
+        "platform": "tts/andrew_en-us/platform.mp3",
+        "pocket": "tts/andrew_en-us/pocket.mp3",
+        "pointed": "tts/andrew_en-us/pointed.mp3",
+        "practice": "tts/andrew_en-us/practice.mp3",
+        "practices": "tts/andrew_en-us/practices.mp3",
+        "predictable": "tts/andrew_en-us/predictable.mp3",
+        "preparing": "tts/andrew_en-us/preparing.mp3",
+        "prevent": "tts/andrew_en-us/prevent.mp3",
+        "probe": "tts/andrew_en-us/probe.mp3",
+        "problem": "tts/andrew_en-us/problem.mp3",
+        "process": "tts/andrew_en-us/process.mp3",
+        "program": "tts/andrew_en-us/program.mp3",
+        "progress": "tts/andrew_en-us/progress.mp3",
+        "proud": "tts/andrew_en-us/proud.mp3",
+        "pulled": "tts/andrew_en-us/pulled.mp3",
+        "pulses": "tts/andrew_en-us/pulses.mp3",
+        "purchase": "tts/andrew_en-us/purchase.mp3",
+        "quiet": "tts/andrew_en-us/quiet.mp3",
+        "rain": "tts/andrew_en-us/rain.mp3",
+        "rarely": "tts/andrew_en-us/rarely.mp3",
+        "reaching": "tts/andrew_en-us/reaching.mp3",
+        "read": "tts/andrew_en-us/read.mp3",
+        "reading": "tts/andrew_en-us/reading.mp3",
+        "reads": "tts/andrew_en-us/reads.mp3",
+        "ready": "tts/andrew_en-us/ready.mp3",
+        "real": "tts/andrew_en-us/real.mp3",
+        "reality": "tts/andrew_en-us/reality.mp3",
+        "realizing": "tts/andrew_en-us/realizing.mp3",
+        "recommends": "tts/andrew_en-us/recommends.mp3",
+        "recording": "tts/andrew_en-us/recording.mp3",
+        "recover": "tts/andrew_en-us/recover.mp3",
+        "reduces": "tts/andrew_en-us/reduces.mp3",
+        "reliable": "tts/andrew_en-us/reliable.mp3",
+        "remain": "tts/andrew_en-us/remain.mp3",
+        "remained": "tts/andrew_en-us/remained.mp3",
+        "remember": "tts/andrew_en-us/remember.mp3",
+        "remembered": "tts/andrew_en-us/remembered.mp3",
+        "repair": "tts/andrew_en-us/repair.mp3",
+        "repeatedly": "tts/andrew_en-us/repeatedly.mp3",
+        "repeating": "tts/andrew_en-us/repeating.mp3",
+        "request": "tts/andrew_en-us/request.mp3",
+        "requires": "tts/andrew_en-us/requires.mp3",
+        "research": "tts/andrew_en-us/research.mp3",
+        "responsibility": "tts/andrew_en-us/responsibility.mp3",
+        "restroom": "tts/andrew_en-us/restroom.mp3",
+        "returned": "tts/andrew_en-us/returned.mp3",
+        "returning": "tts/andrew_en-us/returning.mp3",
+        "reyes": "tts/andrew_en-us/reyes.mp3",
+        "river": "tts/andrew_en-us/river.mp3",
+        "robot": "tts/andrew_en-us/robot.mp3",
+        "roof": "tts/andrew_en-us/roof.mp3",
+        "room": "tts/andrew_en-us/room.mp3",
+        "rounded": "tts/andrew_en-us/rounded.mp3",
+        "routine": "tts/andrew_en-us/routine.mp3",
+        "safeguards": "tts/andrew_en-us/safeguards.mp3",
+        "sam": "tts/andrew_en-us/sam.mp3",
+        "same": "tts/andrew_en-us/same.mp3",
+        "sat": "tts/andrew_en-us/sat.mp3",
+        "satisfied": "tts/andrew_en-us/satisfied.mp3",
+        "saturday": "tts/andrew_en-us/saturday.mp3",
+        "saw": "tts/andrew_en-us/saw.mp3",
+        "schedule": "tts/andrew_en-us/schedule.mp3",
+        "scheduled": "tts/andrew_en-us/scheduled.mp3",
+        "screen": "tts/andrew_en-us/screen.mp3",
+        "searched": "tts/andrew_en-us/searched.mp3",
+        "seat": "tts/andrew_en-us/seat.mp3",
+        "second": "tts/andrew_en-us/second.mp3",
+        "section": "tts/andrew_en-us/section.mp3",
+        "secure": "tts/andrew_en-us/secure.mp3",
+        "seemed": "tts/andrew_en-us/seemed.mp3",
+        "seen": "tts/andrew_en-us/seen.mp3",
+        "sees": "tts/andrew_en-us/sees.mp3",
+        "sensor": "tts/andrew_en-us/sensor.mp3",
+        "sent": "tts/andrew_en-us/sent.mp3",
+        "sequence": "tts/andrew_en-us/sequence.mp3",
+        "several": "tts/andrew_en-us/several.mp3",
+        "she": "tts/andrew_en-us/she.mp3",
+        "shelf": "tts/andrew_en-us/shelf.mp3",
+        "shelter": "tts/andrew_en-us/shelter.mp3",
+        "shining": "tts/andrew_en-us/shining.mp3",
+        "showed": "tts/andrew_en-us/showed.mp3",
+        "signal": "tts/andrew_en-us/signal.mp3",
+        "silence": "tts/andrew_en-us/silence.mp3",
+        "silent": "tts/andrew_en-us/silent.mp3",
+        "silver": "tts/andrew_en-us/silver.mp3",
+        "simple": "tts/andrew_en-us/simple.mp3",
+        "simply": "tts/andrew_en-us/simply.mp3",
+        "since": "tts/andrew_en-us/since.mp3",
+        "sitting": "tts/andrew_en-us/sitting.mp3",
+        "six": "tts/andrew_en-us/six.mp3",
+        "slowly": "tts/andrew_en-us/slowly.mp3",
+        "small": "tts/andrew_en-us/small.mp3",
+        "smell": "tts/andrew_en-us/smell.mp3",
+        "smiling": "tts/andrew_en-us/smiling.mp3",
+        "so": "tts/andrew_en-us/so.mp3",
+        "software": "tts/andrew_en-us/software.mp3",
+        "solved": "tts/andrew_en-us/solved.mp3",
+        "someone": "tts/andrew_en-us/someone.mp3",
+        "something": "tts/andrew_en-us/something.mp3",
+        "sometimes": "tts/andrew_en-us/sometimes.mp3",
+        "sound": "tts/andrew_en-us/sound.mp3",
+        "space": "tts/andrew_en-us/space.mp3",
+        "spend": "tts/andrew_en-us/spend.mp3",
+        "spent": "tts/andrew_en-us/spent.mp3",
+        "standing": "tts/andrew_en-us/standing.mp3",
+        "started": "tts/andrew_en-us/started.mp3",
+        "station": "tts/andrew_en-us/station.mp3",
+        "still": "tts/andrew_en-us/still.mp3",
+        "stories": "tts/andrew_en-us/stories.mp3",
+        "storm": "tts/andrew_en-us/storm.mp3",
+        "strange": "tts/andrew_en-us/strange.mp3",
+        "stranger": "tts/andrew_en-us/stranger.mp3",
+        "strategies": "tts/andrew_en-us/strategies.mp3",
+        "study": "tts/andrew_en-us/study.mp3",
+        "success": "tts/andrew_en-us/success.mp3",
+        "sunset": "tts/andrew_en-us/sunset.mp3",
+        "support": "tts/andrew_en-us/support.mp3",
+        "surface": "tts/andrew_en-us/surface.mp3",
+        "system": "tts/andrew_en-us/system.mp3",
+        "table": "tts/andrew_en-us/table.mp3",
+        "take": "tts/andrew_en-us/take.mp3",
+        "talk": "tts/andrew_en-us/talk.mp3",
+        "talking": "tts/andrew_en-us/talking.mp3",
+        "tapping": "tts/andrew_en-us/tapping.mp3",
+        "team": "tts/andrew_en-us/team.mp3",
+        "technical": "tts/andrew_en-us/technical.mp3",
+        "technology": "tts/andrew_en-us/technology.mp3",
+        "tells": "tts/andrew_en-us/tells.mp3",
+        "ten": "tts/andrew_en-us/ten.mp3",
+        "test": "tts/andrew_en-us/test.mp3",
+        "tested": "tts/andrew_en-us/tested.mp3",
+        "that": "tts/andrew_en-us/that.mp3",
+        "the": "tts/andrew_en-us/the.mp3",
+        "their": "tts/andrew_en-us/their.mp3",
+        "them": "tts/andrew_en-us/them.mp3",
+        "themselves": "tts/andrew_en-us/themselves.mp3",
+        "then": "tts/andrew_en-us/then.mp3",
+        "therefore": "tts/andrew_en-us/therefore.mp3",
+        "these": "tts/andrew_en-us/these.mp3",
+        "they": "tts/andrew_en-us/they.mp3",
+        "things": "tts/andrew_en-us/things.mp3",
+        "thousands": "tts/andrew_en-us/thousands.mp3",
+        "three": "tts/andrew_en-us/three.mp3",
+        "through": "tts/andrew_en-us/through.mp3",
+        "thursday": "tts/andrew_en-us/thursday.mp3",
+        "ticket": "tts/andrew_en-us/ticket.mp3",
+        "times": "tts/andrew_en-us/times.mp3",
+        "to": "tts/andrew_en-us/to.mp3",
+        "today": "tts/andrew_en-us/today.mp3",
+        "together": "tts/andrew_en-us/together.mp3",
+        "tomorrow": "tts/andrew_en-us/tomorrow.mp3",
+        "tomorrow's": "tts/andrew_en-us/tomorrow's.mp3",
+        "too": "tts/andrew_en-us/too.mp3",
+        "touching": "tts/andrew_en-us/touching.mp3",
+        "toward": "tts/andrew_en-us/toward.mp3",
+        "train": "tts/andrew_en-us/train.mp3",
+        "transactions": "tts/andrew_en-us/transactions.mp3",
+        "transmitted": "tts/andrew_en-us/transmitted.mp3",
+        "tray": "tts/andrew_en-us/tray.mp3",
+        "trust": "tts/andrew_en-us/trust.mp3",
+        "trying": "tts/andrew_en-us/trying.mp3",
+        "turn": "tts/andrew_en-us/turn.mp3",
+        "turned": "tts/andrew_en-us/turned.mp3",
+        "two": "tts/andrew_en-us/two.mp3",
+        "uncertainty": "tts/andrew_en-us/uncertainty.mp3",
+        "uncomfortable": "tts/andrew_en-us/uncomfortable.mp3",
+        "under": "tts/andrew_en-us/under.mp3",
+        "unexpected": "tts/andrew_en-us/unexpected.mp3",
+        "unfolded": "tts/andrew_en-us/unfolded.mp3",
+        "until": "tts/andrew_en-us/until.mp3",
+        "unusual": "tts/andrew_en-us/unusual.mp3",
+        "up": "tts/andrew_en-us/up.mp3",
+        "use": "tts/andrew_en-us/use.mp3",
+        "useful": "tts/andrew_en-us/useful.mp3",
+        "users": "tts/andrew_en-us/users.mp3",
+        "using": "tts/andrew_en-us/using.mp3",
+        "usually": "tts/andrew_en-us/usually.mp3",
+        "vibrations": "tts/andrew_en-us/vibrations.mp3",
+        "visit": "tts/andrew_en-us/visit.mp3",
+        "visited": "tts/andrew_en-us/visited.mp3",
+        "waiting": "tts/andrew_en-us/waiting.mp3",
+        "wakes": "tts/andrew_en-us/wakes.mp3",
+        "walked": "tts/andrew_en-us/walked.mp3",
+        "walking": "tts/andrew_en-us/walking.mp3",
+        "walks": "tts/andrew_en-us/walks.mp3",
+        "wanted": "tts/andrew_en-us/wanted.mp3",
+        "wants": "tts/andrew_en-us/wants.mp3",
+        "warm": "tts/andrew_en-us/warm.mp3",
+        "was": "tts/andrew_en-us/was.mp3",
+        "watched": "tts/andrew_en-us/watched.mp3",
+        "water": "tts/andrew_en-us/water.mp3",
+        "we": "tts/andrew_en-us/we.mp3",
+        "weekend": "tts/andrew_en-us/weekend.mp3",
+        "were": "tts/andrew_en-us/were.mp3",
+        "what": "tts/andrew_en-us/what.mp3",
+        "wheels": "tts/andrew_en-us/wheels.mp3",
+        "when": "tts/andrew_en-us/when.mp3",
+        "whenever": "tts/andrew_en-us/whenever.mp3",
+        "where": "tts/andrew_en-us/where.mp3",
+        "which": "tts/andrew_en-us/which.mp3",
+        "who": "tts/andrew_en-us/who.mp3",
+        "will": "tts/andrew_en-us/will.mp3",
+        "window": "tts/andrew_en-us/window.mp3",
+        "windows": "tts/andrew_en-us/windows.mp3",
+        "wings": "tts/andrew_en-us/wings.mp3",
+        "winning": "tts/andrew_en-us/winning.mp3",
+        "with": "tts/andrew_en-us/with.mp3",
+        "without": "tts/andrew_en-us/without.mp3",
+        "woman": "tts/andrew_en-us/woman.mp3",
+        "wooden": "tts/andrew_en-us/wooden.mp3",
+        "word": "tts/andrew_en-us/word.mp3",
+        "worried": "tts/andrew_en-us/worried.mp3",
+        "would": "tts/andrew_en-us/would.mp3",
+        "written": "tts/andrew_en-us/written.mp3",
+        "wrong": "tts/andrew_en-us/wrong.mp3",
+        "year": "tts/andrew_en-us/year.mp3",
+        "years": "tts/andrew_en-us/years.mp3",
+        "yet": "tts/andrew_en-us/yet.mp3"
+      }
+    }
+  }
+}

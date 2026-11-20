@@ -1,0 +1,32 @@
+{
+  "id": "ideas",
+  "stories": [
+    {
+      "id": "small-decisions",
+      "title": "Small Decisions, Big Changes",
+      "level": "B1",
+      "genre": "Self-development",
+      "summary": "Why tiny choices often matter more than dramatic plans.",
+      "tags": ["habits", "discipline", "decisions", "learning"],
+      "text": "People often imagine that personal change requires one dramatic decision. In reality, many improvements begin with actions so small that nobody else notices them.\n\nA person who reads five pages each evening may finish several books in a year. Someone who practices a language for ten minutes each morning gradually becomes more comfortable using it. These actions are not impressive on their own, but they create opportunities to practice consistently.\n\nOf course, habits do not guarantee success. Sometimes we need better strategies, feedback, or support from other people. Still, a modest routine can make progress easier because it reduces the number of decisions we must make every day."
+    },
+    {
+      "id": "bridge-of-ideas",
+      "title": "The Bridge of Ideas",
+      "level": "B2",
+      "genre": "Philosophy",
+      "summary": "Two thinkers disagree about what makes a good life.",
+      "tags": ["philosophy", "wisdom", "conversation", "ethics"],
+      "text": "Two friends met every Thursday on a bridge overlooking the river. One believed that happiness came from freedom: the ability to choose where to go, what to study, and how to spend each day. The other argued that freedom mattered little without responsibility.\n\nTheir discussions rarely ended in agreement. Sometimes they debated for an hour before realizing that they were using the same word to mean different things.\n\nOne evening, a storm forced them to take shelter beneath the bridge. As the rain fell, they helped a stranger repair a damaged bicycle. Walking home, both noticed something unexpected. For a few minutes, neither had worried about winning an argument. They had simply done something useful together."
+    },
+    {
+      "id": "architecture-of-trust",
+      "title": "The Architecture of Trust",
+      "level": "C1",
+      "genre": "Technology and society",
+      "summary": "A reflection on systems, security, and human confidence.",
+      "tags": ["architecture", "security", "software", "society", "trust"],
+      "text": "When engineers design a complex system, they are not merely arranging components. They are also deciding which failures users will experience, which assumptions remain invisible, and how responsibility is distributed across the organization.\n\nConsider a financial platform that handles thousands of transactions every second. Its users rarely admire the elegance of its internal architecture. They care that balances remain accurate, payments are predictable, and mistakes can be corrected. Trust emerges from these ordinary expectations being satisfied repeatedly.\n\nA secure design, therefore, is not simply a collection of technical safeguards. It is an ongoing process of anticipating uncertainty, explaining limitations, and creating mechanisms that allow people to recover when something inevitably goes wrong."
+    }
+  ]
+}

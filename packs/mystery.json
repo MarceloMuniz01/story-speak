@@ -1,0 +1,32 @@
+{
+  "id": "mystery",
+  "stories": [
+    {
+      "id": "missing-key",
+      "title": "The Missing Key",
+      "level": "A2",
+      "genre": "Mystery",
+      "summary": "An old key disappears from a quiet house.",
+      "tags": ["detective", "house", "secret"],
+      "text": "Every evening, Mr. Brown placed a silver key on the wooden table beside his front door. The key opened a box that belonged to his grandfather.\n\nOne morning, the key was gone. The windows were closed, and nobody had visited the house. Mr. Brown searched the kitchen, the bedroom, and the garden. He found nothing.\n\nThen he noticed small marks on the table. They looked like the footprints of a bird. He walked outside and saw a black crow sitting on the roof. Something bright was shining near its nest.\n\nMr. Brown laughed. His mystery had wings."
+    },
+    {
+      "id": "midnight-library",
+      "title": "The Library at Midnight",
+      "level": "B1",
+      "genre": "Mystery",
+      "summary": "A locked library seems to have a visitor after hours.",
+      "tags": ["books", "night", "investigation", "detective"],
+      "text": "At midnight, the lights in the old library turned on by themselves. The caretaker had checked every room before closing, so he was certain that nobody remained inside.\n\nHe called Elena, a local journalist who loved unusual stories. Together, they entered the building and followed a quiet tapping sound toward the history section. A heavy book had fallen from the highest shelf. Inside its cover, they discovered a handwritten note with a date from fifty years earlier.\n\nThe note mentioned a hidden room beneath the library. Elena searched the floor and found a small metal handle. She pulled it carefully. Under the carpet, a wooden door began to open."
+    },
+    {
+      "id": "the-empty-seat",
+      "title": "The Empty Seat",
+      "level": "B2",
+      "genre": "Suspense",
+      "summary": "A passenger notices something impossible on an overnight flight.",
+      "tags": ["airplane", "puzzle", "suspense", "travel"],
+      "text": "The flight was nearly empty, and the cabin lights had been dimmed for the night. Clara sat beside the window, trying to remember where she had seen the man across the aisle. His face seemed familiar, although she could not place it.\n\nWhen she returned from the restroom, his seat was empty. A flight attendant insisted that nobody had occupied it since departure. Clara pointed at the folded newspaper on the tray, but the attendant looked confused. The newspaper carried tomorrow's date.\n\nClara unfolded it and discovered a photograph of herself standing outside an airport she had never visited. The article described an event scheduled to happen in just six hours."
+    }
+  ]
+}
