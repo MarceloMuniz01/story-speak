@@ -1,10 +1,17 @@
-StorySpeak v17
+StorySpeak v19 — atualização segura
 
-1. Copie os arquivos novos por cima da versão anterior SEM apagar tts/.
-2. Atualize a dependência: python -m pip install -r requirements-tts.txt
-3. Gere tudo: python scripts/gerar_tudo.py
-4. Publique tts/ e os arquivos novos no GitHub Pages.
-5. No celular, abra Downloads, escolha a voz e toque em Baixar coleção.
+1) Na pasta ~/story-speak, extraia o ZIP storyspeak-v19-atualizacao-segura.zip:
+   unzip -o /sdcard/Download/storyspeak-v19-atualizacao-segura.zip -d .
+   O ZIP não contém tts/, packs/ nem catalog.json.
 
-Se seus MP3 antigos existirem mas estiverem sem hash,
-use: python scripts/gerar_tudo.py --aproveitar-existentes
+2) Para as próximas atualizações:
+   python scripts/atualizar_projeto.py
+
+3) Para gerar áudios de novas histórias:
+   python scripts/gerar_tudo.py
+
+4) Para adicionar história:
+   python scripts/adicionar_historia.py
+
+5) Atualize GitHub Pages e reabra a PWA, talvez recarregando duas vezes.
+   Downloads incluem texto, áudios e traduções offline.

@@ -1,4 +1,4 @@
-const SHELL = 'storyspeak-reader-v17';
+const SHELL = 'storyspeak-reader-v19';
 const FILES = [
   './', './index.html', './styles.css', './app.js', './dictionary.js',
   './catalog.json', './tts/index.json', './manifest.webmanifest',
@@ -26,7 +26,10 @@ self.addEventListener('fetch', event => {
     event.respondWith(fetch(request).catch(async () =>
       (await (await caches.open(SHELL)).match('./index.html')) || Response.error()
     ));
-  } else if (url.pathname === new URL('./tts/index.json', self.registration.scope).pathname) {
+  } else if ([
+    new URL('./tts/index.json', self.registration.scope).pathname,
+    new URL('./catalog.json', self.registration.scope).pathname
+  ].includes(url.pathname)) {
     event.respondWith(fetch(request).then(async response => {
       if (response.ok) (await caches.open(SHELL)).put(request, response.clone());
       return response;

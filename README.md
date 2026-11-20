@@ -1,95 +1,93 @@
-# StorySpeak v17 — Leitor de inglês simples
+# StorySpeak v19 — Leitor de inglês offline
 
-Site/PWA estático: histórias em inglês, tradução por palavra, voz por frase,
-voz para o texto inteiro, escolha de voz e modo escuro.
+PWA estática com textos em inglês, leitura por frase, pronúncia, tradução por palavra, modo escuro e pesquisa por nível/categoria. **Não há backend**.
 
-## Iniciar
+## Download no celular
 
-Publique os arquivos na raiz do GitHub Pages ou teste com um servidor local:
+Em **Downloads**, escolha a coleção e a voz e toque em **Baixar coleção**.
+O StorySpeak salva o texto, os MP3 publicados para aquela voz e as traduções das palavras.
+Áudios e traduções são compartilhados entre todas as coleções: uma palavra já salva é reutilizada.
 
-```sh
-python -m http.server 8000
-```
+- As **624 palavras diferentes das 12 histórias originais** estão traduzidas no glossário do próprio projeto (`dictionary.js`). Depois de instalar/atualizar a PWA, essas traduções funcionam sem internet. O significado isolado pode variar conforme o contexto.
+- Para **histórias novas** adicionadas pelo usuário, o download usa traduções locais existentes e, para palavras ausentes, consulta a API pública MyMemory somente após o toque em Baixar. Salva o resultado no navegador para uso offline; não faz geração automática de áudio pela API.
+- Se o provedor limitar o uso ou estiver offline, o aplicativo informa quantas traduções e quantos áudios faltaram. Um novo toque em **Completar download** tenta apenas os pendentes.
+- Não é possível garantir que o navegador mantenha os dados para sempre: limpar dados ou liberar espaço pode remover os downloads.
 
-Abra `http://localhost:8000` no navegador. Para instalar a PWA no celular,
-use HTTPS (por exemplo, GitHub Pages).
+A tradução por palavra também funciona ao tocar na palavra enquanto há conexão; essa tradução é armazenada para a próxima vez.
 
-## Gerar todos os áudios com **um só comando**
-
-No Termux, dentro do projeto:
+## Um único comando para gerar todos os áudios
 
 ```sh
 python -m pip install -r requirements-tts.txt
 python scripts/gerar_tudo.py
 ```
 
-O comando padrão usa a voz **Andrew (en-US)** e percorre os 4 packs, gerando:
-
-- `tts/andrew_en-us/*.mp3`: palavras únicas das histórias.
-- `tts/andrew_en-us/packs/<pack>/<historia>/s0001.mp3` etc.: frases.
-- `tts/andrew_en-us/packs/<pack>/<historia>/full.mp3`: histórias completas.
-
-O mesmo comando pode ser repetido: ignora os MP3 já validados, retoma falhas,
-e atualiza `tts/generated.json` e `tts/index.json` automaticamente.
-
-Para gerar apenas uma coleção ou usar outra voz:
-
-```sh
-python scripts/gerar_tudo.py --pack everyday
-python scripts/gerar_tudo.py --voice sonia
-```
-
-Para ver os MP3 pendentes **sem usar a internet**:
+O gerador usa Andrew (`en-US-AndrewMultilingualNeural`) por padrão e percorre todas as histórias, frases e palavras. Não repete arquivos válidos. Outros exemplos:
 
 ```sh
 python scripts/gerar_tudo.py --status
-```
-
-Se você **já tinha MP3 gerados pelas versões anteriores**, mas sem registro
-em `tts/generated.json`, pode aproveitá-los sem gerar novamente:
-
-```sh
+python scripts/gerar_tudo.py --pack everyday
+python scripts/gerar_tudo.py --voice sonia
 python scripts/gerar_tudo.py --aproveitar-existentes
 ```
 
-Esse comando não confirma pelo ouvido qual voz está gravada; utilize-o somente
-para MP3 cuja origem você conhece. Áudios com hash divergente são preservados
-para geração ou revisão, não adotados automaticamente.
+Os arquivos ficam em `tts/<voz>/`, as frases em `tts/<voz>/packs/<categoria>/<historia>/` e o índice em `tts/index.json`. Somente publique MP3 caso tenha os direitos de redistribuição aplicáveis.
 
-Se o serviço online estiver instável, use uma geração mais tranquila:
+## Atualizar pelo Termux sem perder MP3 nem histórias
+
+Na raiz do seu projeto (`~/story-speak`), após ter o script instalado:
 
 ```sh
-python scripts/gerar_tudo.py --workers 1 --delay 2
+python scripts/atualizar_projeto.py
 ```
 
-O gerador precisa de internet, respeita limitações do provedor, grava arquivos
-parciais de maneira segura e pode ser interrompido com Ctrl+C. Antes de
-redistribuir publicamente os áudios da Microsoft, verifique os termos aplicáveis.
+O atualizador escolhe o ZIP StorySpeak mais recente de `/sdcard/Download` (ou `~/storage/downloads`), copia os arquivos da aplicação e **não toca em `tts/`, `catalog.json` e `packs/`**, por padrão.
 
-## Baixar uma coleção no celular
+Para indicar um ZIP específico:
 
-Entre em **Downloads**, selecione a voz e toque em **Baixar coleção**.
-A PWA guarda o texto e **todos os áudios disponíveis da voz** (história inteira,
-frases e palavras) para uso offline. Isso não chama a API neural externa.
-Se faltarem MP3 publicados, o app informa quantos foram salvos e permite
-completar depois.
+```sh
+python scripts/atualizar_projeto.py /sdcard/Download/storyspeak-v19-atualizacao-segura.zip
+```
 
-A publicação deve incluir **toda a pasta `tts/`**, especialmente os MP3 e
-`tts/index.json`. Arquivos do Termux não ficam visíveis no GitHub Pages até você
-publicá-los. O cache do navegador pode ser limpo pelo sistema.
+Para instalar esta versão pela primeira vez, extraia o ZIP de **atualização segura** na pasta do projeto: ele já vem sem `tts/`, `catalog.json` e `packs/`.
 
-Ao clicar para ouvir um áudio ausente, o app tenta a API neural online; se
-ela falhar, usa o TTS do aparelho. Nenhuma geração online é executada ao abrir,
-pesquisar ou baixar uma coleção.
+```sh
+unzip -o /sdcard/Download/storyspeak-v19-atualizacao-segura.zip -d .
+```
+
+## Adicionar histórias e categorias
+
+```sh
+python scripts/adicionar_historia.py
+```
+
+Escolha uma categoria existente ou crie outra. Cole uma história em inglês e digite `:fim` em linha própria; o assistente pergunta título, nível, gênero, resumo e tags.
+
+Também aceita JSON colado (digite `:fim` depois) ou arquivos:
+
+```sh
+python scripts/adicionar_historia.py --arquivo /sdcard/Download/historia.json
+python scripts/adicionar_historia.py --arquivo /sdcard/Download/historia.txt
+```
+
+JSON mínimo:
+
+```json
+{"title":"A Rainy Evening","level":"B1","genre":"Mystery","summary":"A surprise after the rain","tags":["rain","mystery"],"text":"It was a quiet evening. The door opened."}
+```
+
+Após adicionar novas histórias, gere os MP3 faltantes com `python scripts/gerar_tudo.py`, publique `catalog.json`, `packs/` e `tts/` no GitHub Pages. O app detecta as palavras novas durante o download e busca apenas as traduções ainda não salvas.
+
+## Hospedagem
+
+Tudo funciona com arquivos estáticos: GitHub Pages ou outro host HTTPS. Publique `index.html`, `app.js`, `styles.css`, `dictionary.js`, `sw.js`, `catalog.json`, `packs/`, `assets/` e `tts/`. A voz neural online não é necessária para áudios MP3 já baixados; falhas da API de voz têm fallback nativo.
 
 ## Verificações
 
 ```sh
-python tests/test_gerar_tudo.py
 node --check app.js
 node --check sw.js
 node tests/test_frontend.cjs
+python tests/test_gerar_tudo.py
+python tests/test_browser.py   # se houver Playwright e Chromium
 ```
-
-Mantidos: 12 histórias, níveis A1–C1, busca e filtro por categoria. Todo o
-front-end usa JavaScript puro, sem dependências ou backend.

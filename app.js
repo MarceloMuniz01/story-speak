@@ -2,15 +2,17 @@
   'use strict';
 
   const $ = id => document.getElementById(id);
-  const PACK_CACHE = 'storyspeak-packs-v17';
+  const PACK_CACHE = 'storyspeak-packs-v18';
   const TRANSLATION_KEY = 'storyspeak-translations-v1';
   const NATURAL_API = 'https://freeapi.pro';
   const LOCAL_TTS_INDEX = './tts/index.json';
   const VOICE_KEY = 'storyspeak-voice-v13';
   const VOICE_META_KEY = 'storyspeak-natural-voices-v13';
   const OFFLINE_META_KEY = 'storyspeak-offline-voice-packs-v13';
-  const AUDIO_CACHE = 'storyspeak-audio-on-demand-v13';
-  const PACK_AUDIO_PREFIX = 'storyspeak-audio-pack-v13-';
+  const GLOBAL_AUDIO_CACHE = 'storyspeak-audio-global-v18';
+  const OLD_PLAYBACK_CACHE = 'storyspeak-audio-on-demand-v13';
+  const OLD_PACK_AUDIO_PREFIX = 'storyspeak-audio-pack-v13-';
+  let audioMigration = null;
     const ENGLISH_VOICES = new Set([
     'en-US-AndrewMultilingualNeural', 'en-US-AvaNeural',
     'en-GB-SoniaNeural', 'en-GB-RyanNeural'
@@ -35,7 +37,10 @@
   function readJson(key, fallback) {
     try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; }
   }
-  function save(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); } catch {} }
+  function save(key, value) {
+    try { localStorage.setItem(key, JSON.stringify(value)); return true; }
+    catch { return false; }
+  }
   function element(tag, className = '', content) {
     const el = document.createElement(tag);
     if (className) el.className = className;
@@ -170,7 +175,6 @@
     return [...voices.values()].filter(v => ENGLISH_VOICES.has(v.edgeVoice));
   }
   const stableVoiceId = voice => voiceCode(voice) || voice;
-  const offlineCacheName = (packId, voice) => `${PACK_AUDIO_PREFIX}${packId}-${stableVoiceId(voice)}`;
   const offlinePackKey = (packId, voice) => `${packId}:${stableVoiceId(voice)}`;
 
   // Sem opção técnica de formato: sempre baixa história, frases e palavras distintas.
@@ -192,6 +196,52 @@
     return [...unique.values()];
   }
 
+  // Palavras únicas dos textos; compartilhadas entre todos os packs.
+  function storyWords(stories) {
+    const words = new Set();
+    for (const story of stories) {
+      for (const [word] of story.text.matchAll(/[A-Za-z]+(?:[’'][A-Za-z]+)*/g))
+        words.add(normalize(word.replace(/’/g, "'")));
+    }
+    return [...words];
+  }
+
+  // Ao baixar uma coleção, garante tradução em português para cada palavra.
+  // As traduções já conhecidas são locais e o restante é salvo globalmente.
+  // A consulta online é feita SOMENTE após o clique em "Baixar coleção".
+  async function downloadTranslations(stories, signal, progress) {
+    const words = storyWords(stories);
+    let available = 0;
+    let errorsInRow = 0;
+    for (let i = 0; i < words.length; i++) {
+      if (signal.aborted) throw new DOMException('Cancelado', 'AbortError');
+      const word = words[i];
+      if (dictionary[word] || state.onlineTranslations[word]) {
+        available++;
+      } else if (navigator.onLine && errorsInRow < 3) {
+        try {
+          await translate(word, signal);
+          available++;
+          errorsInRow = 0;
+        } catch (error) {
+          if (signal.aborted) throw error;
+          errorsInRow++;
+          console.warn('Tradução não disponível:', word, error.message);
+        }
+        // Fila gentil para serviços públicos; não dispara centenas em paralelo.
+        if (i < words.length - 1)
+          await new Promise((resolve, reject) => {
+            const timer = setTimeout(() => { signal.removeEventListener('abort', stop); resolve(); }, 650);
+            const stop = () => { clearTimeout(timer); reject(new DOMException('Cancelado', 'AbortError')); };
+            signal.addEventListener('abort', stop, { once: true });
+            if (signal.aborted) stop();
+          });
+      }
+      progress(i + 1, words.length);
+    }
+    return { available, total: words.length };
+  }
+
   function jobProgress(packId, done, total, message) {
     const progress = document.querySelector(`[data-pack-progress="${packId}"]`);
     if (progress) { progress.max = Math.max(1, total); progress.value = done; }
@@ -199,39 +249,43 @@
     if (label) label.textContent = `${message} (${done}/${total})`;
   }
 
-  // Downloads usam EXCLUSIVAMENTE os MP3 hospedados no projeto. Nunca fazem POST à API.
+  // Os MP3 vêm do projeto ou cache. Traduções novas consultam API somente pelo clique.
   async function downloadVoicePack(pack, voice) {
     if (!state.cache || state.offlineJobs.has(pack.id)) return;
+    if (state.offlineJobs.size) {
+      toast('Conclua o download atual antes de iniciar outro.');
+      return;
+    }
     const controller = new AbortController();
     state.offlineJobs.set(pack.id, { controller, voice });
     renderPacks();
-    let done = 0; let missing = 0; let total = 0;
+    let done = 0, missingAudio = 0, audioTotal = 0, translationTotal = 0;
+    let translated = 0;
+    const recordKey = offlinePackKey(pack.id, voice);
     try {
-      // Um índice novo pode ter sido publicado após a abertura desta sessão.
-      // Atualiza-o no clique; nunca consulta o serviço neural nesta etapa.
       if (navigator.onLine) await loadLocalTtsIndex();
       const data = await ensurePack(pack, controller.signal, true);
       const items = audioItems(data.stories);
-      total = items.length;
-      const recordKey = offlinePackKey(pack.id, voice);
-      state.offlineSaved[recordKey] = { mode: 'all', count: 0, total, status: 'partial' };
+      audioTotal = items.length;
+      translationTotal = storyWords(data.stories).length;
+      const total = audioTotal + translationTotal;
+      state.offlineSaved[recordKey] = {
+        status: 'partial', audioCount: 0, audioTotal, translationCount: 0, translationTotal
+      };
       save(OFFLINE_META_KEY, state.offlineSaved);
       try { await navigator.storage?.persist?.(); } catch {}
-      const cache = await caches.open(offlineCacheName(pack.id, voice));
-      const previouslyPlayed = await caches.open(AUDIO_CACHE);
-      jobProgress(pack.id, 0, total, 'Salvando áudios');
+      const cache = await sharedAudioCache();
+      jobProgress(pack.id, 0, total, 'Baixando áudios');
       for (const text of items) {
         if (controller.signal.aborted) throw new DOMException('Cancelado', 'AbortError');
         const key = await audioRequestKey(voice, text);
         if (!(await cache.match(key))) {
-          const previous = await previouslyPlayed.match(key);
-          if (previous) await cache.put(key, previous);
-          else {
-            const path = projectAudioPath(voice, text);
-            if (!path) { missing++; done++; jobProgress(pack.id, done, total, 'Alguns áudios ainda não estão disponíveis'); continue; }
+          const path = projectAudioPath(voice, text);
+          if (!path) {
+            missingAudio++;
+          } else {
             try {
-              const url = new URL(path, document.baseURI);
-              const response = await fetch(url, { signal: controller.signal });
+              const response = await fetch(new URL(path, document.baseURI), { signal: controller.signal });
               if (!response.ok) throw new Error(`Arquivo ausente (${response.status})`);
               const blob = await response.blob();
               if (blob.size < 256) throw new Error('MP3 inválido');
@@ -239,25 +293,30 @@
             } catch (error) {
               if (controller.signal.aborted) throw error;
               console.warn('MP3 estático indisponível:', path, error);
-              missing++;
+              missingAudio++;
             }
           }
         }
         done++;
-        jobProgress(pack.id, done, total, 'Baixando para ouvir offline');
+        jobProgress(pack.id, done, total, 'Salvando áudios');
       }
-      const completed = total - missing;
-      state.offlineSaved[offlinePackKey(pack.id, voice)] = {
-        mode: 'all', count: completed, total,
-        status: missing ? 'partial' : 'complete', downloadedAt: Date.now()
+      const translations = await downloadTranslations(data.stories, controller.signal,
+        (current, count) => jobProgress(pack.id, audioTotal + current, total, 'Salvando traduções'));
+      translated = translations.available;
+      const savedAudio = audioTotal - missingAudio;
+      const complete = !missingAudio && translated === translationTotal;
+      state.offlineSaved[recordKey] = {
+        mode: 'all', status: complete ? 'complete' : 'partial',
+        count: savedAudio, total: audioTotal, audioCount: savedAudio, audioTotal,
+        translationCount: translated, translationTotal, downloadedAt: Date.now()
       };
       save(OFFLINE_META_KEY, state.offlineSaved);
-      toast(missing ? `${completed} de ${total} áudios salvos. Alguns não estão disponíveis neste momento.`
-        : 'Coleção baixada! Você já pode ler e ouvir offline.');
+      toast(complete ? 'Coleção completa: histórias, voz e tradução offline!'
+        : `Salvos ${savedAudio}/${audioTotal} áudios e ${translated}/${translationTotal} traduções. Pode completar depois.`);
     } catch (error) {
-      if (controller.signal.aborted) toast(`Download interrompido (${done}/${total}). Pode retomar.`);
-      else toast(`Falha no download local: ${error.message || 'verifique os arquivos'}`);
-      console.warn('Download estático:', error);
+      if (controller.signal.aborted) toast('Download interrompido. Toque novamente para completar.');
+      else toast(`Não foi possível concluir: ${error.message || 'verifique sua conexão'}`);
+      console.warn('Download da coleção:', error);
     } finally {
       state.offlineJobs.delete(pack.id);
       renderPacks(); renderStories();
@@ -268,7 +327,7 @@
   function renderPacks() {
     if (!state.catalog) return;
     const root = $('packList'); root.replaceChildren();
-    $('storageInfo').textContent = 'Baixe uma vez para ler e ouvir mesmo sem internet.';
+    $('storageInfo').textContent = 'Baixe uma vez para ler, ouvir e traduzir palavras sem internet.';
     const voices = naturalVoiceOptions();
     for (const pack of state.catalog.packs) {
       const job = state.offlineJobs.get(pack.id);
@@ -278,6 +337,9 @@
       if (!voiceId) continue;
       state.offlineVoices[pack.id] = voiceId;
       const saved = state.offlineSaved[offlinePackKey(pack.id, voiceId)];
+      const complete = saved?.status === 'complete' &&
+        Number.isInteger(saved.translationTotal) &&
+        saved.translationCount === saved.translationTotal;
       const card = element('div', 'pack-card');
       const top = element('div', 'pack-top');
       const copy = element('div', 'pack-copy');
@@ -299,7 +361,7 @@
       });
       voiceLabel.append(select);
       const button = element('button', 'action-button download-primary', job ? 'Baixando...' :
-        saved?.status === 'complete' ? '↻ Baixar novamente' : saved ? '↻ Completar download' : '↓ Baixar coleção');
+        complete ? '↻ Verificar download' : saved ? '↻ Completar download' : '↓ Baixar coleção');
       button.type = 'button'; button.disabled = busy;
       button.addEventListener('click', () => downloadVoicePack(pack, voiceId));
       const cancel = element('button', 'action-button delete', 'Cancelar');
@@ -312,10 +374,12 @@
       const status = element('small', 'pack-download-status');
       status.dataset.packStatus = pack.id;
       status.textContent = job ? 'Preparando seu download...' : saved
-        ? saved.status === 'complete' ? '✓ Disponível offline com esta voz.'
-          : `${saved.count} de ${saved.total} áudios salvos. Toque em completar download.`
-        : state.downloaded.has(pack.id) ? '✓ Texto salvo. Baixe também o áudio.'
-          : 'Inclui texto, frases e palavras.';
+        ? complete ? '✓ Texto, áudio e tradução disponíveis offline.'
+          : Number.isInteger(saved.translationTotal)
+            ? `Áudios: ${saved.audioCount}/${saved.audioTotal} · Traduções: ${saved.translationCount}/${saved.translationTotal}. Toque para completar.`
+            : 'Áudios já salvos. Toque para adicionar as traduções offline.'
+        : state.downloaded.has(pack.id) ? '✓ Texto salvo. Baixe áudio e traduções.'
+          : 'Inclui texto, áudios e tradução de cada palavra.';
       const progress = element('progress', 'pack-progress');
       progress.max = 1; progress.value = 0;
       progress.dataset.packProgress = pack.id;
@@ -335,11 +399,10 @@
       for (const key of Object.keys(state.offlineSaved)) {
         if (!key.startsWith(`${pack.id}:`)) continue;
         const voice = key.slice(pack.id.length + 1);
-        await caches.delete(offlineCacheName(pack.id, voice));
         delete state.offlineSaved[key];
       }
       save(OFFLINE_META_KEY, state.offlineSaved);
-      toast('Coleção removida deste dispositivo.');
+      toast('Coleção removida. Os áudios compartilhados continuam no dispositivo.');
     } catch (error) {
       console.warn('Não foi possível apagar a coleção:', error);
       toast('Não foi possível remover os downloads.');
@@ -354,11 +417,19 @@
     if (!pack) throw new Error('Pacote não encontrado');
     const url = packUrl(pack);
     const cached = await state.cache?.match(url);
-    const response = cached || await fetch(url);
+    if (cached) {
+      const local = await cached.json();
+      const story = local.stories?.find(s => s.id === meta.id);
+      if (story) return story;
+    }
+    // Uma história adicionada após o download pode não existir no pack antigo.
+    // Nesse caso, atualiza o texto da coleção somente quando houver internet.
+    const response = await fetch(url, { cache: 'no-store' });
     if (!response.ok) throw new Error('Texto indisponível');
-    const data = await response.json();
+    const data = await response.clone().json();
     const story = data.stories?.find(s => s.id === meta.id);
     if (!story) throw new Error('História não encontrada');
+    if (cached) await state.cache?.put(url, response.clone());
     return story;
   }
 
@@ -394,7 +465,10 @@
     if (!navigator.onLine) return;
     try {
       const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 6500);
+      const cancel = () => controller.abort();
+      externalSignal?.addEventListener('abort', cancel, { once: true });
+      if (externalSignal?.aborted) cancel();
+      const timeout = setTimeout(cancel, 6500);
       let response;
       try { response = await fetch(`${NATURAL_API}/api/voices`, { signal: controller.signal }); }
       finally { clearTimeout(timeout); }
@@ -471,15 +545,43 @@
     }
   }
 
-  async function findNaturalCached(voice, text, packId) {
-    const key = await audioRequestKey(voice, text);
-    const names = packId ? [offlineCacheName(packId, voice), AUDIO_CACHE] : [AUDIO_CACHE];
-    for (const name of names) {
-      const cache = await caches.open(name);
-      const hit = await cache.match(key);
-      if (hit) return hit.blob();
+  // Reaproveita todos os MP3 antigos sem baixá-los outra vez.
+  // Os caches legados são apagados somente após a cópia terminar.
+  async function migrateAudioCaches() {
+    const shared = await caches.open(GLOBAL_AUDIO_CACHE);
+    const names = await caches.keys();
+    const oldNames = names.filter(name => name === OLD_PLAYBACK_CACHE ||
+      name.startsWith(OLD_PACK_AUDIO_PREFIX));
+    for (const name of oldNames) {
+      const old = await caches.open(name);
+      try {
+        for (const request of await old.keys()) {
+          if (!(await shared.match(request))) {
+            const response = await old.match(request);
+            if (response?.ok) await shared.put(request, response);
+          }
+        }
+        await caches.delete(name);
+      } catch (error) {
+        // Se faltar espaço, mantém o cache anterior para uma próxima tentativa.
+        console.warn('Migração do áudio não concluída:', name, error);
+      }
     }
-    return null;
+    return shared;
+  }
+
+  function sharedAudioCache() {
+    if (!audioMigration) audioMigration = migrateAudioCaches().catch(error => {
+      audioMigration = null;
+      throw error;
+    });
+    return audioMigration;
+  }
+
+  async function findNaturalCached(voice, text) {
+    const cache = await sharedAudioCache();
+    const response = await cache.match(await audioRequestKey(voice, text));
+    return response ? response.blob() : null;
   }
 
   async function requestNaturalAudio(text, voice, signal) {
@@ -584,7 +686,7 @@
     if (state.audioCache.has(key)) return state.audioCache.get(key);
     let blob = null;
     if ('caches' in window) {
-      try { blob = await findNaturalCached(voice, text, state.currentMeta?.packId); }
+      try { blob = await findNaturalCached(voice, text); }
       catch (error) { console.warn('Cache de áudio indisponível:', error); }
     }
     if (!blob) {
@@ -611,7 +713,7 @@
     if ('caches' in window) {
       try {
         const request = await audioRequestKey(voice, text);
-        const cache = await caches.open(AUDIO_CACHE);
+        const cache = await sharedAudioCache();
         await cache.put(request, new Response(blob, { headers: { 'Content-Type': 'audio/mpeg' } }));
       } catch (error) { console.warn('Sem espaço para cachear áudio:', error); }
     }
@@ -677,7 +779,7 @@
     }
   }
 
-  async function translate(word) {
+  async function translate(word, externalSignal = null) {
     const key = normalize(word.replace(/[’]/g, "'"));
     if (dictionary[key]) return dictionary[key];
     if (state.onlineTranslations[key]) return state.onlineTranslations[key];
@@ -685,7 +787,10 @@
     if (state.requests.has(key)) return state.requests.get(key);
     const request = (async () => {
       const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 6500);
+      const cancel = () => controller.abort();
+      externalSignal?.addEventListener('abort', cancel, { once: true });
+      if (externalSignal?.aborted) cancel();
+      const timeout = setTimeout(cancel, 6500);
       try {
         const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(word)}&langpair=en%7Cpt-BR`;
         const response = await fetch(url, { signal: controller.signal });
@@ -699,9 +804,12 @@
         })[entity]).trim();
         if (!result || normalize(result) === key || result.length > 95) throw new Error('Tradução não encontrada');
         state.onlineTranslations[key] = result;
-        save(TRANSLATION_KEY, state.onlineTranslations);
+        if (!save(TRANSLATION_KEY, state.onlineTranslations)) {
+          delete state.onlineTranslations[key];
+          throw new Error('Sem espaço para salvar a tradução offline');
+        }
         return result;
-      } finally { clearTimeout(timeout); }
+      } finally { clearTimeout(timeout); externalSignal?.removeEventListener('abort', cancel); }
     })();
     state.requests.set(key, request);
     try { return await request; } finally { state.requests.delete(key); }
@@ -879,6 +987,8 @@
       navigator.serviceWorker.register('./sw.js').catch(console.warn);
     if ('caches' in window) {
       try { state.cache = await caches.open(PACK_CACHE); } catch {}
+      // Migra caches de downloads antigos em segundo plano.
+      sharedAudioCache().catch(error => console.warn('Cache de áudio:', error));
     }
     try {
       const response = await fetch('./catalog.json');
