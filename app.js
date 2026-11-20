@@ -3,21 +3,21 @@
 
   const $ = id => document.getElementById(id);
   const PACK_CACHE = 'storyspeak-packs-v18';
-  const TRANSLATION_KEY = 'storyspeak-translations-v1';
   const NATURAL_API = 'https://freeapi.pro';
   const LOCAL_TTS_INDEX = './tts/index.json';
-  const VOICE_KEY = 'storyspeak-voice-v13';
+  const VOICE_KEY = 'storyspeak-voice-v25';
   const VOICE_META_KEY = 'storyspeak-natural-voices-v13';
   const OFFLINE_META_KEY = 'storyspeak-offline-voice-packs-v13';
   const GLOBAL_AUDIO_CACHE = 'storyspeak-audio-global-v18';
   const OLD_PLAYBACK_CACHE = 'storyspeak-audio-on-demand-v13';
   const OLD_PACK_AUDIO_PREFIX = 'storyspeak-audio-pack-v13-';
   let audioMigration = null;
-    const ENGLISH_VOICES = new Set([
-    'en-US-AndrewMultilingualNeural', 'en-US-AvaNeural',
-    'en-GB-SoniaNeural', 'en-GB-RyanNeural'
+  // Keep Andrew Neural separate from Andrew Multilingual. Audio cache keys are voice-specific.
+  const ANDREW_US = 'en-US-AndrewNeural';
+  const ENGLISH_VOICES = new Set([
+    ANDREW_US, 'en-US-AvaNeural', 'en-GB-SoniaNeural', 'en-GB-RyanNeural'
   ]);
-  const DEFAULT_VOICE = 'cloud:voice-107';
+  const DEFAULT_VOICE = `cloud:${ANDREW_US}`;
   const AUDIO_CACHE_LIMIT = 35;
   const dictionary = window.STORYSPEAK_DICTIONARY || {};
   const state = {
@@ -31,7 +31,6 @@
     offlineSaved: readJson(OFFLINE_META_KEY, {}), currentMeta: null,
     ttsIndex: { version: 1, voices: {} }, staticAudioMaps: new Map(),
     audioCache: new Map(),
-    onlineTranslations: readJson(TRANSLATION_KEY, {}), requests: new Map()
   };
 
   function readJson(key, fallback) {
@@ -161,18 +160,24 @@
   }
 
   function naturalVoiceOptions() {
-    const voices = new Map((state.cloudVoices || []).map(v => [v.edgeVoice, v]));
-    if (!voices.has('en-US-AndrewMultilingualNeural'))
-      voices.set('en-US-AndrewMultilingualNeural', {
-        id: 'voice-107', name: 'Andrew Multilingual', edgeVoice: 'en-US-AndrewMultilingualNeural'
-      });
-    // Outras vozes geradas localmente aparecem mesmo offline, sem consultar API.
-    const names = { 'en-US-AvaNeural': 'Ava', 'en-GB-SoniaNeural': 'Sonia', 'en-GB-RyanNeural': 'Ryan' };
-    for (const edge of Object.keys(state.ttsIndex?.voices || {})) {
-      if (!voices.has(edge) && ENGLISH_VOICES.has(edge))
-        voices.set(edge, { id: `static:${edge}`, name: `${names[edge] || edge} (arquivos locais)`, edgeVoice: edge });
-    }
-    return [...voices.values()].filter(v => ENGLISH_VOICES.has(v.edgeVoice));
+    // Use the actual Edge voice name as a permanent ID, not the API's mutable ID.
+    // That keeps old Andrew Multilingual files and browser caches isolated.
+    const available = new Map((state.cloudVoices || [])
+      .filter(v => ENGLISH_VOICES.has(v.edgeVoice))
+      .map(v => [v.edgeVoice, v]));
+    const local = new Set(Object.keys(state.ttsIndex?.voices || {}));
+    const names = {
+      [ANDREW_US]: 'Andrew (inglês americano)',
+      'en-US-AvaNeural': 'Ava',
+      'en-GB-SoniaNeural': 'Sonia',
+      'en-GB-RyanNeural': 'Ryan'
+    };
+    return [...ENGLISH_VOICES]
+      .filter(edge => edge === ANDREW_US || available.has(edge) || local.has(edge))
+      .map(edge => ({
+        id: edge, edgeVoice: edge, name: names[edge],
+        apiId: available.get(edge)?.id || null
+      }));
   }
   const stableVoiceId = voice => voiceCode(voice) || voice;
   const offlinePackKey = (packId, voice) => `${packId}:${stableVoiceId(voice)}`;
@@ -210,35 +215,10 @@
   // As traduções já conhecidas são locais e o restante é salvo globalmente.
   // A consulta online é feita SOMENTE após o clique em "Baixar coleção".
   async function downloadTranslations(stories, signal, progress) {
+    if (signal.aborted) throw new DOMException('Cancelado', 'AbortError');
     const words = storyWords(stories);
-    let available = 0;
-    let errorsInRow = 0;
-    for (let i = 0; i < words.length; i++) {
-      if (signal.aborted) throw new DOMException('Cancelado', 'AbortError');
-      const word = words[i];
-      if (dictionary[word] || state.onlineTranslations[word]) {
-        available++;
-      } else if (navigator.onLine && errorsInRow < 3) {
-        try {
-          await translate(word, signal);
-          available++;
-          errorsInRow = 0;
-        } catch (error) {
-          if (signal.aborted) throw error;
-          errorsInRow++;
-          console.warn('Tradução não disponível:', word, error.message);
-        }
-        // Fila gentil para serviços públicos; não dispara centenas em paralelo.
-        if (i < words.length - 1)
-          await new Promise((resolve, reject) => {
-            const timer = setTimeout(() => { signal.removeEventListener('abort', stop); resolve(); }, 650);
-            const stop = () => { clearTimeout(timer); reject(new DOMException('Cancelado', 'AbortError')); };
-            signal.addEventListener('abort', stop, { once: true });
-            if (signal.aborted) stop();
-          });
-      }
-      progress(i + 1, words.length);
-    }
+    const available = words.filter(word => Boolean(dictionary[word])).length;
+    progress(words.length, words.length);
     return { available, total: words.length };
   }
 
@@ -333,7 +313,7 @@
       const job = state.offlineJobs.get(pack.id);
       const busy = state.busy.has(pack.id) || !!job;
       const voiceId = state.offlineVoices[pack.id] ||
-        voices.find(v => v.edgeVoice === 'en-US-AndrewMultilingualNeural')?.id || voices[0]?.id;
+        voices.find(v => v.edgeVoice === ANDREW_US)?.id || voices[0]?.id;
       if (!voiceId) continue;
       state.offlineVoices[pack.id] = voiceId;
       const saved = state.offlineSaved[offlinePackKey(pack.id, voiceId)];
@@ -436,7 +416,7 @@
   // Apenas vozes en-US e en-GB, com uma seleção curta e sem duplicatas.
   function fillVoices() {
     const select = $('voiceSelect');
-    const selected = select.value || readJson(VOICE_KEY, readJson('storyspeak-voice-v11', DEFAULT_VOICE));
+    const selected = select.value || readJson(VOICE_KEY, DEFAULT_VOICE);
     select.replaceChildren();
     const natural = document.createElement('optgroup');
     natural.label = 'Vozes naturais';
@@ -457,7 +437,8 @@
     for (const voice of state.voices) local.append(new Option(`${voice.name} · ${voice.lang}`, `native:${voice.voiceURI}`));
     select.append(local);
     const values = [...select.options].map(option => option.value);
-    select.value = values.includes(selected) ? selected : DEFAULT_VOICE;
+    select.value = values.includes(selected) ? selected :
+      (values.includes(DEFAULT_VOICE) ? DEFAULT_VOICE : values[0] || 'native:');
     if (state.catalog) renderPacks();
   }
 
@@ -465,10 +446,7 @@
     if (!navigator.onLine) return;
     try {
       const controller = new AbortController();
-      const cancel = () => controller.abort();
-      externalSignal?.addEventListener('abort', cancel, { once: true });
-      if (externalSignal?.aborted) cancel();
-      const timeout = setTimeout(cancel, 6500);
+      const timeout = setTimeout(() => controller.abort(), 6500);
       let response;
       try { response = await fetch(`${NATURAL_API}/api/voices`, { signal: controller.signal }); }
       finally { clearTimeout(timeout); }
@@ -480,7 +458,7 @@
       // IDs são obtidos da API. Em caso de falha, mantemos o último catálogo salvo.
       const dedup = new Map(voices.map(voice => [voice.edgeVoice, voice]));
       const selection = [
-        'en-US-AndrewMultilingualNeural', 'en-US-AvaNeural',
+        ANDREW_US, 'en-US-AvaNeural',
         'en-GB-SoniaNeural', 'en-GB-RyanNeural'
       ].map(id => dedup.get(id)).filter(Boolean);
       if (!selection.length) throw new Error('Nenhuma voz US/UK');
@@ -507,8 +485,9 @@
   // Índice estático: evita um GET que retornaria 404 para cada palavra não gerada.
   // O nome da voz neural, não o ID temporário da API, identifica cada MP3 local.
   function voiceCode(voiceId) {
-    return naturalVoiceOptions().find(v => v.id === voiceId)?.edgeVoice ||
-      (voiceId === 'voice-107' ? 'en-US-AndrewMultilingualNeural' : null);
+    if (ENGLISH_VOICES.has(voiceId)) return voiceId;
+    // Legacy cloud IDs are only accepted for voices explicitly present in the new catalog.
+    return naturalVoiceOptions().find(v => v.apiId && v.apiId === voiceId)?.edgeVoice || null;
   }
 
   function projectAudioPath(voiceId, text) {
@@ -593,9 +572,19 @@
     const timer = setTimeout(abort, 20000);
     try {
       if (signal?.aborted) abort();
+      // Never send an old Andrew Multilingual ID to the API as a fallback.
+      const edgeName = voiceCode(voice);
+      let providerId = state.cloudVoices.find(v => v.edgeVoice === edgeName)?.id;
+      // On the first explicit playback of an uncached word, discover the API ID.
+      // If the provider lacks AndrewNeural, NEVER silently substitute Multilingual.
+      if (!providerId && navigator.onLine && edgeName) {
+        await refreshNaturalVoices();
+        providerId = state.cloudVoices.find(v => v.edgeVoice === edgeName)?.id;
+      }
+      if (!edgeName || !providerId) throw new Error('Esta voz não está disponível na API. Use os MP3 locais ou o TTS do Android.');
       const response = await fetch(`${NATURAL_API}/api/tts`, {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ voice, text: normalizeTts(text), rate: 0, pitch: 0 }),
+        body: JSON.stringify({ voice: providerId, text: normalizeTts(text), rate: 0, pitch: 0 }),
         signal: controller.signal
       });
       if (!response.ok) {
@@ -779,40 +768,10 @@
     }
   }
 
-  async function translate(word, externalSignal = null) {
+  async function translate(word) {
     const key = normalize(word.replace(/[’]/g, "'"));
     if (dictionary[key]) return dictionary[key];
-    if (state.onlineTranslations[key]) return state.onlineTranslations[key];
-    if (!navigator.onLine) throw new Error('Tradução indisponível offline');
-    if (state.requests.has(key)) return state.requests.get(key);
-    const request = (async () => {
-      const controller = new AbortController();
-      const cancel = () => controller.abort();
-      externalSignal?.addEventListener('abort', cancel, { once: true });
-      if (externalSignal?.aborted) cancel();
-      const timeout = setTimeout(cancel, 6500);
-      try {
-        const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(word)}&langpair=en%7Cpt-BR`;
-        const response = await fetch(url, { signal: controller.signal });
-        if (!response.ok) throw new Error('Serviço de tradução indisponível');
-        const json = await response.json();
-        if (Number(json.responseStatus) !== 200 || !json.responseData?.translatedText) throw new Error('Limite da tradução atingido');
-        const raw = String(json.responseData.translatedText).trim();
-        // Usamos textContent para renderizar; entidades HTML são decodificadas sem executar HTML.
-        const result = raw.replace(/&(?:amp|quot|apos|#39|lt|gt);/g, entity => ({
-          '&amp;': '&', '&quot;': '"', '&apos;': "'", '&#39;': "'", '&lt;': '<', '&gt;': '>'
-        })[entity]).trim();
-        if (!result || normalize(result) === key || result.length > 95) throw new Error('Tradução não encontrada');
-        state.onlineTranslations[key] = result;
-        if (!save(TRANSLATION_KEY, state.onlineTranslations)) {
-          delete state.onlineTranslations[key];
-          throw new Error('Sem espaço para salvar a tradução offline');
-        }
-        return result;
-      } finally { clearTimeout(timeout); externalSignal?.removeEventListener('abort', cancel); }
-    })();
-    state.requests.set(key, request);
-    try { return await request; } finally { state.requests.delete(key); }
+    throw new Error('Tradução ainda não disponível.');
   }
 
   // Uma única palavra pode ficar expandida; os resultados atrasados nunca reabrem outra palavra.

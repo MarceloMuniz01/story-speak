@@ -1,116 +1,64 @@
-# StorySpeak v20 — Leitor de inglês offline
+# StorySpeak v25 — Andrew americano (não multilíngue)
 
-PWA estática com textos em inglês, leitura por frase, pronúncia, tradução por palavra, modo escuro e pesquisa por nível/categoria. **Não há backend**.
+O StorySpeak é uma PWA estática de leitura em inglês: áudios por palavra/frase/história, tradução offline (WikDict), categorias, pesquisa, modo escuro e coleções para baixar no Android.
 
-## Download no celular
+## A mudança de voz
 
-Em **Downloads**, escolha a coleção e a voz e toque em **Baixar coleção**.
-O StorySpeak salva o texto, os MP3 publicados para aquela voz e as traduções das palavras.
-Áudios e traduções são compartilhados entre todas as coleções: uma palavra já salva é reutilizada.
+- **Padrão:** `en-US-AndrewNeural` (em vez de `en-US-AndrewMultilingualNeural`).
+- **Nova pasta:** `tts/andrew_neural_en-us/`.
+- **Antiga pasta:** `tts/andrew_en-us/`, com seus MP3 multilíngues, permanece intacta e não é usada como fonte da nova voz.
+- A voz padrão é identificada pelo *nome exato da voz*, não pelo ID da API (`voice-107` era a voz antiga). O índice e cache do navegador também distinguem as variantes.
+- Outras vozes en-US/en-GB podem continuar disponíveis, mas a variante **Andrew Multilingual** não é exibida nem usada.
 
-- As **624 palavras diferentes das 12 histórias originais** estão traduzidas no glossário do próprio projeto (`dictionary.js`). Depois de instalar/atualizar a PWA, essas traduções funcionam sem internet. O significado isolado pode variar conforme o contexto.
-- Para **histórias novas**, o assistente Python acrescenta automaticamente ao `dictionary.js` as palavras inéditas, com até três sentidos separados por `;` quando a fonte oferece alternativas. Sem internet ou com limite da API, o aplicativo ainda pode buscar e guardar traduções faltantes quando o usuário baixar a coleção.
-- Se o provedor limitar o uso ou estiver offline, o aplicativo informa quantas traduções e quantos áudios faltaram. Um novo toque em **Completar download** tenta apenas os pendentes.
-- Não é possível garantir que o navegador mantenha os dados para sempre: limpar dados ou liberar espaço pode remover os downloads.
+## Atualizar no Termux (sem perder arquivos)
 
-A tradução por palavra também funciona ao tocar na palavra enquanto há conexão; essa tradução é armazenada para a próxima vez.
+Coloque o ZIP `storyspeak-v25-andrew-us-atualizacao.zip` em `/sdcard/Download` e rode na raiz do repositório:
 
-## Um único comando para gerar todos os áudios
+```sh
+cd ~/story-speak
+python scripts/atualizar_projeto.py /sdcard/Download/storyspeak-v25-andrew-us-atualizacao.zip
+```
+
+O atualizador preserva `tts/`, `dictionary.js`, `packs/` e `catalog.json`. Alternativamente, use `unzip -o <arquivo.zip> -d .` porque este ZIP de atualização **não contém** essas pastas ou arquivos protegidos.
+
+## Gerar a nova voz (histórias + frases + palavras)
 
 ```sh
 python -m pip install -r requirements-tts.txt
-python scripts/gerar_tudo.py
+python scripts/gerar_tudo.py --voice andrew --status
+python scripts/gerar_tudo.py --voice andrew
 ```
 
-O gerador usa Andrew (`en-US-AndrewMultilingualNeural`) por padrão e percorre todas as histórias, frases e palavras. Não repete arquivos válidos. Outros exemplos:
+O gerador percorre **todas as coleções cadastradas** (incluindo `animes` se já estiver no seu catálogo), cria somente os arquivos ausentes e atualiza `tts/index.json`. Também mantém os registros antigos em `tts/generated.json` sem confundir as duas vozes.
+
+Para gerar uma coleção apenas:
 
 ```sh
-python scripts/gerar_tudo.py --status
-python scripts/gerar_tudo.py --pack everyday
-python scripts/gerar_tudo.py --voice sonia
-python scripts/gerar_tudo.py --aproveitar-existentes
+python scripts/gerar_tudo.py --voice andrew --pack animes
 ```
 
-Os arquivos ficam em `tts/<voz>/`, as frases em `tts/<voz>/packs/<categoria>/<historia>/` e o índice em `tts/index.json`. Somente publique MP3 caso tenha os direitos de redistribuição aplicáveis.
+Se houver falhas do serviço, rode o mesmo comando novamente; não é preciso apagar os MP3 válidos. Não use `--adopt-existing` com arquivos de origem/voz desconhecida. **Não mova os MP3 da pasta antiga para a nova:** isso só trocaria o nome do arquivo, não a pronúncia.
 
-## Atualizar pelo Termux sem perder MP3 nem histórias
-
-Na raiz do seu projeto (`~/story-speak`), após ter o script instalado:
+## Publicar as mudanças
 
 ```sh
-python scripts/atualizar_projeto.py
+git add app.js index.html sw.js scripts/audio_common.py README.md README-ANDREW-US.txt tts/index.json tts/generated.json tts/andrew_neural_en-us/
+git commit -m "Use Andrew Neural en-US instead of Multilingual"
+git push
 ```
 
-O atualizador escolhe o ZIP StorySpeak mais recente de `/sdcard/Download` (ou `~/storage/downloads`), copia os arquivos da aplicação e **não toca em `tts/`, `catalog.json`, `packs/` nem em `dictionary.js`**, por padrão.
+O `index.json` lista só áudios que correspondam ao texto e à voz declarados. Antes da nova geração, áudios Andrew em inglês não aparecerão offline. Depois de publicar, recarregue a PWA para receber o Service Worker v25; se necessário, feche e reabra o aplicativo.
 
-Para indicar um ZIP específico:
+### API online e fallback
 
-```sh
-python scripts/atualizar_projeto.py /sdcard/Download/storyspeak-v20-atualizacao-segura.zip
-```
+Se faltar MP3 e você tocar para ouvir, o leitor procura se o provedor online suporta `en-US-AndrewNeural`. **Não substitui silenciosamente por Andrew Multilingual.** Se esse provedor não oferecer a variante correta, usa a voz nativa do Android como fallback. A síntese e redistribuição dos arquivos devem respeitar os termos do serviço usado.
 
-Para instalar esta versão pela primeira vez, extraia o ZIP de **atualização segura** na pasta do projeto: ele já vem sem `tts/`, `catalog.json`, `packs/` e `dictionary.js`.
+## Tradução offline
 
-```sh
-unzip -o /sdcard/Download/storyspeak-v20-atualizacao-segura.zip -d .
-```
-
-## Adicionar histórias e categorias
-
-```sh
-python scripts/adicionar_historia.py
-```
-
-Escolha uma categoria existente ou crie outra. Cole uma história em inglês e digite `:fim` em linha própria; o assistente pergunta título, nível, gênero, resumo e tags.
-
-Também aceita JSON colado (digite `:fim` depois) ou arquivos:
-
-```sh
-python scripts/adicionar_historia.py --arquivo /sdcard/Download/historia.json
-python scripts/adicionar_historia.py --arquivo /sdcard/Download/historia.txt
-```
-
-JSON mínimo:
-
-```json
-{"title":"A Rainy Evening","level":"B1","genre":"Mystery","summary":"A surprise after the rain","tags":["rain","mystery"],"text":"It was a quiet evening. The door opened."}
-```
-
-Ao confirmar o cadastro, o assistente **atualiza o dicionário automaticamente** usando a API pública MyMemory. Quando a API fornece traduções distintas para a mesma palavra, elas são separadas por `;` (até três por padrão):
-
-```js
-"right": "certo; direita"
-```
-
-Se já existir uma tradução no glossário, ela é preservada. Os novos pares são adicionados em um bloco gerado no final de `dictionary.js`, sem reformatar o dicionário original. O script faz uma consulta por palavra nova, sem gerar falsos sentidos para preencher o limite. Nem todos os significados possíveis estarão sempre disponíveis; as sugestões dependem da fonte e podem ser imprecisas.
-
-Se faltar internet ou atingir o limite da API, a história permanece salva. Para continuar depois:
+A versão v24 usa o dicionário WikDict para atualizar `dictionary.js` sem chave de API:
 
 ```sh
 python scripts/atualizar_dicionario.py
-python scripts/atualizar_dicionario.py --limite 20   # traduzi apenas as próximas 20 palavras
 ```
 
-Para cadastrar sem consultar a API naquele momento:
-
-```sh
-python scripts/adicionar_historia.py --sem-traducao
-```
-
-Após adicionar histórias, gere os MP3 faltantes com `python scripts/gerar_tudo.py`. Publique `catalog.json`, `packs/`, **`dictionary.js`** e `tts/` no GitHub Pages. A PWA busca a versão mais recente do dicionário online e mantém a última versão em cache para uso offline.
-
-## Hospedagem
-
-Tudo funciona com arquivos estáticos: GitHub Pages ou outro host HTTPS. Publique `index.html`, `app.js`, `styles.css`, `dictionary.js`, `sw.js`, `catalog.json`, `packs/`, `assets/` e `tts/`. A voz neural online não é necessária para áudios MP3 já baixados; falhas da API de voz têm fallback nativo.
-
-## Verificações
-
-```sh
-node --check app.js
-node --check sw.js
-node tests/test_frontend.cjs
-python tests/test_gerar_tudo.py
-python tests/test_dictionary.py
-python tests/test_maintenance.py
-python tests/test_browser.py   # se houver Playwright e Chromium
-```
+Os scripts de tradução, as histórias e os MP3 antigos não são modificados pela atualização v25.

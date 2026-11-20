@@ -1,4 +1,4 @@
-const SHELL = 'storyspeak-reader-v20';
+const SHELL = 'storyspeak-reader-v25';
 const FILES = [
   './', './index.html', './styles.css', './app.js', './dictionary.js',
   './catalog.json', './tts/index.json', './manifest.webmanifest',

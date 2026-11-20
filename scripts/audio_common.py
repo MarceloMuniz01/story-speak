@@ -15,7 +15,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 TTS = ROOT / 'tts'
 VOICES = {
-    'andrew': ('en-US-AndrewMultilingualNeural', 'andrew_en-us'),
+    'andrew': ('en-US-AndrewNeural', 'andrew_neural_en-us'),
     'ava': ('en-US-AvaNeural', 'ava_en-us'),
     'sonia': ('en-GB-SoniaNeural', 'sonia_en-gb'),
     'ryan': ('en-GB-RyanNeural', 'ryan_en-gb'),
@@ -91,6 +91,7 @@ def rebuild_index():
     """Publish only files matching the current text+voice fingerprint."""
     saved = load_metadata()
     result = {'version': 1, 'voices': {}}
+    stories_all = list(load_packs())  # Evita reler todos os JSON para cada voz.
     for _short, (voice, slug) in VOICES.items():
         root = TTS / slug
         word_paths = {}
@@ -100,7 +101,7 @@ def rebuild_index():
                     and saved.get(path.relative_to(ROOT).as_posix()) == sha(word, voice)):
                 word_paths[word] = path.relative_to(ROOT).as_posix()
         stories = {}
-        for pack_id, story in load_packs():
+        for pack_id, story in stories_all:
             base = root / 'packs' / pack_id / story['id']
             entry = {'sentences': []}
             full_path = base / 'full.mp3'
@@ -127,9 +128,9 @@ def stop_error(error: Exception) -> bool:
                                   '403', 'forbidden', 'unauthorized', '401'))
 
 
-async def synthesize(tasks, *, voice: str, delay: float = 0.8, force: bool = False,
+async def synthesize(tasks, *, voice: str, delay: float = 0.5, force: bool = False,
                      dry_run: bool = False, max_items: int = 0, retries: int = 2,
-                     workers: int = 2, timeout: float = 50,
+                     workers: int = 3, timeout: float = 50,
                      only_failed: bool = False, group: str = 'words',
                      max_failures: int = 6):
     """Bounded async workers with atomic, resumable output.
@@ -255,7 +256,7 @@ async def synthesize(tasks, *, voice: str, delay: float = 0.8, force: bool = Fal
                         if consecutive_failures >= max_failures:
                             halt_reason = f'{consecutive_failures} falhas seguidas: serviço possivelmente indisponível'
                             halted.set()
-                    if finished % 5 == 0 or time.monotonic() - last_save > 4:
+                    if finished % 15 == 0 or time.monotonic() - last_save > 5:
                         save_progress()
                         last_save = time.monotonic()
             finally:

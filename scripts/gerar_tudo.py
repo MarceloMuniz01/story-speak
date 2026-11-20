@@ -116,6 +116,44 @@ def adopt_existing_audio(tasks: list[tuple[str, Path, str]], voice: str) -> tupl
     return adopted, unchanged, conflicts, invalid
 
 
+
+async def test_voice(voice: str, timeout: float) -> bool:
+    """Quick probe of actual synthesis, not just voice-list availability.
+
+    No files or project metadata are changed. A success is not a guarantee that
+    hundreds of subsequent requests will work.
+    """
+    import tempfile
+    try:
+        import edge_tts
+    except ImportError as exc:
+        raise SystemExit('Instale: python -m pip install -r requirements-tts.txt') from exc
+
+    samples = ('intention', 'decide', 'He decided to act with good intentions.')
+    ok = 0
+    with tempfile.TemporaryDirectory(prefix='storyspeak-voice-test-') as directory:
+        for i, text in enumerate(samples, 1):
+            path = Path(directory) / f'probe-{i}.mp3'
+            try:
+                await asyncio.wait_for(
+                    edge_tts.Communicate(text, voice).save(str(path)), timeout=timeout
+                )
+                if not mp3_valid(path):
+                    raise ValueError('O serviço não retornou um MP3 válido')
+                print(f'[{i}/{len(samples)}] OK: {text}', flush=True)
+                ok += 1
+            except Exception as exc:
+                print(f'[{i}/{len(samples)}] FALHOU: {text} — {type(exc).__name__}: {exc}', flush=True)
+            if i != len(samples):
+                await asyncio.sleep(2)
+    print(f'Resultado da voz {voice}: {ok}/{len(samples)} testes com áudio.', flush=True)
+    if ok != len(samples):
+        print('Não execute o lote de 931 itens agora. Confira a rede, a versão do edge-tts '
+              'e tente novamente mais tarde; a voz está instável ou indisponível.', flush=True)
+        return False
+    print('Teste curto aprovado. Ainda pode haver falhas intermitentes durante o lote.', flush=True)
+    return True
+
 def main():
     parser = argparse.ArgumentParser(
         description='Gera todos os MP3 (histórias, frases e palavras) com retomada automática.')
@@ -123,6 +161,10 @@ def main():
                         help='Pack desejado. Repetir para vários; omitido = todos.')
     parser.add_argument('--voice', choices=VOICES, default='andrew')
     parser.add_argument('--status', action='store_true', help='Somente relatório do que falta; sem acessar TTS.')
+    parser.add_argument('--test-voice', '--teste-voz', action='store_true',
+                        help='Testa 3 sínteses curtas sem gerar arquivos do projeto nem alterar índices.')
+    parser.add_argument('--max-failures', type=int, default=3,
+                        help='Para o lote após N falhas consecutivas de MP3 (padrão: 3).')
     parser.add_argument('--show-missing', type=int, default=0, metavar='N',
                         help='Lista até N MP3 pendentes (0 = não listar).')
     parser.add_argument('--adopt-existing', '--aproveitar-existentes', action='store_true',
@@ -132,15 +174,19 @@ def main():
     parser.add_argument('--dry-run', action='store_true', help='Exibe arquivos pendentes sem gerar.')
     parser.add_argument('--limit', type=int, default=0,
                         help='Máximo de MP3 novos nesta rodada; 0 = TODOS (padrão).')
-    parser.add_argument('--workers', type=int, default=2)
-    parser.add_argument('--delay', type=float, default=0.8)
+    parser.add_argument('--workers', type=int, default=3)
+    parser.add_argument('--delay', type=float, default=0.5)
     parser.add_argument('--retries', type=int, default=2)
     parser.add_argument('--timeout', type=float, default=50)
     parser.add_argument('--force', action='store_true', help='Recria MP3 válidos também; não usar na rotina normal.')
     args = parser.parse_args()
-    if not 0.5 <= args.delay <= 60 or args.limit < 0 or not 0 <= args.retries <= 4 or not 1 <= args.workers <= 3 or args.timeout < 10 or args.show_missing < 0:
-        parser.error('--delay 0.5–60, --workers 1–3, --retries 0–4, --limit >= 0, --show-missing >= 0, --timeout >= 10')
+    if args.max_failures < 1:
+        parser.error('--max-failures precisa ser >= 1')
+    if not 0.4 <= args.delay <= 60 or args.limit < 0 or not 0 <= args.retries <= 4 or not 1 <= args.workers <= 4 or args.timeout < 10 or args.show_missing < 0:
+        parser.error('--delay 0.4–60, --workers 1–4, --retries 0–4, --limit >= 0, --show-missing >= 0, --timeout >= 10')
     voice, slug = VOICES[args.voice]
+    if args.test_voice:
+        raise SystemExit(0 if asyncio.run(test_voice(voice, args.timeout)) else 1)
     selected = set(args.pack or pack_ids())
     tasks = collect(selected, slug)
     pending, counts, examples = audit_tasks(tasks, voice, args.force)
@@ -194,7 +240,7 @@ def main():
             [(path, text) for path, text in pending], voice=voice,
             delay=args.delay, workers=args.workers, retries=args.retries,
             timeout=args.timeout, force=args.force, max_items=args.limit,
-            dry_run=args.dry_run, group='pack'))
+            dry_run=args.dry_run, group='pack', max_failures=args.max_failures))
     except KeyboardInterrupt:
         print('\nInterrompido. Execute o mesmo comando para completar os MP3 restantes.', flush=True)
 

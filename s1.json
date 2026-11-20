@@ -1,0 +1,49 @@
+{
+  "stories": [
+    {
+      "id": "itachi-reality",
+      "title": "Itachi — Reality and Illusion",
+      "level": "B2",
+      "genre": "Philosophical monologue",
+      "summary": "A reflection on how knowledge and awareness shape (and limit) each person's perception of reality.",
+      "tags": ["anime", "naruto", "itachi", "philosophy", "reality", "truth"],
+      "text": "Each of us lives dependent and bound by our individual knowledge and our awareness. All that is what we call \"reality\". However, both knowledge and awareness are equivocal. One's reality might be another's illusion. We all live inside our own fantasies."
+    },
+    {
+      "id": "ayanokoji-tools",
+      "title": "Ayanokōji — All People Are Tools",
+      "level": "B2",
+      "genre": "Psychological monologue",
+      "summary": "A cold declaration of utilitarianism and the belief that winning is the only thing that matters.",
+      "tags": ["anime", "classroom-of-the-elite", "ayanokoji", "psychology", "nihilism"],
+      "text": "I've never once thought of you as an ally. Not you. Not Kushida. Not Hirata. All people are nothing but tools. It doesn't matter how it's done. It doesn't matter what needs to be sacrificed. In this world, winning is everything. As long as I win in the end… that's all that matters."
+    },
+    {
+      "id": "l-monsters",
+      "title": "L — The Monster Who Lies",
+      "level": "C1",
+      "genre": "Psychological monologue",
+      "summary": "L reflects on the nature of different kinds of \"monsters\" and admits he is one of them.",
+      "tags": ["anime", "death-note", "l", "philosophy", "identity"],
+      "text": "There are many types of monsters that scare me: Monsters who cause trouble without showing themselves, monsters who abduct children, monsters who devour dreams, monsters who suck blood… and then, monsters who tell nothing but lies. Lying monsters are a real nuisance: They are much more cunning than others. They pose as humans even though they have no understanding of the human heart; they eat even though they've never experienced hunger; they study even though they have no interest in academics; they seek friendship even though they do not know how to love. If I were to encounter such monsters, I would likely be eaten by them… because in truth, I am that monster."
+    },
+    {
+      "id": "madara-reality",
+      "title": "Madara — Wake Up to Reality",
+      "level": "B2",
+      "genre": "Philosophical monologue",
+      "summary": "Madara's bleak worldview about the inevitability of pain, conflict and the duality of existence.",
+      "tags": ["anime", "naruto", "madara", "philosophy", "nihilism", "war"],
+      "text": "Wake up to reality! Nothing ever goes as planned in this accursed world. The longer you live, the more you realize that the only things that truly exist in this reality are merely pain, suffering and futility. Listen… Everywhere you look in this world, wherever there is light, there will always be shadows to be found as well. As long as there is a concept of victors, the vanquished will also exist. The selfish intent of wanting to preserve peace initiates wars, and hatred is born in order to protect love. There are nexuses, causal relationships that cannot be separated. I want to sever the fate of this world. A world of only victors. A world of only peace. A world of only love. I will create such a world. I am… the ghost of the Uchiha. For truly this reality… is a hell."
+    },
+    {
+      "id": "itachi-people-live",
+      "title": "Itachi — Bound by Beliefs",
+      "level": "B2",
+      "genre": "Philosophical monologue",
+      "summary": "Another classic Itachi reflection on how people define reality through what they accept as true.",
+      "tags": ["anime", "naruto", "itachi", "philosophy", "belief"],
+      "text": "People live their lives bound by what they accept as correct and true. That is how they define \"reality\". But what does it mean to be \"correct\" or \"true\"? Merely vague concepts… Their \"reality\" may all be a mirage. Can we consider them to simply be living in their own world, shaped by their beliefs?"
+    }
+  ]
+}

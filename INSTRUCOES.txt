@@ -1,0 +1,18 @@
+StorySpeak — teste rápido do Andrew Neural
+
+1. Copie scripts/gerar_tudo.py e scripts/audio_common.py para seu projeto.
+   Não substitua a pasta tts/, nem dictionary.js, packs/ ou catalog.json.
+
+2. No Termux (dentro de ~/story-speak):
+   python -m pip install -U edge-tts
+   python scripts/gerar_tudo.py --teste-voz
+
+3. Se 3/3 testes forem OK, gere um lote pequeno com cuidado:
+   python scripts/gerar_tudo.py --limit 10 --workers 1 --delay 2 --retries 1
+
+4. Se falhar repetidamente, não rode o lote inteiro. Teste outro horário.
+   As falhas 'NoAudioReceived' podem ser do serviço remoto.
+
+Novidades: --teste-voz gera três MP3 temporários para conferir a síntese real,
+sem escrever em tts/. --max-failures 3 (padrão) interrompe o lote mais cedo
+quando o provedor deixa de produzir áudio.
