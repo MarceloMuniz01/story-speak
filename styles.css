@@ -48,7 +48,7 @@
 .pack-audio-actions{grid-column:1/-1;display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
 .pack-download-status{grid-column:1/-1;color:var(--muted);line-height:1.5;}
 .pack-progress{grid-column:1/-1;width:100%;height:10px;accent-color:var(--primary);}
-.full-read-btn{margin-bottom:12px;background:var(--tint);color:var(--primary);}
+.full-read-btn{background:var(--tint);color:var(--primary);}
 @media(max-width:620px){.pack-top{flex-wrap:wrap}.pack-top .pack-copy{flex-basis:60%}.pack-audio{grid-template-columns:1fr}.pack-audio-actions .action-button{white-space:normal}}
 
 /* v17: interface centrada em leitura, não em detalhes técnicos. */
@@ -79,4 +79,24 @@
  .pack-audio-actions{grid-column:1}
  .download-primary{flex:1}
  .reader-settings .voice-setting{flex:1 1 100%}
+}
+
+/* v28: one clear voice selector per downloaded category; reuse existing controls. */
+.pack-voice-label{grid-column:1;min-width:0}
+.pack-voice-select{width:100%}
+.pack-audio-actions{grid-column:2}
+@media(max-width:620px){.pack-voice-label,.pack-audio-actions{grid-column:1}}
+
+/* A pronúncia aparece apenas ao segundo toque. Não exige novos botões. */
+.pronunciation-hint{display:block;margin-top:3px;padding:2px 5px;color:var(--primary);font-family:Inter,system-ui,sans-serif;font-size:.76rem;font-weight:800;line-height:1.35;white-space:nowrap;letter-spacing:.01em}
+
+/* v30: Controles com altura e largura estáveis: a entrada do botão Parar nunca move a leitura. */
+.reader-audio-controls{display:flex;flex:1 1 100%;align-items:center;gap:9px;min-width:0}
+.reader-audio-controls .small-button{margin:0;white-space:nowrap}
+.reader-audio-controls .full-read-btn{flex:0 1 auto;min-width:0}
+.reader-audio-controls .stop-audio-btn{flex:0 0 auto}
+.reader-audio-controls .stop-audio-btn.is-idle{visibility:hidden;pointer-events:none}
+@media(max-width:380px){
+  .reader-audio-controls{gap:6px}
+  .reader-audio-controls .small-button{padding:0 7px;font-size:.78rem}
 }

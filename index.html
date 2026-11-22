@@ -10,6 +10,7 @@
   <link rel="apple-touch-icon" href="./assets/icon-192.png">
   <link rel="stylesheet" href="./styles.css">
   <script src="./dictionary.js" defer></script>
+  <script src="./vendor/jszip.min.js" defer></script>
   <script src="./app.js" defer></script>
   <title>StorySpeak — Inglês com tradução</title>
 </head>
@@ -28,7 +29,7 @@
         <div class="hero">
           <span class="eyebrow">LEIA • OUÇA • APRENDA</span>
           <h1>Histórias em inglês<br><span>no seu ritmo.</span></h1>
-          <p>Escolha uma história. Toque nas palavras para ouvir e ver a tradução.</p>
+          <p>Baixe uma categoria para ler offline, ouvir as frases e traduzir cada palavra.</p>
         </div>
         <div class="toolbar">
           <label class="search-wrap"><span aria-hidden="true">⌕</span><input type="search" id="searchInput" autocomplete="off" placeholder="Buscar histórias..." aria-label="Pesquisar histórias"></label>
@@ -40,30 +41,32 @@
         <p id="emptySearch" class="empty hidden">Nenhum texto encontrado.</p>
       </section>
       <section id="packsView" class="view hidden">
-        <div class="section-intro"><span class="eyebrow">LER SEM INTERNET</span><h1>Baixar histórias</h1><p>Escolha uma coleção e uma voz. Baixe textos, áudios e traduções para usar offline.</p></div>
+        <div class="section-intro"><span class="eyebrow">LER SEM INTERNET</span><h1>Baixar histórias</h1><p>Escolha a voz de cada categoria e baixe para ler sem internet. Cada voz tem um ZIP de palavras e um ZIP por coleção.</p></div>
         <p id="storageInfo" class="storage-info">Carregando downloads...</p>
         <div id="packList" class="pack-list"></div>
       </section>
       <section id="readerView" class="view hidden">
         <button id="backBtn" class="back-button" type="button">← Voltar à biblioteca</button>
-        <button id="readFullBtn" class="small-button full-read-btn" type="button">▶ Ouvir história inteira</button>
         <div class="reader-head"><div id="readerMeta" class="reader-meta"></div><h1 id="readerTitle"></h1><p id="readerSummary"></p></div>
         <div class="reader-settings">
-          <div class="setting voice-setting"><label for="voiceSelect">Escolha a voz</label><select id="voiceSelect"><option value="cloud:en-US-AndrewNeural">🇺🇸 Andrew</option></select></div>
+          <div class="setting voice-setting"><label for="voiceSelect">Voz</label><select id="voiceSelect"><option value="native:">Carregando vozes...</option></select></div>
 <details class="reader-options"><summary>Opções de leitura</summary><div class="reader-options-inner">
           <div class="setting rate-setting"><label for="rateInput">Velocidade <output id="rateValue">1.0×</output></label><input id="rateInput" type="range" min="0.7" max="1.3" step="0.1" value="1.0"></div>
           <button id="previewVoiceBtn" class="small-button voice-action" type="button">▶ Testar voz</button>
-          <button id="refreshVoicesBtn" class="small-button voice-action" type="button">↻ Atualizar vozes</button>
+          
           </div></details>
-          <button id="stopBtn" class="small-button hidden" type="button">■ Parar áudio</button>
+          <div class="reader-audio-controls" role="group" aria-label="Controles de áudio">
+            <button id="readFullBtn" class="small-button full-read-btn" type="button">▶ Ouvir história inteira</button>
+            <button id="stopBtn" class="small-button stop-audio-btn is-idle" type="button" disabled>■ Parar áudio</button>
+          </div>
         </div>
         
         <article class="reader-card" aria-label="Texto da história">
-          <div class="reader-tip">Toque em uma palavra para ouvir e traduzir. Toque de novo para ouvir devagar. Use ▶ para ouvir cada frase.</div>
+          <div class="reader-tip">Toque em uma palavra para ouvir e traduzir. Toque de novo para ouvir devagar e ver a pronúncia aproximada. Use ▶ para ouvir cada frase.</div>
           <div id="paragraphs" class="paragraphs" lang="en-US"></div>
           <p id="readerStatus" class="reader-status" role="status" aria-live="polite"></p>
         </article>
-        <p class="reader-footnote">A tradução pode variar conforme a frase. Verbete offline: <a href="https://www.wikdict.com/" target="_blank" rel="noopener">WikDict</a> / Wiktionary, CC BY-SA.</p>
+        <p class="reader-footnote">Os áudios e traduções são locais. Verbete: <a href="https://www.wikdict.com/" target="_blank" rel="noopener">WikDict</a> / Wiktionary, CC BY-SA. Pronúncias americanas: <a href="https://github.com/cmusphinx/cmudict" target="_blank" rel="noopener">CMUdict</a> (BSD).</p>
       </section>
     </main>
     <nav class="bottom-nav" aria-label="Navegação"><a id="libraryTab" href="#library" class="nav-link active">▤ &nbsp;Histórias</a><a id="packsTab" href="#packs" class="nav-link">⇩ &nbsp;Downloads</a></nav>

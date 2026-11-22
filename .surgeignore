@@ -1,0 +1,10 @@
+scripts/
+tests/
+*.py
+*.zip
+*.txt
+README.md
+OTIMIZACAO-V22.md
+requirements-tts.txt
+tts/generated.json
+tts/failed-*.json
